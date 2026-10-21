@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>Maine EPS Formula — Edgecomb Guide</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper: #f4f6f4;
+      --surface: #ffffff;
+      --surface-2: #edf1ef;
+      --ink: #17211d;
+      --muted: #53615b;
+      --line: #cfd8d3;
+      --navy: #153a55;
+      --navy-2: #0d2b40;
+      --teal: #15756e;
+      --teal-soft: #dceeea;
+      --gold: #c98a1b;
+      --gold-soft: #f5ead2;
+      --red: #9a4337;
+      --red-soft: #f3dfdb;
+      --shadow: 0 18px 45px rgba(20, 48, 40, .09);
+      --serif: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif;
+      --sans: "Aptos", "Segoe UI", Helvetica, sans-serif;
+      --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #101715;
+        --surface: #17201d;
+        --surface-2: #1e2b27;
+        --ink: #edf4f0;
+        --muted: #b3c2bb;
+        --line: #34463f;
+        --navy: #8fc2dd;
+        --navy-2: #d4ebf6;
+        --teal: #69c9bf;
+        --teal-soft: #173a35;
+        --gold: #e4b45e;
+        --gold-soft: #3e321d;
+        --red: #efa598;
+        --red-soft: #452722;
+        --shadow: 0 18px 50px rgba(0, 0, 0, .28);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
+    body {
+      margin: 0;
+      width: 100%; max-width: 100%; overflow-x: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--navy); text-underline-offset: 3px; }
+    a:hover { color: var(--teal); }
+    button, summary { font: inherit; }
+    .skip-link {
+      position: fixed; left: 12px; top: -60px; z-index: 99;
+      padding: 10px 14px; background: var(--ink); color: var(--surface);
+    }
+    .skip-link:focus { top: 12px; }
+    .shell { width: 100%; max-width: 1450px; min-width: 0; margin: 0 auto; display: grid; grid-template-columns: 250px minmax(0, 1fr); }
+    main, .hero, .content, section { min-width: 0; max-width: 100%; }
+    .rail {
+      position: sticky; top: 0; height: 100vh; padding: 28px 22px;
+      border-right: 1px solid var(--line); background: var(--surface);
+      display: flex; flex-direction: column; gap: 24px;
+    }
+    .rail .context { font-family: var(--serif); font-size: 1.1rem; line-height: 1.25; color: var(--navy-2); }
+    .rail .context strong { display:block; font-size:1.35rem; margin-bottom: 5px; }
+    .rail nav { display: grid; gap: 3px; }
+    .rail nav a {
+      color: var(--muted); text-decoration: none; padding: 7px 10px;
+      border-radius: 5px; font-size: .9rem; border-left: 3px solid transparent;
+    }
+    .rail nav a:hover, .rail nav a.active { color: var(--ink); background: var(--surface-2); border-left-color: var(--teal); }
+    .rail .stamp { margin-top: auto; color: var(--muted); font-size: .76rem; line-height: 1.4; }
+    main { min-width: 0; }
+    .hero {
+      background: var(--navy-2); color: #f5faf8;
+      padding: 64px clamp(24px, 6vw, 82px) 58px;
+      position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: auto -80px -120px auto;
+      width: 390px; height: 260px; border: 42px solid rgba(255,255,255,.06);
+      border-radius: 50%; transform: rotate(-12deg);
+    }
+    .hero .eyebrow { margin: 0 0 15px; color: #a9d7cf; font-size: .83rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+    .hero h1 { margin: 0; max-width: 900px; font-family: var(--serif); font-weight: 700; font-size: clamp(2.4rem, 6vw, 5.4rem); line-height: .96; letter-spacing: -.035em; }
+    .hero .dek { max-width: 760px; margin: 25px 0 0; color: #d7e3df; font-size: clamp(1.05rem, 1.8vw, 1.3rem); }
+    .hero .source-stamp { display: inline-flex; gap: 8px; align-items: center; margin-top: 28px; font-size: .8rem; color: #c8dad4; border-top: 1px solid rgba(255,255,255,.2); padding-top: 13px; }
+    .hero .dot { width: 7px; height: 7px; border-radius: 50%; background: #6fd0c0; }
+    .content { padding: 0 clamp(18px, 5vw, 72px) 90px; }
+    section { scroll-margin-top: 24px; padding-top: 64px; }
+    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 20px; border-bottom: 1px solid var(--line); padding-bottom: 17px; margin-bottom: 28px; }
+    .section-no { color: var(--teal); font-family: var(--mono); font-size: .79rem; }
+    h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.05; letter-spacing: -.025em; margin: 3px 0 0; color: var(--navy-2); }
+    h3 { font-family: var(--serif); font-size: 1.55rem; line-height: 1.15; margin: 0; }
+    h4 { margin: 0; font-size: 1rem; }
+    p { margin: .65em 0; }
+    .lede { max-width: 850px; font-size: 1.1rem; color: var(--muted); }
+    .callout {
+      display: grid; grid-template-columns: 6px minmax(0, 1fr); background: var(--gold-soft);
+      border-radius: 8px; overflow: hidden; margin: 0 0 30px;
+    }
+    .callout::before { content: ""; background: var(--gold); }
+    .callout > div { padding: 18px 20px; }
+    .callout strong { color: var(--ink); }
+    .callout p { margin: 4px 0 0; color: var(--muted); }
+    .toggle-bar { display: flex; gap: 4px; width: fit-content; padding: 4px; background: var(--surface-2); border-radius: 7px; margin-bottom: 20px; }
+    .toggle-bar button { border: 0; background: transparent; color: var(--muted); padding: 9px 14px; border-radius: 5px; cursor: pointer; font-weight: 700; }
+    .toggle-bar button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+    .snapshot { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); overflow: hidden; }
+    .snapshot-header { padding: 18px 22px; display: flex; gap: 16px; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .snapshot-header .year { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; }
+    .snapshot-header .note { font-size: .8rem; color: var(--muted); text-align: right; }
+    .stat-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); }
+    .stat { padding: 22px; border-right: 1px solid var(--line); min-width: 0; }
+    .stat:last-child { border-right: 0; }
+    .stat .label { display: block; font-size: .76rem; color: var(--muted); min-height: 2.3em; }
+    .stat .value { display: block; margin-top: 9px; font-family: var(--mono); font-weight: 700; font-size: clamp(1.05rem, 2vw, 1.35rem); overflow-wrap: anywhere; }
+    .stat .sub { display:block; margin-top: 5px; font-size: .72rem; color: var(--muted); }
+    .formula-line { margin: 0; padding: 15px 22px; background: var(--surface-2); font-family: var(--mono); font-size: .83rem; color: var(--navy-2); overflow-wrap: anywhere; }
+    .flow { display: grid; gap: 10px; counter-reset: flow; }
+    .flow-step {
+      display: grid; grid-template-columns: 58px minmax(0, .8fr) minmax(250px, 1.35fr); gap: 18px; align-items: start;
+      background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px;
+    }
+    .flow-step .number { width: 42px; height: 42px; border-radius: 50%; display:grid; place-items:center; background: var(--navy-2); color: #fff; font-family:var(--mono); font-weight: 700; }
+    .flow-step .title small { display:block; color:var(--teal); font-size:.72rem; font-family:var(--mono); margin-bottom:5px; }
+    .flow-step .desc { color: var(--muted); }
+    .flow-step .desc p { margin: 0 0 8px; }
+    .flow-step .desc code { font-family: var(--mono); font-size:.86em; color:var(--ink); }
+    .source-link { display: inline-block; font-size: .74rem; font-weight:700; text-decoration:none; margin-top:6px; }
+    .ledger { background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); border-radius: 10px; overflow: hidden; }
+    .ledger-top { padding: 24px; display:flex; align-items:end; justify-content:space-between; gap:20px; background:var(--navy-2); color:#fff; }
+    .ledger-top h3 { font-size: 1.8rem; }
+    .ledger-top p { margin: 3px 0 0; color:#cbdad5; }
+    .ledger-top .total { text-align:right; }
+    .ledger-top .total span { display:block; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:#a8c5bc; }
+    .ledger-top .total strong { font: 700 1.55rem var(--mono); }
+    .ledger-group { border-top: 1px solid var(--line); }
+    .ledger-group:first-of-type { border-top:0; }
+    .ledger-row { display:grid; grid-template-columns: minmax(0,1fr) auto; gap:20px; padding:12px 20px; border-top:1px dashed var(--line); }
+    .ledger-row:first-child { border-top:0; }
+    .ledger-row strong { font-family:var(--mono); white-space:nowrap; }
+    .ledger-row .muted { color:var(--muted); font-size:.82rem; display:block; }
+    .ledger-subtotal { background:var(--surface-2); font-weight:700; }
+    .ledger-equation { padding: 18px 20px; background: var(--teal-soft); font-family:var(--mono); font-size:.9rem; text-align:center; color:var(--ink); }
+    .split { margin-top: 20px; display:grid; grid-template-columns: 3fr 2fr; gap: 20px; }
+    .split-card { background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:21px; }
+    .split-card h3 { margin-bottom:13px; }
+    .sharebar { display:flex; height:38px; overflow:hidden; border-radius:5px; margin:18px 0 12px; color:#fff; font:700 .78rem var(--mono); }
+    .sharebar .local { width:79.26%; display:flex; align-items:center; padding-left:12px; background:var(--navy); }
+    .sharebar .state { width:20.74%; display:flex; align-items:center; justify-content:center; background:var(--teal); }
+    .equation { font-family:var(--mono); font-size:.87rem; background:var(--surface-2); padding:13px; border-radius:5px; margin-top:12px; overflow-wrap:anywhere; }
+    .pupil-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+    .pupil-card { background:var(--surface); border-top:4px solid var(--line); padding:20px; box-shadow:0 4px 16px rgba(20,48,40,.05); }
+    .pupil-card:nth-child(1) { border-color:var(--teal); }
+    .pupil-card:nth-child(2) { border-color:var(--navy); }
+    .pupil-card:nth-child(3) { border-color:var(--gold); }
+    .pupil-card:nth-child(4) { border-color:var(--red); }
+    .pupil-card .big { display:block; font:700 2rem var(--mono); line-height:1; margin-bottom:10px; }
+    .pupil-card .label { display:block; font-weight:700; margin-bottom:8px; }
+    .pupil-card p { color:var(--muted); font-size:.88rem; margin:0; }
+    .reconcile { margin-top:18px; background:var(--red-soft); padding:18px 20px; border-radius:7px; }
+    .reconcile strong { color:var(--red); }
+    .proof-verdict { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:22px; align-items:center; padding:24px; background:var(--teal-soft); border-top:5px solid var(--teal); margin-bottom:18px; }
+    .proof-verdict h3 { font-size:1.8rem; color:var(--navy-2); }
+    .proof-verdict p { margin:.35em 0 0; color:var(--muted); max-width:760px; }
+    .proof-score { font:700 2.6rem var(--mono); color:var(--teal); white-space:nowrap; text-align:right; }
+    .proof-score small { display:block; font:700 .7rem var(--sans); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+    .proof-ledger { background:var(--surface); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+    .proof-row { display:grid; grid-template-columns:minmax(160px,.8fr) minmax(0,1.6fr) auto; gap:18px; align-items:start; padding:15px 18px; border-top:1px solid var(--line); }
+    .proof-row:first-child { border-top:0; }
+    .proof-row .metric { font-weight:700; }
+    .proof-row .work { font: .82rem/1.5 var(--mono); color:var(--muted); overflow-wrap:anywhere; }
+    .proof-row .result { font:700 .85rem var(--mono); color:var(--teal); white-space:nowrap; }
+    .compare-note { margin:22px 0 10px; color:var(--muted); font-size:.9rem; }
+    .open-notes { margin-top:18px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .open-note { padding:15px 17px; background:var(--surface); border:1px solid var(--line); }
+    .open-note b { display:block; margin-bottom:4px; color:var(--red); }
+    .open-note p { margin:0; color:var(--muted); font-size:.86rem; }
+    details { background: var(--surface); border: 1px solid var(--line); border-radius:7px; margin:9px 0; overflow:hidden; }
+    summary { list-style:none; cursor:pointer; padding:17px 19px; display:grid; grid-template-columns:42px minmax(0,1fr) auto; gap:10px; align-items:center; font-weight:700; }
+    summary::-webkit-details-marker { display:none; }
+    summary .tag { color:var(--teal); font-family:var(--mono); font-size:.78rem; }
+    summary .chev { color:var(--muted); transition:transform .2s; }
+    details[open] summary { border-bottom:1px solid var(--line); }
+    details[open] summary .chev { transform:rotate(45deg); }
+    .detail-body { padding:19px; }
+    .detail-body ul { margin:8px 0; padding-left:20px; }
+    .detail-body li { margin:7px 0; }
+    .mini-table { width:100%; border-collapse:collapse; font-size:.88rem; margin-top:14px; }
+    .mini-table th, .mini-table td { text-align:left; vertical-align:top; padding:10px; border-top:1px solid var(--line); }
+    .mini-table th { color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; }
+    .mini-table td:last-child { font-family:var(--mono); }
+    .comparison-table td:last-child { font-family:var(--sans); color:var(--muted); }
+    .analysis-banner { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(240px,.7fr); gap:24px; align-items:center; padding:24px; background:var(--teal-soft); border-top:5px solid var(--teal); margin-bottom:22px; }
+    .analysis-banner h3 { font-size:1.8rem; color:var(--navy-2); }
+    .analysis-banner p { margin:.4em 0 0; color:var(--muted); }
+    .analysis-banner .headline-number { text-align:right; font:700 2.3rem/1 var(--mono); color:var(--teal); }
+    .analysis-banner .headline-number small { display:block; margin-top:7px; font:700 .72rem/1.3 var(--sans); color:var(--muted); text-transform:uppercase; letter-spacing:.07em; }
+    .compare-block { margin-top:28px; }
+    .compare-block h3 { margin-bottom:8px; }
+    .table-note { color:var(--muted); font-size:.82rem; margin:8px 0 0; }
+    .driver-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:20px; }
+    .driver-card { background:var(--surface); border:1px solid var(--line); padding:20px; }
+    .driver-card .driver-label { display:block; font:700 .75rem var(--mono); color:var(--teal); margin-bottom:7px; }
+    .driver-card h3 { font-size:1.35rem; }
+    .driver-card p { color:var(--muted); font-size:.92rem; }
+    .driver-card .math { margin-top:12px; padding-top:11px; border-top:1px solid var(--line); font:.8rem/1.45 var(--mono); color:var(--ink); }
+    .structure-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:20px; }
+    .structure-item { padding:18px; background:var(--surface); border-top:4px solid var(--navy); box-shadow:0 4px 16px rgba(20,48,40,.05); }
+    .structure-item h4 { color:var(--navy-2); margin-bottom:7px; }
+    .structure-item p { margin:0; color:var(--muted); font-size:.86rem; }
+    .lesson-list { margin:18px 0 0; padding:0; list-style:none; counter-reset:lessons; display:grid; gap:9px; }
+    .lesson-list li { counter-increment:lessons; display:grid; grid-template-columns:34px minmax(0,1fr); gap:12px; padding:15px 17px; background:var(--surface); border:1px solid var(--line); }
+    .lesson-list li::before { content:counter(lessons); display:grid; place-items:center; width:28px; height:28px; border-radius:50%; background:var(--navy-2); color:#fff; font:700 .75rem var(--mono); }
+    .answer-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .answer { background:var(--surface); padding:22px; border:1px solid var(--line); border-radius:8px; }
+    .answer .q { color:var(--navy-2); font-family:var(--serif); font-size:1.2rem; font-weight:700; line-height:1.2; }
+    .answer .a { color:var(--muted); margin-top:9px; }
+    .reform-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .reform { background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:22px; }
+    .reform .step { font:700 .78rem var(--mono); color:var(--teal); }
+    .reform h3 { margin:8px 0 12px; }
+    .reform p { color:var(--muted); }
+    .caveat-list { display:grid; gap:9px; }
+    .caveat { display:grid; grid-template-columns:34px minmax(0,1fr); gap:12px; background:var(--surface); padding:16px; border:1px solid var(--line); border-radius:7px; }
+    .caveat .id { font:700 .8rem var(--mono); color:var(--red); }
+    .caveat p { margin:0; color:var(--muted); }
+    .source-list { display:grid; gap:10px; }
+    .source-item { background:var(--surface); border-bottom:1px solid var(--line); padding:14px 16px; }
+    .source-item strong { display:block; color:var(--ink); }
+    .source-item a { overflow-wrap:anywhere; font-size:.82rem; }
+    .source-item span { display:block; color:var(--muted); font-size:.78rem; margin-top:4px; }
+    .closing { margin-top:55px; padding:28px 0 0; border-top:3px double var(--line); color:var(--muted); font-size:.83rem; }
+    .hidden { display:none !important; }
+    @media (max-width: 1050px) {
+      .shell { grid-template-columns: minmax(0, 1fr); }
+      .rail { position:relative; width:100%; max-width:100%; min-width:0; overflow:hidden; height:auto; padding:14px 18px; border-right:0; border-bottom:1px solid var(--line); display:block; }
+      .rail .context, .rail .stamp { display:none; }
+      .rail nav { display:flex; flex-wrap:wrap; width:100%; max-width:100%; min-width:0; overflow:visible; gap:4px; }
+      .rail nav a { white-space:nowrap; border-left:0; border-bottom:3px solid transparent; }
+      .rail nav a:hover, .rail nav a.active { border-left:0; border-bottom-color:var(--teal); }
+      .stat-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+      .stat:nth-child(3) { border-right:0; }
+      .stat:nth-child(n+4) { border-top:1px solid var(--line); }
+      .pupil-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width: 720px) {
+      .hero { padding:44px 22px 42px; }
+      .hero h1 { font-size:clamp(2.45rem, 14vw, 4.2rem); }
+      .content { padding:0 16px 65px; }
+      section { padding-top:48px; }
+      .section-head { grid-template-columns:1fr; }
+      .section-head .section-note { display:none; }
+      .stat-grid { grid-template-columns:1fr 1fr; }
+      .stat, .stat:nth-child(3) { border-right:1px solid var(--line); border-top:1px solid var(--line); }
+      .stat:nth-child(odd) { border-right:1px solid var(--line); }
+      .stat:nth-child(even) { border-right:0; }
+      .stat:first-child, .stat:nth-child(2) { border-top:0; }
+      .stat:last-child { grid-column:1/-1; border-right:0; }
+      .flow-step { grid-template-columns:42px minmax(0,1fr); gap:13px; }
+      .flow-step .desc { grid-column:1/-1; }
+      .ledger-top { align-items:start; flex-direction:column; }
+      .ledger-top .total { text-align:left; }
+      .split, .answer-grid, .reform-grid, .pupil-grid, .open-notes { grid-template-columns:1fr; }
+      .proof-verdict { grid-template-columns:1fr; }
+      .proof-score { text-align:left; }
+      .proof-row { grid-template-columns:1fr; gap:5px; }
+      .proof-row .result { white-space:normal; }
+      .analysis-banner, .driver-grid, .structure-grid { grid-template-columns:1fr; }
+      .analysis-banner .headline-number { text-align:left; }
+      .sharebar { font-size:.68rem; }
+      summary { grid-template-columns:32px minmax(0,1fr) auto; padding:15px; }
+      .mini-table, .mini-table tbody, .mini-table tr, .mini-table td { display:block; width:100%; }
+      .mini-table thead { display:none; }
+      .mini-table tr { padding:10px 0; border-top:1px solid var(--line); }
+      .mini-table td { border:0; padding:2px 0; }
+      .mini-table td::before { content:attr(data-label) ": "; font-weight:700; color:var(--muted); font-family:var(--sans); }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+    @media print {
+      .rail, .toggle-bar { display:none; }
+      .shell { display:block; }
+      .hero { background:#fff; color:#000; padding:28px 0; }
+      .hero .dek, .hero .source-stamp, .hero .eyebrow { color:#333; }
+      .content { padding:0; }
+      section { break-inside:avoid; }
+      details { break-inside:avoid; }
+      details > .detail-body { display:block !important; }
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to guide</a>
+<div class="shell">
+  <aside class="rail" aria-label="Guide navigation">
+    <div class="context"><strong>Edgecomb</strong>ED279 working guide</div>
+    <nav>
+      <a href="#snapshot" class="active">Year snapshot</a>
+      <a href="#formula">Formula map</a>
+      <a href="#worked">FY26 ledger</a>
+      <a href="#validation">Peer comparison</a>
+      <a href="#pupils">Pupil counts</a>
+      <a href="#sections">Line by line</a>
+      <a href="#answers">Board answers</a>
+      <a href="#reform">2026 overhaul</a>
+      <a href="#caveats">Open questions</a>
+      <a href="#sources">Sources</a>
+    </nav>
+    <div class="stamp">Prepared from Maine DOE, Edgecomb's ED279, and MEPRI materials reviewed October 16, 2026.</div>
+  </aside>
+
+  <main id="main">
+    <header class="hero">
+      <p class="eyebrow">Maine Essential Programs &amp; Services</p>
+      <h1>Follow Edgecomb’s verified FY26 dollars.</h1>
+      <p class="dek">A board-ready map of the ED279: what each section calculates, where each published input originates, how Edgecomb’s verified FY26 allocation reconciles to the penny, and how Edgecomb compares with every AOS 98 district plus the Newcastle, Damariscotta, and Dresden-area systems.</p>
+      <div class="source-stamp"><span class="dot"></span> Primary worked source: Edgecomb 2025–2026 ED279, dated April 17, 2026</div>
+    </header>
+
+    <div class="content">
+      <section id="snapshot">
+        <div class="section-head">
+          <div><span class="section-no">00 / ORIENT</span><h2>First, keep the years straight.</h2></div>
+          <div class="section-note">The most important correction in this guide</div>
+        </div>
+        <div class="callout"><div>
+          <strong>The figures previously labeled together as “FY25” belong to two different years.</strong>
+          <p>$14,044 per pupil and 155 pupils are FY25. The $2,237,697.55 allocation, $1,773,575 local contribution, 6.100 mills, $290.75M valuation, and $464,122.55 state share are FY26. They should not be combined.</p>
+        </div></div>
+        <div class="toggle-bar" role="group" aria-label="Choose fiscal year">
+          <button type="button" data-year="fy25" aria-pressed="false">FY25 · 2024–25</button>
+          <button type="button" data-year="fy26" aria-pressed="true">FY26 · 2025–26</button>
+        </div>
+        <div class="snapshot" aria-live="polite">
+          <div class="snapshot-header">
+            <span class="year" id="snap-year">FY26 · 2025–2026</span>
+            <span class="note" id="snap-note">Edgecomb ED279 · verified across school-site PDF and DOE portal</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat"><span class="label">Resident pupils<br>(2-year average)</span><span class="value" id="stat-pupils">142.5</span><span class="sub" id="sub-pupils">Section 2A3</span></div>
+            <div class="stat"><span class="label">Total EPS<br>allocation</span><span class="value" id="stat-total">$2,237,697.55</span><span class="sub">Section 3 total</span></div>
+            <div class="stat"><span class="label">Required local<br>contribution</span><span class="value" id="stat-local">$1,773,575.00</span><span class="sub" id="sub-local">6.100 mills</span></div>
+            <div class="stat"><span class="label">State<br>contribution</span><span class="value" id="stat-state">$464,122.55</span><span class="sub">Before Section 5B adjustments</span></div>
+            <div class="stat"><span class="label">State-certified<br>valuation</span><span class="value" id="stat-value">$290,750,000</span><span class="sub">Section 4B</span></div>
+          </div>
+          <p class="formula-line" id="snap-formula">$290,750,000 × 0.006100 = $1,773,575.00 local; $2,237,697.55 − $1,773,575.00 = $464,122.55 state</p>
+        </div>
+      </section>
+
+      <section id="formula">
+        <div class="section-head">
+          <div><span class="section-no">01 / FORMULA MAP</span><h2>The ED279 is a six-stage pipeline.</h2></div>
+          <div class="section-note">Each section hands a result to the next</div>
+        </div>
+        <p class="lede">In one sentence: DOE builds Edgecomb-specific operating rates, applies them to resident pupils and weights, adds other subsidizable costs, then splits the result between the town and state according to valuation and the statewide mill expectation.</p>
+        <div class="flow">
+          <article class="flow-step"><div class="number">1</div><div class="title"><small>BUILD THE RATES</small><h3>Per-pupil operating rates</h3></div><div class="desc"><p>Attending pupils determine model staff FTEs. State salary-matrix values, benefit factors, support costs, and the regional index produce elementary and secondary rates.</p><code>FY26: $8,573 elementary · $8,970 secondary</code><br><a class="source-link" href="#src-line">DOE line-by-line method ↓</a></div></article>
+          <article class="flow-step"><div class="number">2</div><div class="title"><small>APPLY THE RATES</small><h3>Operating allocation</h3></div><div class="desc"><p>Resident pupils × Section 1 rates, plus economic-disadvantage and multilingual weights, targeted funds, and Edgecomb’s isolated-small-school adjustment.</p><code>FY26: $1,622,973.89</code></div></article>
+          <article class="flow-step"><div class="number">3</div><div class="title"><small>ADD OTHER COSTS</small><h3>Other subsidizable costs</h3></div><div class="desc"><p>Gifted &amp; talented, special education, transportation, teacher retirement, and debt/insured value factor are added separately.</p><code>FY26 total allocation: $2,237,697.55</code></div></article>
+          <article class="flow-step"><div class="number">4</div><div class="title"><small>SPLIT THE BILL</small><h3>Required local and state shares</h3></div><div class="desc"><p>Required local is the lesser of the total allocation or state-certified valuation × the statewide mill expectation. State pays the remainder.</p><code>min($2,237,697.55, $290,750,000 × .006100)</code></div></article>
+          <article class="flow-step"><div class="number">5</div><div class="title"><small>ADJUST</small><h3>Final allocation</h3></div><div class="desc"><p>DOE applies state-only items such as education service center funding and MaineCare Seed. Edgecomb’s FY26 adjusted state contribution is $442,526.25.</p></div></article>
+          <article class="flow-step"><div class="number">6</div><div class="title"><small>PAY</small><h3>Monthly subsidy</h3></div><div class="desc"><p>The schedule shows monthly EPS checks, quarterly MaineCare Seed offsets, CTE subsidy, and construction aid. It is the SAU’s subsidy checkbook.</p></div></article>
+        </div>
+      </section>
+
+      <section id="worked">
+        <div class="section-head">
+          <div><span class="section-no">02 / WORKED EXAMPLE</span><h2>Edgecomb FY26, reconciled.</h2></div>
+          <div class="section-note">Dollar figures from the 2025–2026 ED279</div>
+        </div>
+        <div class="ledger">
+          <div class="ledger-top"><div><h3>Allocation ledger</h3><p>From operating allocation to total EPS</p></div><div class="total"><span>Section 3 total</span><strong>$2,237,697.55</strong></div></div>
+          <div class="ledger-group">
+            <div class="ledger-row"><div><b>Section 2 · Basic allocation</b><span class="muted">PreK, K–8, and 9–12 resident pupil counts × rates</span></div><strong>$1,268,332.00</strong></div>
+            <div class="ledger-row"><div><b>Weighted allocation</b><span class="muted">Economic disadvantage plus 1 multilingual learner</span></div><strong>$106,078.12</strong></div>
+            <div class="ledger-row"><div><b>Targeted funds</b><span class="muted">Assessment, technology, PreK/K–2, disadvantaged</span></div><strong>$102,831.06</strong></div>
+            <div class="ledger-row"><div><b>Isolated small school</b><span class="muted">PreK–8 building adjustment</span></div><strong>$145,732.71</strong></div>
+            <div class="ledger-row ledger-subtotal"><div>Operating allocation total</div><strong>$1,622,973.89</strong></div>
+          </div>
+          <div class="ledger-group">
+            <div class="ledger-row"><div><b>Gifted &amp; talented</b><span class="muted">$3,344.00 × 102.60%</span></div><strong>$3,430.94</strong></div>
+            <div class="ledger-row"><div><b>Special education EPS</b></div><strong>$470,774.16</strong></div>
+            <div class="ledger-row"><div><b>High-cost out-of-district</b></div><strong>$0.00</strong></div>
+            <div class="ledger-row"><div><b>Transportation</b></div><strong>$78,369.94</strong></div>
+            <div class="ledger-row ledger-subtotal"><div>Other subsidizable costs</div><strong>$552,575.04</strong></div>
+          </div>
+          <div class="ledger-group">
+            <div class="ledger-row"><div><b>Teacher retirement</b><span class="muted">MainePERS normalized cost</span></div><strong>$53,370.81</strong></div>
+            <div class="ledger-row"><div><b>Debt / insured value factor</b><span class="muted">2023–24 base</span></div><strong>$8,777.81</strong></div>
+          </div>
+          <div class="ledger-equation">$1,622,973.89 + $552,575.04 + $53,370.81 + $8,777.81 = $2,237,697.55</div>
+        </div>
+        <div class="split">
+          <div class="split-card"><h3>Section 4 split</h3><p>Edgecomb’s valuation-based capacity is below the allocation, so the town pays the full 6.100-mill expectation and the state fills the gap.</p><div class="sharebar" aria-label="Local share 79.26 percent; state share 20.74 percent"><div class="local">Local 79.26%</div><div class="state">20.74%</div></div><div class="equation">$290,750,000 × 0.006100 = $1,773,575.00<br>$2,237,697.55 − $1,773,575.00 = $464,122.55</div></div>
+          <div class="split-card"><h3>Then Section 5 adjusts</h3><p><b>+$3,976.20</b> education service center member allocation</p><p><b>−$25,572.50</b> MaineCare Seed (private)</p><div class="equation">$464,122.55 + $3,976.20 − $25,572.50 = $442,526.25 adjusted state contribution</div></div>
+        </div>
+      </section>
+
+      <section id="validation">
+        <div class="section-head">
+          <div><span class="section-no">03 / PEER COMPARISON</span><h2>Edgecomb’s disadvantage is scale plus a thin tax base.</h2></div>
+          <div class="section-note">AOS 98 + Newcastle, Damariscotta, and Dresden-area systems</div>
+        </div>
+        <div class="analysis-banner">
+          <div><h3>Not the highest-cost district—still one of the hardest places to fund each dollar.</h3><p>In FY25 Edgecomb spent less per pupil than the other three AOS 98 districts. But in the FY27 baseline it faces the full 5.760-mill expectation, while Georgetown, Southport, and Boothbay–Boothbay Harbor are minimum contributors with far lower mill rates. Edgecomb’s state share is meaningful; its property value per pupil is simply much thinner.</p></div>
+          <div class="headline-number">$1.99M<small>FY26 valuation per Section 4 pupil</small></div>
+        </div>
+
+        <div class="compare-block">
+          <h3>FY25 spending: the six-district ranking</h3>
+          <p class="compare-note">MEPRI’s LD 318 Appendix C uses a common SAU-level frame: subsidizable pupils, EPS allocation per pupil, actual spending per pupil, and spending as a percent of EPS.</p>
+          <table class="mini-table comparison-table" aria-label="FY25 per-pupil comparison across AOS 98, Great Salt Bay, and RSU 02">
+            <thead><tr><th>Rank</th><th>District / area</th><th>Pupils</th><th>EPS / pupil</th><th>Spending / pupil</th><th>% of EPS</th></tr></thead>
+            <tbody>
+              <tr><td data-label="Rank">1</td><td data-label="District">Southport · AOS 98</td><td data-label="Pupils">35</td><td data-label="EPS / pupil">$12,705</td><td data-label="Spending / pupil">$34,112</td><td data-label="% of EPS">268%</td></tr>
+              <tr><td data-label="Rank">2</td><td data-label="District">Boothbay–Boothbay Harbor CSD · AOS 98</td><td data-label="Pupils">414</td><td data-label="EPS / pupil">$15,357</td><td data-label="Spending / pupil">$25,469</td><td data-label="% of EPS">166%</td></tr>
+              <tr><td data-label="Rank">3</td><td data-label="District">Georgetown · AOS 98</td><td data-label="Pupils">112</td><td data-label="EPS / pupil">$14,498</td><td data-label="Spending / pupil">$22,516</td><td data-label="% of EPS">155%</td></tr>
+              <tr><td data-label="Rank">4</td><td data-label="District"><b>Edgecomb · AOS 98</b></td><td data-label="Pupils"><b>155</b></td><td data-label="EPS / pupil"><b>$14,044</b></td><td data-label="Spending / pupil"><b>$19,247</b></td><td data-label="% of EPS"><b>137%</b></td></tr>
+              <tr><td data-label="Rank">5</td><td data-label="District">Great Salt Bay CSD · Damariscotta / Newcastle</td><td data-label="Pupils">380</td><td data-label="EPS / pupil">$14,006</td><td data-label="Spending / pupil">$18,707</td><td data-label="% of EPS">134%</td></tr>
+              <tr><td data-label="Rank">6</td><td data-label="District">RSU 02 · Dresden-area comparator</td><td data-label="Pupils">1,432</td><td data-label="EPS / pupil">$14,475</td><td data-label="Spending / pupil">$17,953</td><td data-label="% of EPS">124%</td></tr>
+            </tbody>
+          </table>
+          <p class="table-note">Statewide median SAU: $13,870 EPS per pupil, $18,350 actual spending per pupil, 134% of EPS. Source: <a href="#src-ld318">LD 318 Appendix C ↓</a>. “Pupils” here means the ED279 subsidizable-pupil count, not building attendance.</p>
+        </div>
+
+        <div class="compare-block">
+          <h3>FY27 burden: share percentage and tax rate tell different stories</h3>
+          <table class="mini-table comparison-table" aria-label="FY27 local share and mill comparison">
+            <thead><tr><th>District</th><th>Total EPS</th><th>Required local</th><th>State share</th><th>Local share</th><th>EPS mill</th></tr></thead>
+            <tbody>
+              <tr><td data-label="District">Georgetown</td><td data-label="Total EPS">$1.648M</td><td data-label="Local">$1.509M</td><td data-label="State">$138,732</td><td data-label="Local share">91.6%</td><td data-label="Mill">1.881</td></tr>
+              <tr><td data-label="District">Boothbay–Boothbay Harbor CSD</td><td data-label="Total EPS">$6.993M</td><td data-label="Local">$6.031M</td><td data-label="State">$962,472</td><td data-label="Local share">86.2%</td><td data-label="Mill">2.268</td></tr>
+              <tr><td data-label="District">Southport</td><td data-label="Total EPS">$614,006</td><td data-label="Local">$505,497</td><td data-label="State">$108,509</td><td data-label="Local share">82.3%</td><td data-label="Mill">0.604</td></tr>
+              <tr><td data-label="District"><b>Edgecomb</b></td><td data-label="Total EPS"><b>$2.414M</b></td><td data-label="Local"><b>$1.912M</b></td><td data-label="State"><b>$502,514</b></td><td data-label="Local share"><b>79.2%</b></td><td data-label="Mill"><b>5.760</b></td></tr>
+              <tr><td data-label="District">RSU 02</td><td data-label="Total EPS">$21.118M</td><td data-label="Local">$9.396M</td><td data-label="State">$11.722M</td><td data-label="Local share">44.5%</td><td data-label="Mill">5.760</td></tr>
+            </tbody>
+          </table>
+          <p class="table-note">DOE labels these FY27 baseline estimates “subject to change.” Great Salt Bay is absent because the CSD was dissolved in March 2026. Source: <a href="#src-ld2226">DOE’s April 9, 2026 baseline table ↓</a>.</p>
+        </div>
+
+        <div class="compare-block">
+          <h3>What specifically works against Edgecomb</h3>
+          <div class="driver-grid">
+            <article class="driver-card"><span class="driver-label">01 · SMALL SCALE</span><h3>107 attending pupils carry building-level fixed costs.</h3><p>FY26 attendance averaged 107.0. Administration, facilities, and classroom staffing move in steps, so Edgecomb cannot shrink costs one student at a time. RSU 02 spreads its system over 1,432 subsidizable pupils and spends $1,294 less per pupil than Edgecomb.</p><div class="math">$19,247 − $17,953 = $1,294 per pupil</div></article>
+            <article class="driver-card"><span class="driver-label">02 · ABOVE-MODEL SPENDING</span><h3>Scale explains pressure; 137% of EPS measures the remaining choice.</h3><p>Edgecomb’s FY25 actual spending exceeded its modeled EPS level by $806,465. A 120%-of-EPS benchmark would be about $370,000 below Edgecomb’s reported level; that is a scenario, not a claim that every dollar is immediately removable.</p><div class="math">($19,247 − $14,044) × 155 = $806,465<br>17% × $14,044 × 155 ≈ $370,000</div></article>
+            <article class="driver-card"><span class="driver-label">03 · THIN TAX BASE PER PUPIL</span><h3>The state formula helps, but each mill raises less.</h3><p>Edgecomb’s FY26 valuation was $290.75M across 146 Section 4 pupils, or about $1.99M per pupil. The FY27 implied ratios for Georgetown, Boothbay–Boothbay Harbor, and Southport are roughly 3–12 times higher. That is why Edgecomb can have AOS 98’s lowest local-share percentage and still its highest EPS mill.</p><div class="math">$290,750,000 ÷ 146 = $1,991,438 per pupil</div></article>
+            <article class="driver-card"><span class="driver-label">04 · FORMULA RELIEF IS PARTIAL</span><h3>The isolated-school adjustment dents the gap; it does not erase it.</h3><p>Edgecomb’s verified FY26 adjustment is $145,732.71. That equals 18.1% of the FY25 spending-above-EPS gap, but roughly 105% of Edgecomb’s gap to the statewide median. Put differently: it brings Edgecomb near median spending, not down to its own EPS allocation.</p><div class="math">$145,732.71 ÷ $806,465 = 18.1%<br>($19,247 − $18,350) × 155 = $139,035</div></article>
+          </div>
+          <div class="callout" style="margin-top:18px"><div><strong>Two commonly blamed categories do not explain Edgecomb’s position.</strong><p>Using DOE comparison files with a mixed-year pupil denominator, Edgecomb’s transportation allocation is approximately $506 per pupil—the lowest among the five included districts with data—and its special-education comparison amount is about $1,957 per pupil, lowest among the four AOS 98 districts. These are directional comparisons only: Edgecomb’s separate FY26 ED279 special-education line is $470,774.16, a different basis that the source record did not reconcile.</p></div></div>
+        </div>
+
+        <div class="compare-block">
+          <h3>Structure explains the outliers</h3>
+          <div class="structure-grid">
+            <article class="structure-item"><h4>Georgetown &amp; Southport</h4><p>Micro-scale raises spending, but coastal valuation suppresses the EPS mill. High local-share percentages do not translate into high tax rates.</p></article>
+            <article class="structure-item"><h4>Boothbay–Boothbay Harbor CSD</h4><p>One two-town SAU blends valuation, but its 166%-of-EPS spending shows that larger scale alone does not guarantee discipline.</p></article>
+            <article class="structure-item"><h4>RSU 02</h4><p>District-wide averages spread costs across 1,432 pupils. At 124% of EPS and $17,953 per pupil, it is the clearest scale comparison in the requested peer set.</p></article>
+            <article class="structure-item"><h4>Great Salt Bay CSD</h4><p>Its FY25 comparison remains valid, but LD 2050 dissolved the CSD by emergency enactment on March 3, 2026. The successor structure was not verified.</p></article>
+            <article class="structure-item"><h4>AOS 98</h4><p>Four SAUs across five towns share superintendent and central-office services, not a tax base or a unified operating budget. Edgecomb still carries its building economics alone.</p></article>
+            <article class="structure-item"><h4>Edgecomb</h4><p>It combines small-school fixed costs with materially less valuation per pupil than its coastal AOS peers. That combination—not transportation or special education—is the central disadvantage.</p></article>
+          </div>
+        </div>
+
+        <div class="compare-block">
+          <h3>Three transferable lessons</h3>
+          <ol class="lesson-list">
+            <li><div><b>Track structure, not just line items.</b> RSU 02’s cost advantage comes from multi-town scale. AOS 98 already shares administration, but deeper service sharing or reorganization is the lever that changes fixed-cost economics.</div></li>
+            <li><div><b>Use EPS percentage as a discipline measure, not a verdict.</b> RSU 02 operates at 124% of EPS and Great Salt Bay reported 134%; Edgecomb at 137% should separate unavoidable small-school costs from locally chosen additions before debating arbitrary cuts.</div></li>
+            <li><div><b>Do not mistake formula aid for tax-base relief.</b> Edgecomb already receives a larger state share than its AOS peers. The remaining pressure comes from how little valuation sits behind each pupil and from costs above the modeled EPS level.</div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="pupils">
+        <div class="section-head">
+          <div><span class="section-no">04 / DENOMINATORS</span><h2>“Pupils” means four different things.</h2></div>
+          <div class="section-note">FY26 unless noted</div>
+        </div>
+        <div class="pupil-grid">
+          <article class="pupil-card"><span class="big">107.0</span><span class="label">Attending average</span><p>Students educated at Eddy School: 101.0 in October 2023 and 113.0 in October 2024, averaged. This drives Section 1 rates.</p></article>
+          <article class="pupil-card"><span class="big">142.5</span><span class="label">Resident average</span><p>All Edgecomb-resident publicly funded pupils, including high-school students tuitioned out. This drives most of Section 2.</p></article>
+          <article class="pupil-card"><span class="big">141.0</span><span class="label">October 2024 residents</span><p>The single most-recent October count: 11.0 PreK + 88.0 K–8 + 42.0 grades 9–12. It is not the FY25 155 average.</p></article>
+          <article class="pupil-card"><span class="big">146.0</span><span class="label">Section 4A pupils</span><p>The allocation-distribution count used in Section 4. The report distinguishes this from Section 2’s resident average.</p></article>
+        </div>
+        <div class="reconcile"><strong>Why FY25 says 155:</strong> the FY25 two-year resident average uses October 2022 (166.0) and October 2023 (144.0): (166 + 144) ÷ 2 = 155. Its attending average was 105.0. The per-pupil figure $14,044 is $2,176,821.11 ÷ 155, rounded.</div>
+      </section>
+
+      <section id="sections">
+        <div class="section-head">
+          <div><span class="section-no">05 / LINE BY LINE</span><h2>What enters each section—and from where.</h2></div>
+          <div class="section-note">Open a section to audit its inputs</div>
+        </div>
+
+        <details open><summary><span class="tag">§1</span><span>Computation of EPS per-pupil rates</span><span class="chev">＋</span></summary><div class="detail-body">
+          <p><b>Purpose:</b> build Edgecomb-specific elementary and secondary operating rates. The result funds regular education operations only.</p>
+          <ul><li><b>Attending pupils:</b> two-year average of October 1 enrollment from Synergy, by grade band.</li><li><b>Model staff FTE:</b> attending pupils ÷ EPS staffing ratio for eight staff groups. For SAUs under 1,200, example teacher ratios are 15:1 in PreK–K, 17:1 in grades 1–8, and 16:1 in grades 9–12.</li><li><b>Actual FTE:</b> NEO Staff module, October 30 snapshot. The ratio <i>EPS FTE ÷ actual FTE</i> scales matrix salary.</li><li><b>Salary:</b> each actual employee is placed on the state matrix by experience and education. Matrix salaries are summed, then scaled by percent of EPS.</li><li><b>Benefits:</b> 26% for teachers/guidance/librarians/health; 40% for ed tech/library tech/clerical; 21% for administrators.</li><li><b>Other support:</b> statewide per-pupil amounts for substitutes, supplies, professional development, instructional leadership, activities, system administration, and operations/maintenance.</li><li><b>Regional index:</b> salaries + substitutes are adjusted by the labor-market index. Edgecomb’s FY26 index is 1.02.</li></ul>
+          <table class="mini-table"><thead><tr><th>FY26 component</th><th>Input / arithmetic</th><th>Amount</th></tr></thead><tbody><tr><td data-label="Component">Teachers</td><td data-label="Arithmetic">6.46 EPS FTE ÷ 10.1 actual FTE × $648,837 matrix salary</td><td data-label="Amount">$415,178</td></tr><tr><td data-label="Component">Teacher-family benefits</td><td data-label="Arithmetic">26% × $451,025</td><td data-label="Amount">$117,267</td></tr><tr><td data-label="Component">Operations &amp; maintenance</td><td data-label="Arithmetic">$1,267 × 107 attending</td><td data-label="Amount">$135,569</td></tr><tr><td data-label="Component">Regional adjustment</td><td data-label="Arithmetic">1.02 index</td><td data-label="Amount">+$10,927</td></tr><tr><td data-label="Component">Section 1 total</td><td data-label="Arithmetic">Total costs ÷ 107.0 attending</td><td data-label="Amount">$917,259</td></tr></tbody></table>
+          <p><b>Result:</b> $8,573 elementary and $8,970 secondary.</p>
+        </div></details>
+
+        <details><summary><span class="tag">§2</span><span>Operating cost allocations</span><span class="chev">＋</span></summary><div class="detail-body">
+          <p><b>Purpose:</b> apply Section 1 rates to resident pupils, then add demographic weights and targeted funds.</p>
+          <ul><li><b>Resident pupils:</b> Synergy October 1 records; PreK uses the most recent October, while K–8 and 9–12 use two-year averages. Residents tuitioned to another school remain included.</li><li><b>Basic FY26:</b> 11.0 PreK × $8,573 + 93.0 K–8 × $8,573 + 42.0 grades 9–12 × $8,970 = $1,268,332.</li><li><b>Economic disadvantage:</b> the highest reported percentage across K–8, 9–12, or total is applied with a 0.15 weight. FY26 ED279 uses 52.53%.</li><li><b>Multilingual learners:</b> tiered weights; Edgecomb’s one K–8 learner uses 0.70: 1.0 × 0.70 × $8,573 = $6,001.10.</li><li><b>Targeted FY26 rates:</b> assessment $56/pupil; technology $123 elementary and $369 secondary; PreK and K–2 use a 0.10 weight; disadvantaged pupils receive an additional 0.05 weight.</li><li><b>Isolated small school:</b> computed per qualifying building; Edgecomb FY26 receives $145,732.71.</li></ul>
+          <p><b>Result:</b> $1,622,973.89 operating allocation.</p>
+        </div></details>
+
+        <details><summary><span class="tag">§3</span><span>Other subsidizable costs</span><span class="chev">＋</span></summary><div class="detail-body">
+          <ul><li><b>Gifted &amp; talented:</b> lesser of audited actual or budgeted spending, inflated. FY26 uses 102.60%.</li><li><b>Special education:</b> a formula combining base, prevalence above 15%, small-size adjustment when fewer than 20 special-ed pupils, high-cost in-district, and a maintenance-of-effort hold-harmless. High-cost out-of-district is separate and based on costs above state thresholds.</li><li><b>Transportation:</b> prior-year allocation inflated and bounded between 90% and 105% of net operating expenditures, using the greater of pupil-density or miles-driven models.</li><li><b>Teacher retirement:</b> a current-year normalized employer cost estimate from MainePERS.</li><li><b>Debt / IVF:</b> state-approved principal and interest, approved leases, and private-school insured-value-factor tuition amounts, capped as described by DOE.</li></ul>
+          <p><b>FY26 result:</b> $552,575.04 other costs + $53,370.81 retirement + $8,777.81 IVF, added to Section 2.</p>
+        </div></details>
+
+        <details><summary><span class="tag">§4</span><span>Required local contribution and state share</span><span class="chev">＋</span></summary><div class="detail-body">
+          <ul><li><b>Valuation:</b> lesser of the most recent Maine Revenue Services certified valuation or the three-year average.</li><li><b>Mill expectation:</b> set annually through the state budget from statewide education cost, available state resources, and statewide valuation. It is not Edgecomb’s actual property-tax rate.</li><li><b>Rule:</b> required local contribution = lesser of total EPS allocation or valuation × mill expectation. State contribution = total allocation − required local.</li></ul>
+          <div class="equation">min($2,237,697.55, $290,750,000 × .006100) = $1,773,575.00 local</div>
+        </div></details>
+
+        <details><summary><span class="tag">§5</span><span>Totals and adjustments</span><span class="chev">＋</span></summary><div class="detail-body"><p>Section 5 starts with local and state totals, applies minimum-contributor rules where relevant, then adds state-only items. Edgecomb’s FY26 B-adjustments are +$3,976.20 for education service center membership and −$25,572.50 MaineCare Seed. The warrant-article local contribution remains $1,773,575.00.</p></div></details>
+        <details><summary><span class="tag">§6</span><span>Scheduled and year-to-date payments</span><span class="chev">＋</span></summary><div class="detail-body"><p>The payment schedule turns the subsidy into monthly checks. Edgecomb’s FY26 monthly EPS amounts decline across the year—approximately $38,598 in July–September, $37,743 in October–December, $36,691 in January–March, and $34,477 in April–June—as quarterly MaineCare Seed offsets are reflected.</p></div></details>
+      </section>
+
+      <section id="answers">
+        <div class="section-head"><div><span class="section-no">06 / BOARD-READY</span><h2>Answers for the questions that recur.</h2></div><div class="section-note">Plain language, with the denominator intact</div></div>
+        <div class="answer-grid">
+          <article class="answer"><div class="q">Does “$14,044 EPS per pupil” mean that is what Edgecomb spends?</div><div class="a">No. It is FY25’s modeled EPS allocation divided by the 155 resident-pupil average: $2,176,821.11 ÷ 155. Actual FY25 spending was reported as $19,247 per pupil, or 137% of EPS. EPS is a modeled minimum-sufficient level, not a spending cap.</div></article>
+          <article class="answer"><div class="q">Does one more student cost the average per-pupil amount?</div><div class="a">No. A per-pupil figure is an average, not marginal cost. Most staffing, building, and transportation costs move in steps. One added pupil may change the denominator and some formula weights without requiring another classroom or route.</div></article>
+          <article class="answer"><div class="q">Why is “school enrollment” lower than resident pupils?</div><div class="a">Eddy School serves PreK–8. Edgecomb’s resident-pupil count also includes publicly funded resident high-school students tuitioned to secondary schools. Section 1 uses attending pupils; Section 2 generally uses resident pupils.</div></article>
+          <article class="answer"><div class="q">Who chose 6.100 mills?</div><div class="a">The statewide mill expectation comes through the state budget process, based on statewide total education cost, available state resources, and statewide valuation. It caps required local contribution; it is not Edgecomb’s actual tax rate.</div></article>
+          <article class="answer"><div class="q">Is teacher retirement local salary money?</div><div class="a">No. DOE adds MainePERS’s normalized employer-cost estimate to EPS, and the SAU remits that amount to the retirement system. It is shown in the allocation but is not ordinary local salary spending.</div></article>
+          <article class="answer"><div class="q">Why can actual spending exceed EPS?</div><div class="a">Actual salaries and contracts can differ from the state matrix; small schools cannot achieve every modeled scale efficiency; high-school tuition is substantial; and towns may approve additional local spending. LD 318 reports a statewide median of 134% of EPS.</div></article>
+        </div>
+      </section>
+
+      <section id="reform">
+        <div class="section-head"><div><span class="section-no">07 / WHAT CHANGES</span><h2>The 2026 overhaul starts in FY28.</h2></div><div class="section-note">LD 2226 · phased protection through FY2030</div></div>
+        <p class="lede">The enacted changes update three parts of the model beginning in 2027–28. Exact Edgecomb values cannot be known until DOE publishes the FY28 calculation.</p>
+        <div class="reform-grid">
+          <article class="reform"><span class="step">STEP 1</span><h3>County cost-of-living index</h3><p>The 35 labor-market areas frozen since FY2005 are replaced by county-based indices, with a 1.00 floor. Edgecomb’s FY26 index was 1.02; its future Lincoln County value is still to be determined.</p></article>
+          <article class="reform"><span class="step">STEP 2</span><h3>Poverty-weighted local mill</h3><p>The local mill will reflect 90% property valuation and 10% student-poverty measure. It redistributes local and state shares without changing the statewide total. The research indicates Edgecomb would likely move downward, but the exact result is not yet published.</p></article>
+          <article class="reform"><span class="step">STEP 3</span><h3>Three-year hold-harmless</h3><p>Through FY2030, an SAU’s state subsidy may not fall below the prior year because of Steps 1–2. Edgecomb is protected from a formula-driven subsidy loss during the phase-in.</p></article>
+        </div>
+      </section>
+
+      <section id="caveats">
+        <div class="section-head"><div><span class="section-no">08 / AUDIT NOTES</span><h2>What remains open or ambiguous.</h2></div><div class="section-note">Do not overstate these points</div></div>
+        <div class="caveat-list">
+          <div class="caveat"><span class="id">01</span><p><b>FY25 ED279 is preliminary.</b> The DOE portal report located for FY25 is dated April 23, 2025 and labeled “Governor’s Supplemental Budget.” A final certified FY25 portal report was not located.</p></div>
+          <div class="caveat"><span class="id">02</span><p><b>Part of FY25 Section 2 was truncated in the live read.</b> The operating total is implied as $1,591,328.20 by Section 3 arithmetic, but the disadvantaged-targeted lines and isolated-small-school line were not directly captured.</p></div>
+          <div class="caveat"><span class="id">03</span><p><b>Do not mix demographic columns or years.</b> Edgecomb’s FY25 ED279 uses 45.10% economic disadvantage and LD 318 rounds that to 45%; FY26 uses 52.53%. The 21% shown in LD 318 is the special-education rate, not economic disadvantage.</p></div>
+          <div class="caveat"><span class="id">04</span><p><b>Librarian lines are unusual.</b> FY26 reports 0.0 actual librarian and library-tech FTE while showing $6,215 and $5,503 adjusted salaries. Treat those figures as reported; the underlying display logic is not fully explained.</p></div>
+          <div class="caveat"><span class="id">05</span><p><b>FY28 Edgecomb effects are not yet final.</b> The new Lincoln County index and poverty-weighted mill will be set in future DOE calculations. Directional language is not a substitute for the published FY28 ED279.</p></div>
+          <div class="caveat"><span class="id">06</span><p><b>FY27 peer figures are estimates.</b> DOE marks the April 9, 2026 baseline “subject to change.” Great Salt Bay has no row because the CSD was dissolved; its successor structure was not verified.</p></div>
+          <div class="caveat"><span class="id">07</span><p><b>Transportation and special-education peer rates are directional.</b> They divide FY26 or January 2025 allocations by FY25 pupil counts. Edgecomb’s special-education summary-file amount and its FY26 ED279 amount use different bases that were not reconciled.</p></div>
+          <div class="caveat"><span class="id">08</span><p><b>Peer ED279 detail is incomplete.</b> FY26 Section 4 figures were not verified for Southport, RSU 02, or Great Salt Bay; FY27 baseline data is used instead and labeled accordingly.</p></div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <div class="section-head"><div><span class="section-no">09 / SOURCES</span><h2>Primary documents.</h2></div><div class="section-note">Links preserved from the research record</div></div>
+        <div class="source-list">
+          <div class="source-item" id="src-line"><strong>Maine DOE · ED279 Line by Line Information &amp; Calculations (October 1, 2025)</strong><a href="https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20ED279%20Line%20by%20Line%20Information%20%26%20Calculations%20-%2010.1.2025.pdf" target="_blank" rel="noopener">Official PDF</a><span>Formula definitions and data vintages for Sections 1–6.</span></div>
+          <div class="source-item"><strong>Maine DOE · ED279 Line by Line, FY27 updates (July 15, 2026)</strong><a href="https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20ED279%20Line%20by%20Line%20Information%20%26%20Calculations%20-%207.15.2026.pdf" target="_blank" rel="noopener">Official PDF</a><span>Updated guidance and the FY27 treatment of debt service.</span></div>
+          <div class="source-item"><strong>Edgecomb School Department · 2025–2026 ED279</strong><a href="https://www.edgecomblearns.org/s/ED279Report.pdf" target="_blank" rel="noopener">Full PDF</a><span>Primary source for the FY26 worked calculation and payment schedule; dated April 17, 2026.</span></div>
+          <div class="source-item"><strong>Maine DOE · public ED279 portal</strong><a href="https://neo.maine.gov/DOE/NEO/eps/public/ed279.aspx" target="_blank" rel="noopener">Open portal</a><span>Edgecomb reports use Org ID 166. Peer figures in the comparison use the common LD 318 Appendix C frame and the FY27 DOE baseline rather than mixing individual ED279 vintages.</span></div>
+          <div class="source-item"><strong>Maine DOE · EPS funding overview</strong><a href="https://www.maine.gov/doe/funding/gpa/eps" target="_blank" rel="noopener">Overview page</a><span>Official conceptual overview.</span></div>
+          <div class="source-item"><strong>Maine DOE · Analyzing changes to your ED279 (January 22, 2026)</strong><a href="https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20Analyzing%20changes%20to%20your%20ED%20279%20-%201.22.2026.pdf" target="_blank" rel="noopener">Official PDF</a><span>Year-over-year interpretation guidance.</span></div>
+          <div class="source-item" id="src-ld318"><strong>MEPRI · LD 318 Recommended Parameter Updates (March 2026 revision)</strong><a href="http://bpb-us-w2.wpmucdn.com/wpsites.maine.edu/dist/e/97/files/2026/03/LD-318_March2026_wAddendum_F.pdf" target="_blank" rel="noopener">Report PDF</a><span>Appendix C provides the common FY25 pupil, EPS, spending, and percent-of-EPS comparison for all six included districts.</span></div>
+          <div class="source-item" id="src-ld2226"><strong>Maine DOE · Amended LD 2226 Step 2 baseline by SAU (April 9, 2026)</strong><a href="https://maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20Amended%20LD%202226%20Step%202%20Poverty%20Factor%2010%25%20Variable%20Mill%20Rates%20by%20SAU%20-%204.9.2026.pdf" target="_blank" rel="noopener">Official PDF</a><span>FY27 baseline total EPS, required local, state share, and mill rates; DOE marks the estimates subject to change.</span></div>
+          <div class="source-item"><strong>LD 2050 fiscal note (January 30, 2026)</strong><a href="https://legiscan.com/ME/supplement/LD2050/id/648021/Maine-2025-LD2050-Fiscal_Note_Text.pdf" target="_blank" rel="noopener">Fiscal note PDF</a><span>Documents the voter-approved plan to dissolve Great Salt Bay CSD.</span></div>
+          <div class="source-item"><strong>LD 2050 legislative history</strong><a href="https://trackbill.com/bill/maine-legislative-document-2050-an-act-to-dissolve-the-great-salt-bay-community-school-district/2755197/" target="_blank" rel="noopener">Bill history</a><span>Reports emergency enactment and gubernatorial signature on March 3, 2026.</span></div>
+          <div class="source-item"><strong>Maine DOE · Amended LD 2226 simulation (April 8, 2026)</strong><a href="https://www1.maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20Amended%20LD%202226%20Summary%20Results%20with%20Details%20-%204.8.2026.pdf" target="_blank" rel="noopener">Official PDF</a><span>Three-step overhaul and statewide simulation.</span></div>
+          <div class="source-item"><strong>Educate Maine · How is Public Education Funded in Maine?</strong><a href="http://www.educatemaine.org/docs/17-029_EDME-FundingPrimer-FNL-web.pdf" target="_blank" rel="noopener">Funding primer PDF</a><span>Conceptual framework for state and local funding.</span></div>
+        </div>
+        <p class="closing">Figures are presented at their published precision. “FY25” means school year 2024–2025; “FY26” means school year 2025–2026. This guide is a reading aid for the ED279, not a replacement for the signed report or a legal interpretation of Maine statute.</p>
+      </section>
+    </div>
+  </main>
+</div>
+<script>
+(function () {
+  var snapshots = {
+    fy25: {
+      year: 'FY25 · 2024–2025',
+      note: 'Preliminary ED279 dated April 23, 2025; per-pupil figures from LD 318 Appendix C',
+      pupils: '155.0',
+      subPupils: 'Section 2A3 · two-year average',
+      total: '$2,176,821.11',
+      local: '$1,755,293.00',
+      subLocal: '6.620 mills · preliminary',
+      state: '$421,528.11',
+      value: '$265,150,000',
+      formula: '$265,150,000 × 0.006620 = $1,755,293.00 local; $2,176,821.11 − $1,755,293.00 = $421,528.11 state'
+    },
+    fy26: {
+      year: 'FY26 · 2025–2026',
+      note: 'Edgecomb ED279 · verified across school-site PDF and DOE portal',
+      pupils: '142.5',
+      subPupils: 'Section 2A3',
+      total: '$2,237,697.55',
+      local: '$1,773,575.00',
+      subLocal: '6.100 mills',
+      state: '$464,122.55',
+      value: '$290,750,000',
+      formula: '$290,750,000 × 0.006100 = $1,773,575.00 local; $2,237,697.55 − $1,773,575.00 = $464,122.55 state'
+    }
+  };
+  var ids = {
+    year: 'snap-year', note: 'snap-note', pupils: 'stat-pupils', subPupils: 'sub-pupils',
+    total: 'stat-total', local: 'stat-local', subLocal: 'sub-local', state: 'stat-state',
+    value: 'stat-value', formula: 'snap-formula'
+  };
+  document.querySelectorAll('[data-year]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var data = snapshots[button.getAttribute('data-year')];
+      Object.keys(ids).forEach(function (key) { document.getElementById(ids[key]).textContent = data[key]; });
+      document.querySelectorAll('[data-year]').forEach(function (b) { b.setAttribute('aria-pressed', b === button ? 'true' : 'false'); });
+    });
+  });
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.rail nav a'));
+  var sections = navLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          navLinks.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id); });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+})();
+</script>
+</body>
+</html>
