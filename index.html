@@ -311,7 +311,7 @@
     <nav>
       <a href="#snapshot" class="active">Year snapshot</a>
       <a href="#formula">Formula map</a>
-      <a href="#worked">FY26 ledger</a>
+      <a href="#worked">FY27 ledger</a>
       <a href="#validation">Peer comparison</a>
       <a href="#pupils">Pupil counts</a>
       <a href="#sections">Line by line</a>
@@ -320,15 +320,15 @@
       <a href="#caveats">Open questions</a>
       <a href="#sources">Sources</a>
     </nav>
-    <div class="stamp">Prepared from Maine DOE, Edgecomb's ED279, and MEPRI materials reviewed October 16, 2026.</div>
+    <div class="stamp">Prepared from Maine DOE, Edgecomb's ED279, and MEPRI materials reviewed October 21, 2026.</div>
   </aside>
 
   <main id="main">
     <header class="hero">
       <p class="eyebrow">Maine Essential Programs &amp; Services</p>
-      <h1>Follow Edgecomb’s verified FY26 dollars.</h1>
-      <p class="dek">A board-ready map of the ED279: what each section calculates, where each published input originates, how Edgecomb’s verified FY26 allocation reconciles to the penny, and how Edgecomb compares with every AOS 98 district plus the Newcastle, Damariscotta, and Dresden-area systems.</p>
-      <div class="source-stamp"><span class="dot"></span> Primary worked source: Edgecomb 2025–2026 ED279, dated April 17, 2026</div>
+      <h1>Follow Edgecomb’s verified FY27 dollars.</h1>
+      <p class="dek">A board-ready map of the ED279: what each section calculates, where each published input originates, how Edgecomb’s verified FY27 allocation reconciles to the penny, and how Edgecomb compares with every AOS 98 district plus the Newcastle, Damariscotta, and Dresden-area systems.</p>
+      <div class="source-stamp"><span class="dot"></span> Primary worked source: Edgecomb 2026–2027 ED279, printed October 21, 2026 (preliminary)</div>
     </header>
 
     <div class="content">
@@ -339,25 +339,26 @@
         </div>
         <div class="callout"><div>
           <strong>The figures previously labeled together as “FY25” belong to two different years.</strong>
-          <p>$14,044 per pupil and 155 pupils are FY25. The $2,237,697.55 allocation, $1,773,575 local contribution, 6.100 mills, $290.75M valuation, and $464,122.55 state share are FY26. They should not be combined.</p>
+          <p>$14,044 per pupil and 155 pupils are FY25. The $2,237,697.55 allocation, $1,773,575 local contribution, 6.100 mills, $290.75M valuation, and $464,122.55 state share are FY26. The worked year is now FY27: a $2,363,258.84 allocation, $1,873,763.66 local contribution, 5.645 mills, $331.93M valuation, and $489,495.18 state share before adjustments. They should not be combined.</p>
         </div></div>
         <div class="toggle-bar" role="group" aria-label="Choose fiscal year">
           <button type="button" data-year="fy25" aria-pressed="false">FY25 · 2024–25</button>
-          <button type="button" data-year="fy26" aria-pressed="true">FY26 · 2025–26</button>
+          <button type="button" data-year="fy26" aria-pressed="false">FY26 · 2025–26</button>
+          <button type="button" data-year="fy27" aria-pressed="true">FY27 · 2026–27</button>
         </div>
         <div class="snapshot" aria-live="polite">
           <div class="snapshot-header">
-            <span class="year" id="snap-year">FY26 · 2025–2026</span>
-            <span class="note" id="snap-note">Edgecomb ED279 · verified across school-site PDF and DOE portal</span>
+            <span class="year" id="snap-year">FY27 · 2026–2027</span>
+            <span class="note" id="snap-note">Preliminary ED279 printed October 21, 2026 · DOE portal, Org ID 166</span>
           </div>
           <div class="stat-grid">
-            <div class="stat"><span class="label">Resident pupils<br>(2-year average)</span><span class="value" id="stat-pupils">142.5</span><span class="sub" id="sub-pupils">Section 2A3</span></div>
-            <div class="stat"><span class="label">Total EPS<br>allocation</span><span class="value" id="stat-total">$2,237,697.55</span><span class="sub">Section 3 total</span></div>
-            <div class="stat"><span class="label">Required local<br>contribution</span><span class="value" id="stat-local">$1,773,575.00</span><span class="sub" id="sub-local">6.100 mills</span></div>
-            <div class="stat"><span class="label">State<br>contribution</span><span class="value" id="stat-state">$464,122.55</span><span class="sub">Before Section 5B adjustments</span></div>
-            <div class="stat"><span class="label">State-certified<br>valuation</span><span class="value" id="stat-value">$290,750,000</span><span class="sub">Section 4B</span></div>
+            <div class="stat"><span class="label">Resident pupils<br>(2-year average)</span><span class="value" id="stat-pupils">140.0</span><span class="sub" id="sub-pupils">Section 2A3 · two-year average</span></div>
+            <div class="stat"><span class="label">Total EPS<br>allocation</span><span class="value" id="stat-total">$2,363,258.84</span><span class="sub">Section 3 total</span></div>
+            <div class="stat"><span class="label">Required local<br>contribution</span><span class="value" id="stat-local">$1,873,763.66</span><span class="sub" id="sub-local">5.645 mills</span></div>
+            <div class="stat"><span class="label">State<br>contribution</span><span class="value" id="stat-state">$489,495.18</span><span class="sub">Before Section 5B adjustments</span></div>
+            <div class="stat"><span class="label">State-certified<br>valuation</span><span class="value" id="stat-value">$331,933,333</span><span class="sub">Section 4B</span></div>
           </div>
-          <p class="formula-line" id="snap-formula">$290,750,000 × 0.006100 = $1,773,575.00 local; $2,237,697.55 − $1,773,575.00 = $464,122.55 state</p>
+          <p class="formula-line" id="snap-formula">$331,933,333 × 0.005645 = $1,873,763.66 local; $2,363,258.84 − $1,873,763.66 = $489,495.18 state</p>
         </div>
       </section>
 
@@ -368,45 +369,44 @@
         </div>
         <p class="lede">In one sentence: DOE builds Edgecomb-specific operating rates, applies them to resident pupils and weights, adds other subsidizable costs, then splits the result between the town and state according to valuation and the statewide mill expectation.</p>
         <div class="flow">
-          <article class="flow-step"><div class="number">1</div><div class="title"><small>BUILD THE RATES</small><h3>Per-pupil operating rates</h3></div><div class="desc"><p>Attending pupils determine model staff FTEs. State salary-matrix values, benefit factors, support costs, and the regional index produce elementary and secondary rates.</p><code>FY26: $8,573 elementary · $8,970 secondary</code><br><a class="source-link" href="#src-line">DOE line-by-line method ↓</a></div></article>
-          <article class="flow-step"><div class="number">2</div><div class="title"><small>APPLY THE RATES</small><h3>Operating allocation</h3></div><div class="desc"><p>Resident pupils × Section 1 rates, plus economic-disadvantage and multilingual weights, targeted funds, and Edgecomb’s isolated-small-school adjustment.</p><code>FY26: $1,622,973.89</code></div></article>
-          <article class="flow-step"><div class="number">3</div><div class="title"><small>ADD OTHER COSTS</small><h3>Other subsidizable costs</h3></div><div class="desc"><p>Gifted &amp; talented, special education, transportation, teacher retirement, and debt/insured value factor are added separately.</p><code>FY26 total allocation: $2,237,697.55</code></div></article>
-          <article class="flow-step"><div class="number">4</div><div class="title"><small>SPLIT THE BILL</small><h3>Required local and state shares</h3></div><div class="desc"><p>Required local is the lesser of the total allocation or state-certified valuation × the statewide mill expectation. State pays the remainder.</p><code>min($2,237,697.55, $290,750,000 × .006100)</code></div></article>
-          <article class="flow-step"><div class="number">5</div><div class="title"><small>ADJUST</small><h3>Final allocation</h3></div><div class="desc"><p>DOE applies state-only items such as education service center funding and MaineCare Seed. Edgecomb’s FY26 adjusted state contribution is $442,526.25.</p></div></article>
+          <article class="flow-step"><div class="number">1</div><div class="title"><small>BUILD THE RATES</small><h3>Per-pupil operating rates</h3></div><div class="desc"><p>Attending pupils determine model staff FTEs. State salary-matrix values, benefit factors, support costs, and the regional index produce elementary and secondary rates.</p><code>FY27: $8,698 elementary · $9,298 secondary</code><br><a class="source-link" href="#src-line">DOE line-by-line method ↓</a></div></article>
+          <article class="flow-step"><div class="number">2</div><div class="title"><small>APPLY THE RATES</small><h3>Operating allocation</h3></div><div class="desc"><p>Resident pupils × Section 1 rates, plus economic-disadvantage and multilingual weights, targeted funds, and Edgecomb’s isolated-small-school adjustment.</p><code>FY27: $1,528,708.36</code></div></article>
+          <article class="flow-step"><div class="number">3</div><div class="title"><small>ADD OTHER COSTS</small><h3>Other subsidizable costs</h3></div><div class="desc"><p>Gifted &amp; talented, special education, transportation, teacher retirement, and debt/insured value factor are added separately.</p><code>FY27 total allocation: $2,363,258.84</code></div></article>
+          <article class="flow-step"><div class="number">4</div><div class="title"><small>SPLIT THE BILL</small><h3>Required local and state shares</h3></div><div class="desc"><p>Required local is the lesser of the total allocation or state-certified valuation × the statewide mill expectation. State pays the remainder.</p><code>min($2,363,258.84, $331,933,333 × .005645)</code></div></article>
+          <article class="flow-step"><div class="number">5</div><div class="title"><small>ADJUST</small><h3>Final allocation</h3></div><div class="desc"><p>DOE applies state-only items such as education service center funding and MaineCare Seed. Edgecomb’s FY27 adjusted state contribution is $484,672.53.</p></div></article>
           <article class="flow-step"><div class="number">6</div><div class="title"><small>PAY</small><h3>Monthly subsidy</h3></div><div class="desc"><p>The schedule shows monthly EPS checks, quarterly MaineCare Seed offsets, CTE subsidy, and construction aid. It is the SAU’s subsidy checkbook.</p></div></article>
         </div>
       </section>
 
       <section id="worked">
         <div class="section-head">
-          <div><span class="section-no">02 / WORKED EXAMPLE</span><h2>Edgecomb FY26, reconciled.</h2></div>
-          <div class="section-note">Dollar figures from the 2025–2026 ED279</div>
+          <div><span class="section-no">02 / WORKED EXAMPLE</span><h2>Edgecomb FY27, reconciled.</h2></div>
+          <div class="section-note">Dollar figures from the 2026–2027 ED279</div>
         </div>
         <div class="ledger">
-          <div class="ledger-top"><div><h3>Allocation ledger</h3><p>From operating allocation to total EPS</p></div><div class="total"><span>Section 3 total</span><strong>$2,237,697.55</strong></div></div>
+          <div class="ledger-top"><div><h3>Allocation ledger</h3><p>From operating allocation to total EPS</p></div><div class="total"><span>Section 3 total</span><strong>$2,363,258.84</strong></div></div>
           <div class="ledger-group">
-            <div class="ledger-row"><div><b>Section 2 · Basic allocation</b><span class="muted">PreK, K–8, and 9–12 resident pupil counts × rates</span></div><strong>$1,268,332.00</strong></div>
-            <div class="ledger-row"><div><b>Weighted allocation</b><span class="muted">Economic disadvantage plus 1 multilingual learner</span></div><strong>$106,078.12</strong></div>
-            <div class="ledger-row"><div><b>Targeted funds</b><span class="muted">Assessment, technology, PreK/K–2, disadvantaged</span></div><strong>$102,831.06</strong></div>
-            <div class="ledger-row"><div><b>Isolated small school</b><span class="muted">PreK–8 building adjustment</span></div><strong>$145,732.71</strong></div>
-            <div class="ledger-row ledger-subtotal"><div>Operating allocation total</div><strong>$1,622,973.89</strong></div>
+            <div class="ledger-row"><div><b>Section 2 · Basic allocation</b><span class="muted">PreK, K–8, and 9–12 resident pupil counts × rates</span></div><strong>$1,225,524.00</strong></div>
+            <div class="ledger-row"><div><b>Weighted + targeted funds</b><span class="muted">Economic-disadvantage and multilingual weights; assessment, technology, PreK/K–2, disadvantaged (combined — see audit note 08)</span></div><strong>$169,607.80</strong></div>
+            <div class="ledger-row"><div><b>Isolated small school</b><span class="muted">PreK–8 building adjustment</span></div><strong>$133,576.56</strong></div>
+            <div class="ledger-row ledger-subtotal"><div>Operating allocation total</div><strong>$1,528,708.36</strong></div>
           </div>
           <div class="ledger-group">
-            <div class="ledger-row"><div><b>Gifted &amp; talented</b><span class="muted">$3,344.00 × 102.60%</span></div><strong>$3,430.94</strong></div>
-            <div class="ledger-row"><div><b>Special education EPS</b></div><strong>$470,774.16</strong></div>
+            <div class="ledger-row"><div><b>Gifted &amp; talented</b><span class="muted">$3,344.00 × 103.50%</span></div><strong>$3,461.04</strong></div>
+            <div class="ledger-row"><div><b>Special education EPS</b></div><strong>$640,507.81</strong></div>
             <div class="ledger-row"><div><b>High-cost out-of-district</b></div><strong>$0.00</strong></div>
-            <div class="ledger-row"><div><b>Transportation</b></div><strong>$78,369.94</strong></div>
-            <div class="ledger-row ledger-subtotal"><div>Other subsidizable costs</div><strong>$552,575.04</strong></div>
+            <div class="ledger-row"><div><b>Transportation</b></div><strong>$122,506.75</strong></div>
+            <div class="ledger-row ledger-subtotal"><div>Other subsidizable costs</div><strong>$766,475.60</strong></div>
           </div>
           <div class="ledger-group">
-            <div class="ledger-row"><div><b>Teacher retirement</b><span class="muted">MainePERS normalized cost</span></div><strong>$53,370.81</strong></div>
-            <div class="ledger-row"><div><b>Debt / insured value factor</b><span class="muted">2023–24 base</span></div><strong>$8,777.81</strong></div>
+            <div class="ledger-row"><div><b>Teacher retirement</b><span class="muted">MainePERS normalized cost</span></div><strong>$54,838.51</strong></div>
+            <div class="ledger-row"><div><b>Debt service</b><span class="muted">Approved leases + insured value factor</span></div><strong>$13,236.37</strong></div>
           </div>
-          <div class="ledger-equation">$1,622,973.89 + $552,575.04 + $53,370.81 + $8,777.81 = $2,237,697.55</div>
+          <div class="ledger-equation">$1,528,708.36 + $766,475.60 + $54,838.51 + $13,236.37 = $2,363,258.84</div>
         </div>
         <div class="split">
-          <div class="split-card"><h3>Section 4 split</h3><p>Edgecomb’s valuation-based capacity is below the allocation, so the town pays the full 6.100-mill expectation and the state fills the gap.</p><div class="sharebar" aria-label="Local share 79.26 percent; state share 20.74 percent"><div class="local">Local 79.26%</div><div class="state">20.74%</div></div><div class="equation">$290,750,000 × 0.006100 = $1,773,575.00<br>$2,237,697.55 − $1,773,575.00 = $464,122.55</div></div>
-          <div class="split-card"><h3>Then Section 5 adjusts</h3><p><b>+$3,976.20</b> education service center member allocation</p><p><b>−$25,572.50</b> MaineCare Seed (private)</p><div class="equation">$464,122.55 + $3,976.20 − $25,572.50 = $442,526.25 adjusted state contribution</div></div>
+          <div class="split-card"><h3>Section 4 split</h3><p>Edgecomb’s valuation-based capacity is below the allocation, so the town pays the full 5.645-mill expectation and the state fills the gap.</p><div class="sharebar" aria-label="Local share 79.29 percent; state share 20.71 percent"><div class="local">Local 79.29%</div><div class="state">20.71%</div></div><div class="equation">$331,933,333 × 0.005645 = $1,873,763.66<br>$2,363,258.84 − $1,873,763.66 = $489,495.18</div></div>
+          <div class="split-card"><h3>Then Section 5 adjusts</h3><p><b>+$3,919.80</b> education service center member allocation</p><p><b>−$8,742.45</b> MaineCare Seed (private)</p><div class="equation">$489,495.18 + $3,919.80 − $8,742.45 = $484,672.53 adjusted state contribution</div></div>
         </div>
       </section>
 
@@ -416,8 +416,8 @@
           <div class="section-note">AOS 98 + Newcastle, Damariscotta, and Dresden-area systems</div>
         </div>
         <div class="analysis-banner">
-          <div><h3>Not the highest-cost district—still one of the hardest places to fund each dollar.</h3><p>In FY25 Edgecomb spent less per pupil than the other three AOS 98 districts. But in the FY27 baseline it faces the full 5.760-mill expectation, while Georgetown, Southport, and Boothbay–Boothbay Harbor are minimum contributors with far lower mill rates. Edgecomb’s state share is meaningful; its property value per pupil is simply much thinner.</p></div>
-          <div class="headline-number">$1.99M<small>FY26 valuation per Section 4 pupil</small></div>
+          <div><h3>Not the highest-cost district—still one of the hardest places to fund each dollar.</h3><p>In FY25 Edgecomb spent less per pupil than the other three AOS 98 districts. But in its FY27 ED279 it faces the full 5.645-mill expectation, while Georgetown, Southport, and Boothbay–Boothbay Harbor are minimum contributors with far lower mill rates. Edgecomb’s state share is meaningful; its property value per pupil is simply much thinner.</p></div>
+          <div class="headline-number">$2.41M<small>FY27 valuation per Section 4 pupil</small></div>
         </div>
 
         <div class="compare-block">
@@ -442,25 +442,25 @@
           <table class="mini-table comparison-table" aria-label="FY27 local share and mill comparison">
             <thead><tr><th>District</th><th>Total EPS</th><th>Required local</th><th>State share</th><th>Local share</th><th>EPS mill</th></tr></thead>
             <tbody>
-              <tr><td data-label="District">Georgetown</td><td data-label="Total EPS">$1.648M</td><td data-label="Local">$1.509M</td><td data-label="State">$138,732</td><td data-label="Local share">91.6%</td><td data-label="Mill">1.881</td></tr>
-              <tr><td data-label="District">Boothbay–Boothbay Harbor CSD</td><td data-label="Total EPS">$6.993M</td><td data-label="Local">$6.031M</td><td data-label="State">$962,472</td><td data-label="Local share">86.2%</td><td data-label="Mill">2.268</td></tr>
-              <tr><td data-label="District">Southport</td><td data-label="Total EPS">$614,006</td><td data-label="Local">$505,497</td><td data-label="State">$108,509</td><td data-label="Local share">82.3%</td><td data-label="Mill">0.604</td></tr>
-              <tr><td data-label="District"><b>Edgecomb</b></td><td data-label="Total EPS"><b>$2.414M</b></td><td data-label="Local"><b>$1.912M</b></td><td data-label="State"><b>$502,514</b></td><td data-label="Local share"><b>79.2%</b></td><td data-label="Mill"><b>5.760</b></td></tr>
-              <tr><td data-label="District">RSU 02</td><td data-label="Total EPS">$21.118M</td><td data-label="Local">$9.396M</td><td data-label="State">$11.722M</td><td data-label="Local share">44.5%</td><td data-label="Mill">5.760</td></tr>
+              <tr><td data-label="District">Georgetown</td><td data-label="Total EPS">$1.594M</td><td data-label="Local">$1.455M</td><td data-label="State">$138,732</td><td data-label="Local share">91.3%</td><td data-label="Mill">1.814</td></tr>
+              <tr><td data-label="District">Boothbay–Boothbay Harbor CSD</td><td data-label="Total EPS">$6.884M</td><td data-label="Local">$5.921M</td><td data-label="State">$962,472</td><td data-label="Local share">86.0%</td><td data-label="Mill">2.227</td></tr>
+              <tr><td data-label="District">Southport</td><td data-label="Total EPS">$602,421</td><td data-label="Local">$495,155</td><td data-label="State">$107,267</td><td data-label="Local share">82.2%</td><td data-label="Mill">0.592</td></tr>
+              <tr><td data-label="District"><b>Edgecomb</b></td><td data-label="Total EPS"><b>$2.363M</b></td><td data-label="Local"><b>$1.874M</b></td><td data-label="State"><b>$489,495</b></td><td data-label="Local share"><b>79.3%</b></td><td data-label="Mill"><b>5.645</b></td></tr>
+              <tr><td data-label="District">RSU 02</td><td data-label="Total EPS">$20.835M</td><td data-label="Local">$9.209M</td><td data-label="State">$11.626M</td><td data-label="Local share">44.2%</td><td data-label="Mill">5.645</td></tr>
             </tbody>
           </table>
-          <p class="table-note">DOE labels these FY27 baseline estimates “subject to change.” Great Salt Bay is absent because the CSD was dissolved in March 2026. Source: <a href="#src-ld2226">DOE’s April 9, 2026 baseline table ↓</a>.</p>
+          <p class="table-note">FY27 ED279 Section 5A amounts, from DOE’s FY27 GPA comparison; the FY27 printouts are preliminary and DOE may adjust them during the year. Great Salt Bay is absent because the CSD was dissolved in March 2026. Source: <a href="#src-fy27gpa">DOE’s FY27 GPA comparison (March 3, 2026) ↓</a>.</p>
         </div>
 
         <div class="compare-block">
           <h3>What specifically works against Edgecomb</h3>
           <div class="driver-grid">
-            <article class="driver-card"><span class="driver-label">01 · SMALL SCALE</span><h3>107 attending pupils carry building-level fixed costs.</h3><p>FY26 attendance averaged 107.0. Administration, facilities, and classroom staffing move in steps, so Edgecomb cannot shrink costs one student at a time. RSU 02 spreads its system over 1,432 subsidizable pupils and spends $1,294 less per pupil than Edgecomb.</p><div class="math">$19,247 − $17,953 = $1,294 per pupil</div></article>
+            <article class="driver-card"><span class="driver-label">01 · SMALL SCALE</span><h3>108.5 attending pupils carry building-level fixed costs.</h3><p>FY27 attendance averaged 108.5. Administration, facilities, and classroom staffing move in steps, so Edgecomb cannot shrink costs one student at a time. RSU 02 spreads its system over 1,432 subsidizable pupils and spends $1,294 less per pupil than Edgecomb.</p><div class="math">$19,247 − $17,953 = $1,294 per pupil</div></article>
             <article class="driver-card"><span class="driver-label">02 · ABOVE-MODEL SPENDING</span><h3>Scale explains pressure; 137% of EPS measures the remaining choice.</h3><p>Edgecomb’s FY25 actual spending exceeded its modeled EPS level by $806,465. A 120%-of-EPS benchmark would be about $370,000 below Edgecomb’s reported level; that is a scenario, not a claim that every dollar is immediately removable.</p><div class="math">($19,247 − $14,044) × 155 = $806,465<br>17% × $14,044 × 155 ≈ $370,000</div></article>
-            <article class="driver-card"><span class="driver-label">03 · THIN TAX BASE PER PUPIL</span><h3>The state formula helps, but each mill raises less.</h3><p>Edgecomb’s FY26 valuation was $290.75M across 146 Section 4 pupils, or about $1.99M per pupil. The FY27 implied ratios for Georgetown, Boothbay–Boothbay Harbor, and Southport are roughly 3–12 times higher. That is why Edgecomb can have AOS 98’s lowest local-share percentage and still its highest EPS mill.</p><div class="math">$290,750,000 ÷ 146 = $1,991,438 per pupil</div></article>
-            <article class="driver-card"><span class="driver-label">04 · FORMULA RELIEF IS PARTIAL</span><h3>The isolated-school adjustment dents the gap; it does not erase it.</h3><p>Edgecomb’s verified FY26 adjustment is $145,732.71. That equals 18.1% of the FY25 spending-above-EPS gap, but roughly 105% of Edgecomb’s gap to the statewide median. Put differently: it brings Edgecomb near median spending, not down to its own EPS allocation.</p><div class="math">$145,732.71 ÷ $806,465 = 18.1%<br>($19,247 − $18,350) × 155 = $139,035</div></article>
+            <article class="driver-card"><span class="driver-label">03 · THIN TAX BASE PER PUPIL</span><h3>The state formula helps, but each mill raises less.</h3><p>Edgecomb’s FY27 valuation was $331.93M across 138 Section 4 pupils, or about $2.41M per pupil. The implied valuations behind its peers’ required-local figures run far larger — roughly $802M for Georgetown, $836M for Southport, and $2.66B for Boothbay–Boothbay Harbor. That is why Edgecomb can have AOS 98’s lowest local-share percentage and still its highest EPS mill.</p><div class="math">$331,933,333 ÷ 138 = $2,405,314 per pupil</div></article>
+            <article class="driver-card"><span class="driver-label">04 · FORMULA RELIEF IS PARTIAL</span><h3>The isolated-school adjustment dents the gap; it does not erase it.</h3><p>Edgecomb’s verified FY27 adjustment is $133,576.56. That equals 16.6% of the FY25 spending-above-EPS gap, but roughly 96% of Edgecomb’s gap to the statewide median. Put differently: it brings Edgecomb near median spending, not down to its own EPS allocation.</p><div class="math">$133,576.56 ÷ $806,465 = 16.6%<br>($19,247 − $18,350) × 155 = $139,035</div></article>
           </div>
-          <div class="callout" style="margin-top:18px"><div><strong>Two commonly blamed categories do not explain Edgecomb’s position.</strong><p>Using DOE comparison files with a mixed-year pupil denominator, Edgecomb’s transportation allocation is approximately $506 per pupil—the lowest among the five included districts with data—and its special-education comparison amount is about $1,957 per pupil, lowest among the four AOS 98 districts. These are directional comparisons only: Edgecomb’s separate FY26 ED279 special-education line is $470,774.16, a different basis that the source record did not reconcile.</p></div></div>
+          <div class="callout" style="margin-top:18px"><div><strong>Two commonly blamed categories do not explain Edgecomb’s position.</strong><p>Using DOE comparison files with a mixed-year pupil denominator, Edgecomb’s transportation allocation is approximately $506 per pupil—the lowest among the five included districts with data—and its special-education comparison amount is about $1,957 per pupil, lowest among the four AOS 98 districts. These are directional comparisons only: Edgecomb’s separate FY27 ED279 special-education line is $640,507.81, a different basis that the source record did not reconcile.</p></div></div>
         </div>
 
         <div class="compare-block">
@@ -488,13 +488,13 @@
       <section id="pupils">
         <div class="section-head">
           <div><span class="section-no">04 / DENOMINATORS</span><h2>“Pupils” means four different things.</h2></div>
-          <div class="section-note">FY26 unless noted</div>
+          <div class="section-note">FY27 unless noted</div>
         </div>
         <div class="pupil-grid">
-          <article class="pupil-card"><span class="big">107.0</span><span class="label">Attending average</span><p>Students educated at Eddy School: 101.0 in October 2023 and 113.0 in October 2024, averaged. This drives Section 1 rates.</p></article>
-          <article class="pupil-card"><span class="big">142.5</span><span class="label">Resident average</span><p>All Edgecomb-resident publicly funded pupils, including high-school students tuitioned out. This drives most of Section 2.</p></article>
-          <article class="pupil-card"><span class="big">141.0</span><span class="label">October 2024 residents</span><p>The single most-recent October count: 11.0 PreK + 88.0 K–8 + 42.0 grades 9–12. It is not the FY25 155 average.</p></article>
-          <article class="pupil-card"><span class="big">146.0</span><span class="label">Section 4A pupils</span><p>The allocation-distribution count used in Section 4. The report distinguishes this from Section 2’s resident average.</p></article>
+          <article class="pupil-card"><span class="big">108.5</span><span class="label">Attending average</span><p>Students educated at Eddy School: 113.0 in October 2024 and 104.0 in October 2025, averaged. This drives Section 1 rates.</p></article>
+          <article class="pupil-card"><span class="big">140.0</span><span class="label">Resident average</span><p>All Edgecomb-resident publicly funded pupils, including high-school students tuitioned out. This drives most of Section 2.</p></article>
+          <article class="pupil-card"><span class="big">139.0</span><span class="label">October 2025 residents</span><p>The single most-recent October count: 7.0 PreK + 90.0 K–8 + 42.0 grades 9–12. It is not the FY25 155 average.</p></article>
+          <article class="pupil-card"><span class="big">138.0</span><span class="label">Section 4A pupils</span><p>The allocation-distribution count used in Section 4. The report distinguishes this from Section 2’s resident average.</p></article>
         </div>
         <div class="reconcile"><strong>Why FY25 says 155:</strong> the FY25 two-year resident average uses October 2022 (166.0) and October 2023 (144.0): (166 + 144) ÷ 2 = 155. Its attending average was 105.0. The per-pupil figure $14,044 is $2,176,821.11 ÷ 155, rounded.</div>
       </section>
@@ -507,29 +507,29 @@
 
         <details open><summary><span class="tag">§1</span><span>Computation of EPS per-pupil rates</span><span class="chev">＋</span></summary><div class="detail-body">
           <p><b>Purpose:</b> build Edgecomb-specific elementary and secondary operating rates. The result funds regular education operations only.</p>
-          <ul><li><b>Attending pupils:</b> two-year average of October 1 enrollment from Synergy, by grade band.</li><li><b>Model staff FTE:</b> attending pupils ÷ EPS staffing ratio for eight staff groups. For SAUs under 1,200, example teacher ratios are 15:1 in PreK–K, 17:1 in grades 1–8, and 16:1 in grades 9–12.</li><li><b>Actual FTE:</b> NEO Staff module, October 30 snapshot. The ratio <i>EPS FTE ÷ actual FTE</i> scales matrix salary.</li><li><b>Salary:</b> each actual employee is placed on the state matrix by experience and education. Matrix salaries are summed, then scaled by percent of EPS.</li><li><b>Benefits:</b> 26% for teachers/guidance/librarians/health; 40% for ed tech/library tech/clerical; 21% for administrators.</li><li><b>Other support:</b> statewide per-pupil amounts for substitutes, supplies, professional development, instructional leadership, activities, system administration, and operations/maintenance.</li><li><b>Regional index:</b> salaries + substitutes are adjusted by the labor-market index. Edgecomb’s FY26 index is 1.02.</li></ul>
-          <table class="mini-table"><thead><tr><th>FY26 component</th><th>Input / arithmetic</th><th>Amount</th></tr></thead><tbody><tr><td data-label="Component">Teachers</td><td data-label="Arithmetic">6.46 EPS FTE ÷ 10.1 actual FTE × $648,837 matrix salary</td><td data-label="Amount">$415,178</td></tr><tr><td data-label="Component">Teacher-family benefits</td><td data-label="Arithmetic">26% × $451,025</td><td data-label="Amount">$117,267</td></tr><tr><td data-label="Component">Operations &amp; maintenance</td><td data-label="Arithmetic">$1,267 × 107 attending</td><td data-label="Amount">$135,569</td></tr><tr><td data-label="Component">Regional adjustment</td><td data-label="Arithmetic">1.02 index</td><td data-label="Amount">+$10,927</td></tr><tr><td data-label="Component">Section 1 total</td><td data-label="Arithmetic">Total costs ÷ 107.0 attending</td><td data-label="Amount">$917,259</td></tr></tbody></table>
-          <p><b>Result:</b> $8,573 elementary and $8,970 secondary.</p>
+          <ul><li><b>Attending pupils:</b> two-year average of October 1 enrollment from Synergy, by grade band.</li><li><b>Model staff FTE:</b> attending pupils ÷ EPS staffing ratio for eight staff groups. For SAUs under 1,200, example teacher ratios are 15:1 in PreK–K, 17:1 in grades 1–8, and 16:1 in grades 9–12.</li><li><b>Actual FTE:</b> NEO Staff module, October 30 snapshot. The ratio <i>EPS FTE ÷ actual FTE</i> scales matrix salary.</li><li><b>Salary:</b> each actual employee is placed on the state matrix by experience and education. Matrix salaries are summed, then scaled by percent of EPS.</li><li><b>Benefits:</b> 26% for teachers/guidance/librarians/health; 40% for ed tech/library tech/clerical; 21% for administrators.</li><li><b>Other support:</b> statewide per-pupil amounts for substitutes, supplies, professional development, instructional leadership, activities, system administration, and operations/maintenance.</li><li><b>Regional index:</b> salaries + substitutes are adjusted by the labor-market index. Edgecomb’s FY27 index is 1.02.</li></ul>
+          <table class="mini-table"><thead><tr><th>FY27 component</th><th>Input / arithmetic</th><th>Amount</th></tr></thead><tbody><tr><td data-label="Component">Teachers</td><td data-label="Arithmetic">6.57 EPS FTE ÷ 10.3 actual FTE × $649,476 matrix salary</td><td data-label="Amount">$414,277</td></tr><tr><td data-label="Component">Teacher-family benefits</td><td data-label="Arithmetic">26% × $459,340</td><td data-label="Amount">$119,428</td></tr><tr><td data-label="Component">Other benefits</td><td data-label="Arithmetic">40% × $58,172 (techs + clerical) + 21% × $35,485 (admin)</td><td data-label="Amount">$30,721</td></tr><tr><td data-label="Component">Operations &amp; maintenance</td><td data-label="Arithmetic">$1,311 × 108.5 attending</td><td data-label="Amount">$142,244</td></tr><tr><td data-label="Component">Section 1 total</td><td data-label="Arithmetic">Total costs ÷ 108.5 attending</td><td data-label="Amount">$943,693</td></tr></tbody></table>
+          <p><b>Result:</b> $8,698 elementary and $9,298 secondary.</p>
         </div></details>
 
         <details><summary><span class="tag">§2</span><span>Operating cost allocations</span><span class="chev">＋</span></summary><div class="detail-body">
           <p><b>Purpose:</b> apply Section 1 rates to resident pupils, then add demographic weights and targeted funds.</p>
-          <ul><li><b>Resident pupils:</b> Synergy October 1 records; PreK uses the most recent October, while K–8 and 9–12 use two-year averages. Residents tuitioned to another school remain included.</li><li><b>Basic FY26:</b> 11.0 PreK × $8,573 + 93.0 K–8 × $8,573 + 42.0 grades 9–12 × $8,970 = $1,268,332.</li><li><b>Economic disadvantage:</b> the highest reported percentage across K–8, 9–12, or total is applied with a 0.15 weight. FY26 ED279 uses 52.53%.</li><li><b>Multilingual learners:</b> tiered weights; Edgecomb’s one K–8 learner uses 0.70: 1.0 × 0.70 × $8,573 = $6,001.10.</li><li><b>Targeted FY26 rates:</b> assessment $56/pupil; technology $123 elementary and $369 secondary; PreK and K–2 use a 0.10 weight; disadvantaged pupils receive an additional 0.05 weight.</li><li><b>Isolated small school:</b> computed per qualifying building; Edgecomb FY26 receives $145,732.71.</li></ul>
-          <p><b>Result:</b> $1,622,973.89 operating allocation.</p>
+          <ul><li><b>Resident pupils:</b> Synergy October 1 records; PreK uses the most recent October, while K–8 and 9–12 use two-year averages. Residents tuitioned to another school remain included.</li><li><b>Basic FY27:</b> 7.0 PreK × $8,698 + 89.0 K–8 × $8,698 + 42.0 grades 9–12 × $9,298 = $1,225,524.</li><li><b>Economic disadvantage:</b> the highest reported percentage across K–8, 9–12, or total is applied with a 0.15 weight. FY27 ED279 uses 40.21%.</li><li><b>Multilingual learners:</b> tiered weights; Edgecomb’s one K–8 learner uses 0.70: 1.0 × 0.70 × $8,698 = $6,088.60.</li><li><b>Targeted FY27 rates:</b> assessment $58/pupil; technology $127 elementary and $382 secondary; PreK and K–2 use a 0.10 weight; disadvantaged pupils receive an additional 0.05 weight.</li><li><b>Isolated small school:</b> computed per qualifying building; Edgecomb FY27 receives $133,576.56.</li></ul>
+          <p><b>Result:</b> $1,528,708.36 operating allocation.</p>
         </div></details>
 
         <details><summary><span class="tag">§3</span><span>Other subsidizable costs</span><span class="chev">＋</span></summary><div class="detail-body">
-          <ul><li><b>Gifted &amp; talented:</b> lesser of audited actual or budgeted spending, inflated. FY26 uses 102.60%.</li><li><b>Special education:</b> a formula combining base, prevalence above 15%, small-size adjustment when fewer than 20 special-ed pupils, high-cost in-district, and a maintenance-of-effort hold-harmless. High-cost out-of-district is separate and based on costs above state thresholds.</li><li><b>Transportation:</b> prior-year allocation inflated and bounded between 90% and 105% of net operating expenditures, using the greater of pupil-density or miles-driven models.</li><li><b>Teacher retirement:</b> a current-year normalized employer cost estimate from MainePERS.</li><li><b>Debt / IVF:</b> state-approved principal and interest, approved leases, and private-school insured-value-factor tuition amounts, capped as described by DOE.</li></ul>
-          <p><b>FY26 result:</b> $552,575.04 other costs + $53,370.81 retirement + $8,777.81 IVF, added to Section 2.</p>
+          <ul><li><b>Gifted &amp; talented:</b> lesser of audited actual or budgeted spending, inflated. FY27 uses 103.50%.</li><li><b>Special education:</b> a formula combining base, prevalence above 15%, small-size adjustment when fewer than 20 special-ed pupils, high-cost in-district, and a maintenance-of-effort hold-harmless. High-cost out-of-district is separate and based on costs above state thresholds.</li><li><b>Transportation:</b> prior-year allocation inflated and bounded between 90% and 105% of net operating expenditures, using the greater of pupil-density or miles-driven models.</li><li><b>Teacher retirement:</b> a current-year normalized employer cost estimate from MainePERS.</li><li><b>Debt / IVF:</b> state-approved principal and interest, approved leases, and private-school insured-value-factor tuition amounts, capped as described by DOE.</li></ul>
+          <p><b>FY27 result:</b> $766,475.60 other costs + $54,838.51 retirement + $13,236.37 debt service, added to Section 2.</p>
         </div></details>
 
         <details><summary><span class="tag">§4</span><span>Required local contribution and state share</span><span class="chev">＋</span></summary><div class="detail-body">
           <ul><li><b>Valuation:</b> lesser of the most recent Maine Revenue Services certified valuation or the three-year average.</li><li><b>Mill expectation:</b> set annually through the state budget from statewide education cost, available state resources, and statewide valuation. It is not Edgecomb’s actual property-tax rate.</li><li><b>Rule:</b> required local contribution = lesser of total EPS allocation or valuation × mill expectation. State contribution = total allocation − required local.</li></ul>
-          <div class="equation">min($2,237,697.55, $290,750,000 × .006100) = $1,773,575.00 local</div>
+          <div class="equation">min($2,363,258.84, $331,933,333 × .005645) = $1,873,763.66 local</div>
         </div></details>
 
-        <details><summary><span class="tag">§5</span><span>Totals and adjustments</span><span class="chev">＋</span></summary><div class="detail-body"><p>Section 5 starts with local and state totals, applies minimum-contributor rules where relevant, then adds state-only items. Edgecomb’s FY26 B-adjustments are +$3,976.20 for education service center membership and −$25,572.50 MaineCare Seed. The warrant-article local contribution remains $1,773,575.00.</p></div></details>
-        <details><summary><span class="tag">§6</span><span>Scheduled and year-to-date payments</span><span class="chev">＋</span></summary><div class="detail-body"><p>The payment schedule turns the subsidy into monthly checks. Edgecomb’s FY26 monthly EPS amounts decline across the year—approximately $38,598 in July–September, $37,743 in October–December, $36,691 in January–March, and $34,477 in April–June—as quarterly MaineCare Seed offsets are reflected.</p></div></details>
+        <details><summary><span class="tag">§5</span><span>Totals and adjustments</span><span class="chev">＋</span></summary><div class="detail-body"><p>Section 5 starts with local and state totals, applies minimum-contributor rules where relevant, then adds state-only items. Edgecomb’s FY27 B-adjustments are +$3,919.80 for education service center membership and −$8,742.45 MaineCare Seed. The warrant-article local contribution remains $1,873,763.66.</p></div></details>
+        <details><summary><span class="tag">§6</span><span>Scheduled and year-to-date payments</span><span class="chev">＋</span></summary><div class="detail-body"><p>The payment schedule turns the subsidy into monthly checks. Edgecomb’s FY27 monthly EPS checks are $40,768.50 in July–September and $40,263.00 in October–May ($40,263.03 in June), with MaineCare Seed offsets of $4,192.98 in July and $4,549.47 in October. The twelve checks total the $484,672.53 adjusted state contribution.</p></div></details>
       </section>
 
       <section id="answers">
@@ -538,7 +538,7 @@
           <article class="answer"><div class="q">Does “$14,044 EPS per pupil” mean that is what Edgecomb spends?</div><div class="a">No. It is FY25’s modeled EPS allocation divided by the 155 resident-pupil average: $2,176,821.11 ÷ 155. Actual FY25 spending was reported as $19,247 per pupil, or 137% of EPS. EPS is a modeled minimum-sufficient level, not a spending cap.</div></article>
           <article class="answer"><div class="q">Does one more student cost the average per-pupil amount?</div><div class="a">No. A per-pupil figure is an average, not marginal cost. Most staffing, building, and transportation costs move in steps. One added pupil may change the denominator and some formula weights without requiring another classroom or route.</div></article>
           <article class="answer"><div class="q">Why is “school enrollment” lower than resident pupils?</div><div class="a">Eddy School serves PreK–8. Edgecomb’s resident-pupil count also includes publicly funded resident high-school students tuitioned to secondary schools. Section 1 uses attending pupils; Section 2 generally uses resident pupils.</div></article>
-          <article class="answer"><div class="q">Who chose 6.100 mills?</div><div class="a">The statewide mill expectation comes through the state budget process, based on statewide total education cost, available state resources, and statewide valuation. It caps required local contribution; it is not Edgecomb’s actual tax rate.</div></article>
+          <article class="answer"><div class="q">Who chose 5.645 mills?</div><div class="a">The statewide mill expectation comes through the state budget process, based on statewide total education cost, available state resources, and statewide valuation. It caps required local contribution; it is not Edgecomb’s actual tax rate.</div></article>
           <article class="answer"><div class="q">Is teacher retirement local salary money?</div><div class="a">No. DOE adds MainePERS’s normalized employer-cost estimate to EPS, and the SAU remits that amount to the retirement system. It is shown in the allocation but is not ordinary local salary spending.</div></article>
           <article class="answer"><div class="q">Why can actual spending exceed EPS?</div><div class="a">Actual salaries and contracts can differ from the state matrix; small schools cannot achieve every modeled scale efficiency; high-school tuition is substantial; and towns may approve additional local spending. LD 318 reports a statewide median of 134% of EPS.</div></article>
         </div>
@@ -548,7 +548,7 @@
         <div class="section-head"><div><span class="section-no">07 / WHAT CHANGES</span><h2>The 2026 overhaul starts in FY28.</h2></div><div class="section-note">LD 2226 · phased protection through FY2030</div></div>
         <p class="lede">The enacted changes update three parts of the model beginning in 2027–28. Exact Edgecomb values cannot be known until DOE publishes the FY28 calculation.</p>
         <div class="reform-grid">
-          <article class="reform"><span class="step">STEP 1</span><h3>County cost-of-living index</h3><p>The 35 labor-market areas frozen since FY2005 are replaced by county-based indices, with a 1.00 floor. Edgecomb’s FY26 index was 1.02; its future Lincoln County value is still to be determined.</p></article>
+          <article class="reform"><span class="step">STEP 1</span><h3>County cost-of-living index</h3><p>The 35 labor-market areas frozen since FY2005 are replaced by county-based indices, with a 1.00 floor. Edgecomb’s FY27 index is 1.02; its future Lincoln County value is still to be determined.</p></article>
           <article class="reform"><span class="step">STEP 2</span><h3>Poverty-weighted local mill</h3><p>The local mill will reflect 90% property valuation and 10% student-poverty measure. It redistributes local and state shares without changing the statewide total. The research indicates Edgecomb would likely move downward, but the exact result is not yet published.</p></article>
           <article class="reform"><span class="step">STEP 3</span><h3>Three-year hold-harmless</h3><p>Through FY2030, an SAU’s state subsidy may not fall below the prior year because of Steps 1–2. Edgecomb is protected from a formula-driven subsidy loss during the phase-in.</p></article>
         </div>
@@ -559,12 +559,12 @@
         <div class="caveat-list">
           <div class="caveat"><span class="id">01</span><p><b>FY25 ED279 is preliminary.</b> The DOE portal report located for FY25 is dated April 23, 2025 and labeled “Governor’s Supplemental Budget.” A final certified FY25 portal report was not located.</p></div>
           <div class="caveat"><span class="id">02</span><p><b>Part of FY25 Section 2 was truncated in the live read.</b> The operating total is implied as $1,591,328.20 by Section 3 arithmetic, but the disadvantaged-targeted lines and isolated-small-school line were not directly captured.</p></div>
-          <div class="caveat"><span class="id">03</span><p><b>Do not mix demographic columns or years.</b> Edgecomb’s FY25 ED279 uses 45.10% economic disadvantage and LD 318 rounds that to 45%; FY26 uses 52.53%. The 21% shown in LD 318 is the special-education rate, not economic disadvantage.</p></div>
-          <div class="caveat"><span class="id">04</span><p><b>Librarian lines are unusual.</b> FY26 reports 0.0 actual librarian and library-tech FTE while showing $6,215 and $5,503 adjusted salaries. Treat those figures as reported; the underlying display logic is not fully explained.</p></div>
+          <div class="caveat"><span class="id">03</span><p><b>Do not mix demographic columns or years.</b> Edgecomb’s FY25 ED279 uses 45.10% economic disadvantage and LD 318 rounds that to 45%; FY26 uses 52.53% and FY27 uses 40.21%. The 21% shown in LD 318 is the special-education rate, not economic disadvantage.</p></div>
+          <div class="caveat"><span class="id">04</span><p><b>Librarian lines remain unusual.</b> FY26 reported 0.0 actual librarian and library-tech FTE while showing $6,215 and $5,503 adjusted salaries; FY27 again reports 0.0 actual FTE, this time with $0 matrix salary. Treat those figures as reported; the underlying display logic is not fully explained.</p></div>
           <div class="caveat"><span class="id">05</span><p><b>FY28 Edgecomb effects are not yet final.</b> The new Lincoln County index and poverty-weighted mill will be set in future DOE calculations. Directional language is not a substitute for the published FY28 ED279.</p></div>
-          <div class="caveat"><span class="id">06</span><p><b>FY27 peer figures are estimates.</b> DOE marks the April 9, 2026 baseline “subject to change.” Great Salt Bay has no row because the CSD was dissolved; its successor structure was not verified.</p></div>
-          <div class="caveat"><span class="id">07</span><p><b>Transportation and special-education peer rates are directional.</b> They divide FY26 or January 2025 allocations by FY25 pupil counts. Edgecomb’s special-education summary-file amount and its FY26 ED279 amount use different bases that were not reconciled.</p></div>
-          <div class="caveat"><span class="id">08</span><p><b>Peer ED279 detail is incomplete.</b> FY26 Section 4 figures were not verified for Southport, RSU 02, or Great Salt Bay; FY27 baseline data is used instead and labeled accordingly.</p></div>
+          <div class="caveat"><span class="id">06</span><p><b>FY27 figures are actuals, but preliminary.</b> The peer table now uses ED279 Section 5A amounts from DOE’s FY27 GPA comparison (March 3, 2026), replacing the earlier LD 2226 baseline estimates. The FY27 printouts are labeled “Governor’s Recommended Funding Level,” and DOE may adjust them during FY27. Great Salt Bay has no row because the CSD was dissolved; its successor structure was not verified.</p></div>
+          <div class="caveat"><span class="id">07</span><p><b>Transportation and special-education peer rates are directional.</b> They divide FY26 or January 2025 allocations by FY25 pupil counts. Edgecomb’s special-education summary-file amount and its FY27 ED279 amount use different bases that were not reconciled.</p></div>
+          <div class="caveat"><span class="id">08</span><p><b>Some FY27 lines are calculated, not printed.</b> The DOE portal capture cut off the ED279’s right-hand product column, so the Section 1 teacher line, the Section 2 weighted/targeted split, and the transportation line are calculated here from the report’s own printed inputs — the weighted and targeted lines are combined for that reason, and transportation is the reconciling remainder after gifted &amp; talented and special education. Every section total, and every other figure in the worked example, is the report’s printed value, and all identities reconcile exactly.</p></div>
         </div>
       </section>
 
@@ -573,8 +573,10 @@
         <div class="source-list">
           <div class="source-item" id="src-line"><strong>Maine DOE · ED279 Line by Line Information &amp; Calculations (October 1, 2025)</strong><a href="https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20ED279%20Line%20by%20Line%20Information%20%26%20Calculations%20-%2010.1.2025.pdf" target="_blank" rel="noopener">Official PDF</a><span>Formula definitions and data vintages for Sections 1–6.</span></div>
           <div class="source-item"><strong>Maine DOE · ED279 Line by Line, FY27 updates (July 15, 2026)</strong><a href="https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20ED279%20Line%20by%20Line%20Information%20%26%20Calculations%20-%207.15.2026.pdf" target="_blank" rel="noopener">Official PDF</a><span>Updated guidance and the FY27 treatment of debt service.</span></div>
-          <div class="source-item"><strong>Edgecomb School Department · 2025–2026 ED279</strong><a href="https://www.edgecomblearns.org/s/ED279Report.pdf" target="_blank" rel="noopener">Full PDF</a><span>Primary source for the FY26 worked calculation and payment schedule; dated April 17, 2026.</span></div>
-          <div class="source-item"><strong>Maine DOE · public ED279 portal</strong><a href="https://neo.maine.gov/DOE/NEO/eps/public/ed279.aspx" target="_blank" rel="noopener">Open portal</a><span>Edgecomb reports use Org ID 166. Peer figures in the comparison use the common LD 318 Appendix C frame and the FY27 DOE baseline rather than mixing individual ED279 vintages.</span></div>
+          <div class="source-item"><strong>Edgecomb School Department · 2026–2027 ED279</strong><a href="https://neo.maine.gov/DOE/NEO/eps/public/ed279.aspx" target="_blank" rel="noopener">DOE portal report</a><span>Primary source for the FY27 worked calculation and payment schedule; printed October 21, 2026 and labeled preliminary (Governor’s Recommended Funding Level).</span></div>
+          <div class="source-item" id="src-fy27gpa"><strong>Maine DOE · FY27 GPA Allocation Comparison of FY26 to FY27, Preliminary by SAU (March 3, 2026)</strong><a href="https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20FY27%20GPA%20Allocation%20Comparison%20of%20FY26%20to%20FY27%20Preliminary%20by%20SAU%20-%203.3.2026.pdf" target="_blank" rel="noopener">Official PDF</a><span>ED279 Section 5A total EPS, required local, state share, and mill rate for every SAU; source for the FY27 peer-burden table.</span></div>
+          <div class="source-item"><strong>Edgecomb School Department · 2025–2026 ED279</strong><a href="https://www.edgecomblearns.org/s/ED279Report.pdf" target="_blank" rel="noopener">Full PDF</a><span>Primary source for the FY26 comparison figures; dated April 17, 2026.</span></div>
+          <div class="source-item"><strong>Maine DOE · public ED279 portal</strong><a href="https://neo.maine.gov/DOE/NEO/eps/public/ed279.aspx" target="_blank" rel="noopener">Open portal</a><span>Edgecomb reports use Org ID 166. Peer figures in the comparison use the common LD 318 Appendix C frame and DOE’s FY27 GPA comparison rather than mixing individual ED279 vintages.</span></div>
           <div class="source-item"><strong>Maine DOE · EPS funding overview</strong><a href="https://www.maine.gov/doe/funding/gpa/eps" target="_blank" rel="noopener">Overview page</a><span>Official conceptual overview.</span></div>
           <div class="source-item"><strong>Maine DOE · Analyzing changes to your ED279 (January 22, 2026)</strong><a href="https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20Analyzing%20changes%20to%20your%20ED%20279%20-%201.22.2026.pdf" target="_blank" rel="noopener">Official PDF</a><span>Year-over-year interpretation guidance.</span></div>
           <div class="source-item" id="src-ld318"><strong>MEPRI · LD 318 Recommended Parameter Updates (March 2026 revision)</strong><a href="http://bpb-us-w2.wpmucdn.com/wpsites.maine.edu/dist/e/97/files/2026/03/LD-318_March2026_wAddendum_F.pdf" target="_blank" rel="noopener">Report PDF</a><span>Appendix C provides the common FY25 pupil, EPS, spending, and percent-of-EPS comparison for all six included districts.</span></div>
@@ -584,7 +586,7 @@
           <div class="source-item"><strong>Maine DOE · Amended LD 2226 simulation (April 8, 2026)</strong><a href="https://www1.maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20Amended%20LD%202226%20Summary%20Results%20with%20Details%20-%204.8.2026.pdf" target="_blank" rel="noopener">Official PDF</a><span>Three-step overhaul and statewide simulation.</span></div>
           <div class="source-item"><strong>Educate Maine · How is Public Education Funded in Maine?</strong><a href="http://www.educatemaine.org/docs/17-029_EDME-FundingPrimer-FNL-web.pdf" target="_blank" rel="noopener">Funding primer PDF</a><span>Conceptual framework for state and local funding.</span></div>
         </div>
-        <p class="closing">Figures are presented at their published precision. “FY25” means school year 2024–2025; “FY26” means school year 2025–2026. This guide is a reading aid for the ED279, not a replacement for the signed report or a legal interpretation of Maine statute.</p>
+        <p class="closing">Figures are presented at their published precision. “FY25” means school year 2024–2025; “FY26” means school year 2025–2026; “FY27” means school year 2026–2027. This guide is a reading aid for the ED279, not a replacement for the signed report or a legal interpretation of Maine statute.</p>
       </section>
     </div>
   </main>
@@ -615,6 +617,18 @@
       state: '$464,122.55',
       value: '$290,750,000',
       formula: '$290,750,000 × 0.006100 = $1,773,575.00 local; $2,237,697.55 − $1,773,575.00 = $464,122.55 state'
+    },
+    fy27: {
+      year: 'FY27 · 2026–2027',
+      note: 'Preliminary ED279 printed October 21, 2026 · DOE portal, Org ID 166',
+      pupils: '140.0',
+      subPupils: 'Section 2A3 · two-year average',
+      total: '$2,363,258.84',
+      local: '$1,873,763.66',
+      subLocal: '5.645 mills',
+      state: '$489,495.18',
+      value: '$331,933,333',
+      formula: '$331,933,333 × 0.005645 = $1,873,763.66 local; $2,363,258.84 − $1,873,763.66 = $489,495.18 state'
     }
   };
   var ids = {
