@@ -1,0 +1,1512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Edgecomb Comprehensive Plan 2009 — Town of Edgecomb, Maine</title>
+<style>
+  :root{
+    --green:#173d2b; --green2:#245c40; --green-soft:#e3ece4;
+    --cream:#faf6ec; --paper:#fffdf7; --ink:#1c2420; --slate:#46545c; --slate2:#6b7a82;
+    --line:#d8d2c2; --gold:#b98a2f; --gold-soft:#f3e8cf;
+    --chip:#eef0ea; --radius:14px;
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --sans: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --green:#9fd3b4; --green2:#b7e2c8; --green-soft:#22392c;
+      --cream:#141a16; --paper:#1b221d; --ink:#eef2ec; --slate:#c3cdc6; --slate2:#9fb0a5;
+      --line:#39463d; --gold:#e0b45c; --gold-soft:#3a3220; --chip:#263129;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:19px;line-height:1.55}
+  button,[role="button"],select,summary{ min-height:44px; }
+  a{color:var(--green2);text-decoration-thickness:1.5px;text-underline-offset:3px}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  /* Hero */
+  .hero{padding:52px 0 40px;border-bottom:3px double var(--line)}
+  .kicker{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);font-weight:700;margin:0 0 14px}
+  h1{font-family:var(--serif);font-size:clamp(34px,6vw,54px);line-height:1.08;margin:0 0 10px;font-weight:700}
+  .hero .sub{font-size:21px;color:var(--slate);max-width:44em;margin:0 0 28px}
+  .visionbox{background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--green2);border-radius:10px;padding:26px 28px;max-width:820px}
+  .visionbox .lbl{font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--green2);margin:0 0 10px}
+  .visionbox blockquote{margin:0;font-family:var(--serif);font-size:clamp(21px,3.4vw,27px);line-height:1.4;font-style:italic}
+  .visionbox .cite{margin:14px 0 0;font-size:16px;color:var(--slate)}
+  .flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:28px;font-family:var(--serif);font-size:19px}
+  .flow .step{background:var(--green-soft);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-weight:700}
+  .flow .arr{color:var(--slate2);font-size:22px}
+  .heronav{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .heronav a{display:inline-flex;align-items:center;min-height:48px;padding:10px 20px;border-radius:999px;background:var(--green);color:#f7f3e6;text-decoration:none;font-weight:700;font-size:17px}
+  .heronav a.alt{background:transparent;color:var(--ink);border:2px solid var(--green2)}
+  @media (prefers-color-scheme: dark){ .heronav a{background:#2c5c42;color:#eef6ee} .heronav a.alt{background:transparent} }
+  /* Sections */
+  section{padding:46px 0 8px}
+  h2{font-family:var(--serif);font-size:clamp(27px,4.4vw,38px);line-height:1.15;margin:0 0 8px}
+  h3{font-family:var(--serif);font-size:24px;margin:28px 0 8px}
+  .lede{font-size:20px;color:var(--slate);max-width:46em;margin:0 0 22px}
+  .note{font-size:16.5px;color:var(--slate)}
+  .sourceline{font-size:15px;color:var(--slate2);margin-top:8px}
+  /* Dashboard */
+  .dashctl{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+  .dashctl button{border:2px solid var(--green2);background:var(--paper);color:var(--ink);border-radius:999px;padding:10px 22px;font-size:17px;font-weight:700;cursor:pointer;font-family:var(--sans)}
+  .dashctl button[aria-pressed="true"]{background:var(--green);color:#f7f3e6}
+  @media (prefers-color-scheme: dark){ .dashctl button[aria-pressed="true"]{background:#2c5c42} }
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 18px}
+  .card h3{margin:0 0 4px;font-size:21px}
+  .card .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+  .card .era{border-top:3px solid var(--line);padding-top:10px}
+  .card .era.today{border-top-color:var(--gold)}
+  .card .era .when{font-size:13.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--slate)}
+  .card .era .big{font-family:var(--serif);font-size:34px;line-height:1.1;margin:4px 0 2px}
+  .card .era .what{font-size:15.5px;color:var(--slate)}
+  .card .src{font-size:14.5px;color:var(--slate2);margin:14px 0 0;border-top:1px dashed var(--line);padding-top:10px}
+  body[data-dash="then"] .card .era.today{opacity:.28}
+  body[data-dash="now"] .card .era.then{opacity:.28}
+  .card .era{transition:opacity .25s ease}
+  /* Polls */
+  .poll{background:var(--green-soft);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin:22px 0}
+  .poll .pq{font-family:var(--serif);font-size:21px;font-weight:700;margin:0 0 4px}
+  .poll .pctx{font-size:16.5px;color:var(--slate);margin:0 0 14px}
+  .poll .opts{display:flex;flex-wrap:wrap;gap:10px}
+  .poll .opts button{flex:1 1 130px;border:2px solid var(--green2);background:var(--paper);color:var(--ink);border-radius:10px;padding:12px 14px;font-size:17px;font-weight:700;cursor:pointer;font-family:var(--sans)}
+  .poll .opts button[aria-pressed="true"]{background:var(--green);color:#f7f3e6;border-color:var(--green)}
+  @media (prefers-color-scheme: dark){ .poll .opts button[aria-pressed="true"]{background:#2c5c42} }
+  .poll .result{margin:14px 0 0;font-size:16.5px;display:none}
+  .poll.voted .result{display:block}
+  /* Bars */
+  .bars{margin:14px 0 6px;display:grid;gap:14px}
+  .bar-row .bar-lbl{font-size:17px;margin:0 0 5px}
+  .bar-row .bar-lbl b{font-family:var(--serif)}
+  .bar-track{background:var(--chip);border-radius:999px;height:22px;overflow:hidden}
+  .bar-fill{height:100%;background:var(--green2);border-radius:999px}
+  .bar-fill.gold{background:var(--gold)}
+  .bar-note{font-size:14.5px;color:var(--slate2)}
+  /* Chapters */
+  .chapnav{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 26px;position:sticky;top:0;background:var(--cream);padding:12px 0;z-index:5}
+  .chapnav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 18px;border-radius:999px;border:2px solid var(--green2);text-decoration:none;font-weight:700;font-size:16.5px;color:var(--ink);background:var(--paper)}
+  .chapter{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:30px 30px 26px;margin:0 0 30px}
+  @media (max-width:560px){ .chapter{padding:22px 18px} body{font-size:18px} }
+  .chapter .part{font-size:14px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--gold);margin:0 0 6px}
+  .chapter h2{margin-bottom:6px}
+  .vision-quote{border-left:5px solid var(--gold);padding:6px 0 6px 18px;margin:16px 0}
+  .vision-quote p{font-family:var(--serif);font-style:italic;font-size:20.5px;line-height:1.45;margin:0}
+  .vision-quote .cite{font-style:normal;font-family:var(--sans);font-size:15px;color:var(--slate);margin-top:8px}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:18px 0}
+  .fact{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .fact .n{font-family:var(--serif);font-size:30px;line-height:1.05}
+  .fact .t{font-size:16px;color:var(--slate);margin-top:4px}
+  /* Scorecard */
+  .score-note{background:var(--gold-soft);border:1px solid var(--gold);border-radius:12px;padding:16px 20px;font-size:17px;margin:16px 0}
+  .policies{list-style:none;margin:14px 0;padding:0;display:grid;gap:10px}
+  .policies li{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:flex-start;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:var(--paper)}
+  .policies .ptxt{flex:1 1 320px;font-size:17.5px}
+  .policies .ptxt .pnum{font-weight:700;color:var(--green2)}
+  .chip{flex:0 0 auto;font-size:14px;font-weight:700;letter-spacing:.03em;background:var(--chip);border:1px dashed var(--slate2);color:var(--slate);border-radius:999px;padding:6px 13px;margin-top:2px}
+  details.strategies{border:1px solid var(--line);border-radius:12px;padding:4px 18px;margin:10px 0;background:var(--cream)}
+  details.strategies summary{cursor:pointer;font-weight:700;font-size:17px;padding:10px 0}
+  details.strategies ul{margin:4px 0 14px;padding-left:22px;font-size:16.5px;color:var(--ink)}
+  details.strategies li{margin-bottom:7px}
+  /* Prompt box */
+  .promptbox{border:2px dashed var(--green2);border-radius:var(--radius);padding:22px 24px;margin:24px 0 6px;background:var(--green-soft)}
+  .promptbox h3{margin:0 0 6px}
+  .promptbox p{margin:0 0 8px}
+  .promptbox textarea{width:100%;min-height:96px;border:1.5px solid var(--line);border-radius:10px;padding:12px;font:inherit;font-size:17px;background:var(--paper);color:var(--ink)}
+  .promptbox .note{margin-top:8px}
+  /* Districts */
+  .distbar{display:flex;height:64px;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:14px 0 6px}
+  .distbar button{border:0;cursor:pointer;color:#fff;font-family:var(--sans);font-weight:700;font-size:16px;padding:6px 4px;line-height:1.2}
+  .distbar button small{display:block;font-weight:400;font-size:13.5px;opacity:.9}
+  .distbar button[aria-pressed="true"]{box-shadow:inset 0 0 0 4px #fff8}
+  .d-marine{background:#2f5d50}.d-wood{background:#476b34}.d-rural{background:#7a8a3f}.d-comm{background:#a4762a}
+  .distdetail{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-top:12px}
+  .distdetail h4{font-family:var(--serif);font-size:21px;margin:0 0 6px}
+  .distdetail p{margin:0 0 6px;font-size:17px}
+  /* Feedback — agree / disagree / comment, recorded in-page via the endpoint */
+  .sayline{font-size:18.5px;max-width:46em;margin:26px 0 0}
+  .feedback{background:var(--green-soft);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin:18px 0}
+  .feedback .fb-q{font-family:var(--serif);font-size:20.5px;font-weight:700;margin:0 0 12px}
+  .fb-btns{display:flex;flex-wrap:wrap;gap:10px}
+  .fb-btn{display:inline-flex;align-items:center;min-height:48px;padding:10px 18px;border-radius:999px;font-weight:700;font-size:16.5px;text-decoration:none;border:2px solid var(--green2);background:var(--paper);color:var(--ink);cursor:pointer}
+  .fb-btn.fb-agree{background:var(--green);border-color:var(--green);color:#f7f3e6}
+  @media (prefers-color-scheme: dark){ .fb-btn.fb-agree{background:#2c5c42;border-color:#2c5c42} }
+  .fb-btn.fb-comment{border-style:dashed}
+  .fb-note{font-size:14.5px;color:var(--slate);margin:12px 0 0}
+  /* In-page capture: status, tallies, comment areas */
+  .fb-btn{font-family:var(--sans)}
+  .fb-btn[disabled]{opacity:.45;cursor:default}
+  .fb-btn.is-chosen{opacity:1;box-shadow:inset 0 0 0 3px var(--gold)}
+  .fb-status{font-size:16.5px;font-weight:700;color:var(--green2);margin:12px 0 0}
+  .fb-status:empty{display:none}
+  .fb-tally{font-size:14.5px;color:var(--slate);margin:8px 0 0}
+  .fb-comment{display:grid;gap:10px;margin-top:14px;border-top:1px dashed var(--line);padding-top:14px}
+  .fb-comment[hidden]{display:none}
+  .fb-comment textarea{width:100%;min-height:76px;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;font-size:16.5px;background:var(--paper);color:var(--ink)}
+  .fb-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media (max-width:560px){ .fb-fields{grid-template-columns:1fr} }
+  .fb-fields label{font-size:14.5px;font-weight:700;color:var(--slate);display:grid;gap:4px}
+  .fb-fields .opt{font-weight:400}
+  .fb-fields input{border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;font-size:16.5px;background:var(--paper);color:var(--ink);min-height:44px;width:100%}
+  .promptbox .fb-fields{margin-top:10px}
+  .fb-sendbtn{padding:10px 20px;font-size:16px;min-height:44px}
+  .fb-sendbtn[disabled]{opacity:.5;cursor:default}
+  .fb-mini button{display:inline-flex;align-items:center;min-height:40px;padding:6px 15px;border-radius:999px;border:1.5px solid var(--green2);font-size:15px;font-weight:700;text-decoration:none;color:var(--ink);background:var(--paper);cursor:pointer;font-family:var(--sans)}
+  .fb-mini button.mini-agree{background:var(--green);border-color:var(--green);color:#f7f3e6}
+  @media (prefers-color-scheme: dark){ .fb-mini button.mini-agree{background:#2c5c42;border-color:#2c5c42} }
+  .fb-mini button[disabled]{opacity:.45;cursor:default}
+  .fb-mini button.is-chosen{opacity:1;box-shadow:inset 0 0 0 2px var(--gold)}
+  .fb-mini .fb-comment,.fb-mini .fb-status,.fb-mini .fb-tally{flex:1 1 100%}
+  .fb-mini .fb-status{margin-top:6px;font-size:15px}
+  .fb-mini .fb-tally{margin-top:2px}
+  .fb-mini{display:flex;flex-wrap:wrap;gap:8px;align-items:center;flex:1 1 100%;margin-top:10px;border-top:1px dashed var(--line);padding-top:10px}
+  .fb-mini .fb-mini-lbl{font-size:13.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--slate)}
+  .fb-mini a{display:inline-flex;align-items:center;min-height:40px;padding:6px 15px;border-radius:999px;border:1.5px solid var(--green2);font-size:15px;font-weight:700;text-decoration:none;color:var(--ink);background:var(--paper)}
+  .fb-mini a.mini-agree{background:var(--green);border-color:var(--green);color:#f7f3e6}
+  @media (prefers-color-scheme: dark){ .fb-mini a.mini-agree{background:#2c5c42;border-color:#2c5c42} }
+  .idxcard .fb-mini{margin-top:14px}
+  .sendrow{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:12px}
+  .sendbtn{border:0;border-radius:999px;background:var(--green);color:#f7f3e6;font-family:var(--sans);font-size:17px;font-weight:700;padding:12px 24px;cursor:pointer;min-height:48px}
+  @media (prefers-color-scheme: dark){ .sendbtn{background:#2c5c42} }
+  .nextbox .fb-link{display:inline-flex;align-items:center;min-height:48px;padding:10px 22px;border-radius:999px;background:#f7f3e6;color:#173d2b;text-decoration:none;font-weight:700;font-size:17px;margin-top:6px}
+  /* Plan tabs */
+  .tabnav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;position:sticky;top:0;background:var(--cream);padding:12px 0;z-index:6}
+  .tabnav button{border:2px solid var(--green2);background:var(--paper);color:var(--ink);border-radius:999px;padding:10px 18px;font-size:16.5px;font-weight:700;cursor:pointer;font-family:var(--sans);min-height:48px}
+  .tabnav button[aria-selected="true"]{background:var(--green);color:#f7f3e6;border-color:var(--green)}
+  @media (prefers-color-scheme: dark){ .tabnav button[aria-selected="true"]{background:#2c5c42;border-color:#2c5c42} }
+  .tabpanel[hidden]{display:none}
+  /* Index */
+  .indexgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .idxcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .idxcard h3{margin:0 0 4px;font-size:21px}
+  .idxcard .phase{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:4px 11px;margin:6px 0 10px;color:var(--slate)}
+  .idxcard blockquote{margin:8px 0;font-family:var(--serif);font-style:italic;font-size:17.5px;line-height:1.45}
+  .idxcard .cite{font-size:14.5px;color:var(--slate2)}
+  /* Next */
+  .nextbox{background:var(--green);color:#f2efe2;border-radius:18px;padding:30px 32px;margin:10px 0 30px}
+  @media (prefers-color-scheme: dark){ .nextbox{background:#0e2418} }
+  .nextbox h2{color:#fff}
+  .nextbox p{font-size:19px;max-width:44em}
+  .nextbox .meet{font-family:var(--serif);font-size:clamp(22px,3.6vw,29px);background:#ffffff14;border:1px solid #ffffff33;border-radius:12px;padding:16px 20px;margin:18px 0}
+  footer{border-top:3px double var(--line);padding:30px 0 46px;margin-top:40px}
+  footer p{font-size:15.5px;color:var(--slate);max-width:52em}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body data-dash="both">
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Town of Edgecomb, Maine · Comprehensive Plan</p>
+    <h1>Edgecomb&rsquo;s plan, then and now</h1>
+    <p class="sub">In 2009, Edgecomb adopted a comprehensive plan written from a town-wide survey and months of public forums. This site opens that plan up — what it promised, what residents said then, and where the town stands today — as Edgecomb begins writing the next one.</p>
+
+    <div class="visionbox">
+      <p class="lbl">The 2009 Town Vision — the plan&rsquo;s own words</p>
+      <blockquote>&ldquo;To preserve and protect the existing way of life and the historical, scenic and natural resources from encroachment while guiding small scale sustainable growth throughout the town.&rdquo;</blockquote>
+      <p class="cite">Verbatim — Part 1, Introduction, printed p. 0 of the 2009 Comprehensive Plan, Volume I.</p>
+    </div>
+
+    <p class="sayline"><strong>Have your say as you read.</strong> Every vision, survey result, and policy on this page carries agree, disagree, and comment buttons. Your answer is recorded right here on the page and goes to the Comprehensive Planning Committee, which is writing the next plan. Your name and your road or neighborhood are optional, and are only sent if you add them with a comment.</p>
+
+    <div class="feedback" data-item="Overall Town Vision (Part 1, p. 0)">
+      <p class="fb-q">Start here: does the 2009 Town Vision still describe the Edgecomb you want?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <div class="flow" aria-label="How this site is organized">
+      <span class="step">Edgecomb in 2009</span><span class="arr" aria-hidden="true">&rarr;</span>
+      <span class="step">Edgecomb today</span><span class="arr" aria-hidden="true">&rarr;</span>
+      <span class="step">The next plan</span>
+    </div>
+
+    <nav class="heronav" aria-label="Jump to a section">
+      <a href="#dashboard" data-tablink="overview">2009 vs. today</a>
+      <a class="alt" href="#natural" data-tablink="part4">Natural Resources — Part 4</a>
+      <a class="alt" href="#landuse" data-tablink="part2">Land Use — Part 2</a>
+      <a class="alt" href="#feedback">Have your say</a>
+      <a class="alt" href="#next">What happens next</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ PLAN TABS ============ -->
+  <p class="lede" style="margin-top:38px">The whole 2009 plan, part by part. The Overview shows the town then and now; each part of the plan has its own tab, with its visions in the plan&rsquo;s own words, what residents said in the 2007 survey, and the policies the town adopted. Every vision, survey result, and policy carries agree, disagree, and comment buttons.</p>
+  <nav class="tabnav" role="tablist" aria-label="Parts of the 2009 Comprehensive Plan">
+    <button type="button" role="tab" id="tabbtn-overview" aria-controls="tab-overview" aria-selected="true" data-tab="overview">Overview</button>
+    <button type="button" role="tab" id="tabbtn-part1" aria-controls="tab-part1" aria-selected="false" data-tab="part1">Part 1 · Introduction</button>
+    <button type="button" role="tab" id="tabbtn-part2" aria-controls="tab-part2" aria-selected="false" data-tab="part2">Part 2 · Land Use</button>
+    <button type="button" role="tab" id="tabbtn-part3" aria-controls="tab-part3" aria-selected="false" data-tab="part3">Part 3 · Economy &amp; Housing</button>
+    <button type="button" role="tab" id="tabbtn-part4" aria-controls="tab-part4" aria-selected="false" data-tab="part4">Part 4 · Natural Resources</button>
+    <button type="button" role="tab" id="tabbtn-part5" aria-controls="tab-part5" aria-selected="false" data-tab="part5">Part 5 · Facilities &amp; Services</button>
+    <button type="button" role="tab" id="tabbtn-part6" aria-controls="tab-part6" aria-selected="false" data-tab="part6">Part 6 · Policies &amp; Strategies</button>
+  </nav>
+  <div class="tabpanel" id="tab-overview" role="tabpanel" aria-labelledby="tabbtn-overview">
+<!-- ============ DASHBOARD ============ -->
+  <section id="dashboard" aria-labelledby="dash-h">
+    <h2 id="dash-h">2009 vs. today: the town in numbers</h2>
+    <p class="lede">Each card pairs a figure from the 2009 plan itself with the most recent verified figure. The measures are not always identical — where they differ, the card says so plainly.</p>
+
+    <div class="dashctl" role="group" aria-label="Choose which era to emphasize">
+      <button type="button" data-dashbtn="both" aria-pressed="true">Show both</button>
+      <button type="button" data-dashbtn="then" aria-pressed="false">Plan era only</button>
+      <button type="button" data-dashbtn="now" aria-pressed="false">Today only</button>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Population</h3>
+        <div class="pair">
+          <div class="era then"><p class="when">Plan era</p><p class="big">1,228</p><p class="what">Residents in 2006, as printed in the plan. The 2010 census counted 1,249.</p></div>
+          <div class="era today"><p class="when">Today</p><p class="big">1,251</p><p class="what">Estimated residents (±281 margin of error).</p></div>
+        </div>
+        <p class="src">Plan figure: 2009 Comprehensive Plan, Part 3, p. 13. Today: U.S. Census Bureau, ACS 2024 5-year estimates, via Census Reporter.</p>
+      </article>
+
+      <article class="card">
+        <h3>Median age</h3>
+        <div class="pair">
+          <div class="era then"><p class="when">Plan era</p><p class="big">—</p><p class="what">The plan described residents as &ldquo;primarily &hellip; middle-aged&rdquo; with &ldquo;an aging population&rdquo; — it published no single median-age figure. None is invented here.</p></div>
+          <div class="era today"><p class="when">Today</p><p class="big">41.0</p><p class="what">Median age in Edgecomb — notably younger than Lincoln County as a whole, at 51.4.</p></div>
+        </div>
+        <p class="src">Plan description: Part 3, p. 13. Today: ACS 2024 5-year estimates, via Census Reporter.</p>
+      </article>
+
+      <article class="card">
+        <h3>Household income</h3>
+        <div class="pair">
+          <div class="era then"><p class="when">Plan era</p><p class="big">$50,865</p><p class="what">Median <em>family</em> income, 2006, as printed in the plan.</p></div>
+          <div class="era today"><p class="when">Today</p><p class="big">$108,750</p><p class="what">Median <em>household</em> income (Lincoln County: $76,875).</p></div>
+        </div>
+        <p class="src">Note the measure changed: family income (plan, Part 3, p. 13) vs. household income (ACS 2024) — related, but not the same statistic, and the two are not directly comparable dollar-for-dollar.</p>
+      </article>
+
+      <article class="card">
+        <h3>Housing</h3>
+        <div class="pair">
+          <div class="era then"><p class="when">Plan era</p><p class="big">466</p><p class="what">Houses in the 2006 housing stock; 237 of them were built before 1950.</p></div>
+          <div class="era today"><p class="when">Today</p><p class="big">761</p><p class="what">Housing units — of which 187 (24.6%) are seasonal.</p></div>
+        </div>
+        <p class="src">Plan figures: Part 3, pp. 13, 21. Today: ACS 2024 5-year estimates, via Census Reporter.</p>
+      </article>
+
+      <article class="card">
+        <h3>Edgecomb Eddy School</h3>
+        <div class="pair">
+          <div class="era then"><p class="when">Plan era</p><p class="big">94 <span style="font-size:19px">of 135</span></p><p class="what">Students enrolled in 2008, against a school capacity of 135.</p></div>
+          <div class="era today"><p class="when">Today</p><p class="big">91</p><p class="what">Students enrolled — 62 from Edgecomb and 29 from other towns.</p></div>
+        </div>
+        <p class="src">Plan figure: Part 5, p. 44. Today: current Edgecomb Eddy School enrollment, as reported to the school board.</p>
+      </article>
+
+      <article class="card">
+        <h3>Local businesses</h3>
+        <div class="pair">
+          <div class="era then"><p class="when">Plan era</p><p class="big">58</p><p class="what">Businesses in Edgecomb in 2005–06, employing about 205 people — mostly contractors, light manufacturing, and professional services.</p></div>
+          <div class="era today"><p class="when">Today</p><p class="big">—</p><p class="what">No verified current count is available. Counting today&rsquo;s businesses is an open task for the new plan&rsquo;s research.</p></div>
+        </div>
+        <p class="src">Plan figures: Part 3, pp. 13, 17. Marked as an open question rather than filled with an estimate.</p>
+      </article>
+    </div>
+
+    <div class="feedback" data-item="Dashboard — 2009 vs. today figures">
+      <p class="fb-q">Anything in these numbers surprise you — or anything important missing?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment on these figures</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <p class="sourceline">How the 2009 numbers were gathered: focus groups in June 2006; a 14-item questionnaire mailed in August 2007 to 667 households, with 365 forms returned; and three public forums in September–October 2008 (Part 1, p. 2). The plan records that responses &ldquo;presented an overwhelming mandate to retain the town&rsquo;s &lsquo;rural&rsquo; character.&rdquo;</p>
+  </section>
+  </div>
+
+  <div class="tabpanel" id="tab-part1" role="tabpanel" aria-labelledby="tabbtn-part1" hidden>
+  <article class="chapter" id="part1" aria-labelledby="p1-h">
+    <p class="part">Part 1 · Printed pp. 0–2</p>
+    <h2 id="p1-h">Introduction</h2>
+    <p class="note">Summary (not plan language): Part 1 sets out the town vision for the whole plan, explains its purpose, and describes how residents shaped it — focus groups, a town-wide questionnaire, and public forums held between 2006 and 2008.</p>
+
+    <h3>The Town Vision</h3>
+    <div class="vision-quote">
+      <p>&ldquo;To preserve and protect the existing way of life and the historical, scenic and natural resources from encroachment while guiding small scale sustainable growth throughout the town.&rdquo;</p>
+      <p class="cite">Verbatim — Part 1, Introduction, printed p. 0. This is the overall vision for the whole plan, also shown at the top of this page.</p>
+    </div>
+    <div class="feedback" data-item="Part 1 Introduction — Purpose of the plan (p. 0)">
+      <p class="fb-q">The plan&rsquo;s stated purpose</p>
+      <p class="note" style="margin:0 0 12px">&ldquo;The purpose of the Comprehensive Plan is twofold, to comply with state requirements and remain true to Maine&rsquo;s Growth Management Plan and, most importantly, to provide a blueprint for Edgecomb&rsquo;s future, which will realize the vision and preserve the special qualities valued by its citizens.&rdquo; (Part 1, p. 0.) Does that purpose still fit?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>How the 2009 plan was made</h3>
+    <div class="facts">
+      <div class="fact"><p class="n">June 2006</p><p class="t">Focus groups opened the planning process (Part 1, p. 2).</p></div>
+      <div class="fact"><p class="n">365 of 667</p><p class="t">Households returned the 14-item questionnaire mailed in August 2007 (p. 2).</p></div>
+      <div class="fact"><p class="n">3 forums</p><p class="t">Public forums in September–October 2008 (p. 2).</p></div>
+      <div class="fact"><p class="n">&ldquo;Rural&rdquo;</p><p class="t">Responses &ldquo;presented an overwhelming mandate to retain the town&rsquo;s &lsquo;rural&rsquo; character&rdquo; (p. 2).</p></div>
+    </div>
+
+    <h3>The dominant issues the plan named (Part 1, p. 2)</h3>
+    <ul style="font-size:17.5px;padding-left:22px">
+      <li style="margin-bottom:8px">Managing development and curtailing rapid growth.</li>
+      <li style="margin-bottom:8px">Public water and sewer, &ldquo;currently available on only 1% of land in Edgecomb,&rdquo; needing careful monitoring.</li>
+      <li style="margin-bottom:8px">High-speed internet access as &ldquo;critical&rdquo; to small business.</li>
+      <li>Heavy summer traffic on Route 1, whose solution &ldquo;remains in the hands of Maine Department of Transportation.&rdquo;</li>
+    </ul>
+    <div class="feedback" data-item="Part 1 — Dominant issues named in 2009 (p. 2)">
+      <p class="fb-q">Are these still Edgecomb&rsquo;s dominant issues?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <div class="promptbox">
+      <h3>What should the new plan say?</h3>
+      <p>What should the next comprehensive plan&rsquo;s introduction promise? Type your thought here, then send it — your comment is recorded right on this page and goes straight to the committee.</p>
+      <label class="sr" for="prompt-p1">Your thought on the introduction for the new plan</label>
+      <textarea id="prompt-p1" data-comment-for="Part 1 Introduction — What should the new plan say?" placeholder="Type your comment here…"></textarea>
+      <div class="fb-fields">
+        <label>Road or neighborhood <span class="opt">(optional)</span><input type="text" data-opt="road" autocomplete="off" aria-label="Road or neighborhood (optional)"></label>
+        <label>Name <span class="opt">(optional)</span><input type="text" data-opt="name" autocomplete="name" aria-label="Name (optional)"></label>
+      </div>
+      <div class="sendrow"><button type="button" class="sendbtn" data-send="prompt-p1">Send to the committee</button></div>
+      <p class="note">Road or neighborhood and name are optional — both can be left blank.</p>
+    </div>
+  </article>
+  </div>
+
+  <div class="tabpanel" id="tab-part2" role="tabpanel" aria-labelledby="tabbtn-part2" hidden>
+  <!-- ============ LAND USE ============ -->
+  <article class="chapter" id="landuse" aria-labelledby="lu-h">
+    <p class="part">Part 2 · Printed pp. 3–12 · Policies in Part 6, pp. 67–68</p>
+    <h2 id="lu-h">Existing &amp; Future Land Use</h2>
+    <p class="note">Summary (not plan language): Part 2 is the plan&rsquo;s map of the town — four districts covering every acre, the growth areas along Routes 1 and 27, and the decision to keep the 2003 district map in place for the following fifteen to twenty years.</p>
+
+    <h3>The Town Vision</h3>
+    <div class="vision-quote">
+      <p>&ldquo;To accommodate and guide Edgecomb&rsquo;s growth while supporting the expressed wishes of the townspeople to retain their individual autonomy, the community spirit and rural environment.&rdquo;</p>
+      <p class="cite">Verbatim — Part 2, printed p. 5. Maine&rsquo;s goal for this part: &ldquo;To encourage orderly growth and development in appropriate areas of each community, while protecting the state&rsquo;s rural character, making efficient use of public services, and preventing development sprawl.&rdquo;</p>
+    </div>
+
+    <div class="feedback" data-item="Land Use Vision (Part 2, p. 5)">
+      <p class="fb-q">Do you still agree?</p>
+      <p class="note" style="margin:0 0 12px">Growth guided, autonomy and rural environment protected — does that balance still sound right for Edgecomb today?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>The four districts — tap or click to explore</h3>
+    <p class="note">Every acre of Edgecomb sits in one of four districts, as adopted in 2003 (Part 2, p. 5). Plain-text version: Marine 36%, Woodland 28%, Rural 26%, Commercial 10%.</p>
+    <div class="distbar" role="group" aria-label="Land use districts by share of town">
+      <button type="button" class="d-marine" style="flex:36" data-dist="marine" aria-pressed="true">Marine<small>36%</small></button>
+      <button type="button" class="d-wood" style="flex:28" data-dist="woodland" aria-pressed="false">Woodland<small>28%</small></button>
+      <button type="button" class="d-rural" style="flex:26" data-dist="rural" aria-pressed="false">Rural<small>26%</small></button>
+      <button type="button" class="d-comm" style="flex:10" data-dist="commercial" aria-pressed="false">Commercial<small>10%</small></button>
+    </div>
+    <div class="distdetail" id="distdetail" aria-live="polite"></div>
+
+    <div class="feedback" data-item="Land Use — Four-district map adopted in 2003">
+      <p class="fb-q">The new plan inherits this four-district map. Should it stay?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">&ldquo;I agree with this&rdquo; here means keeping the four districts as they are. Your answer is recorded right here on this page.</p>
+    </div>
+
+    <h3>What residents said in 2007 — the Citizens&rsquo; View</h3>
+    <p class="note">From 357 respondents to the land use questions (Part 2, p. 5). The plan&rsquo;s own gloss: &ldquo;Citizens&rsquo; responses clearly indicate the town should remain rural in character.&rdquo;</p>
+    <div class="bars">
+      <div class="bar-row"><p class="bar-lbl"><b>99%</b> (326 people) felt protecting Edgecomb&rsquo;s unique and defining natural, historical and archaeological sites is very or fairly important to maintaining the town&rsquo;s character</p><div class="bar-track"><div class="bar-fill" style="width:99%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>63%</b> (226 people) did not favor multifamily housing or new construction on smaller lots</p><div class="bar-track"><div class="bar-fill" style="width:63%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>54%</b> (194 people) felt no new sewer and water extensions should be allowed</p><div class="bar-track"><div class="bar-fill gold" style="width:54%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>54%</b> (191 people) felt nature preserves bring benefits to all and are worth the trade-off in lost tax revenues</p><div class="bar-track"><div class="bar-fill gold" style="width:54%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>45%</b> (159 people) said that if smaller lots were allowed, they should be restricted to areas where part of the land was left as open space</p><div class="bar-track"><div class="bar-fill" style="width:45%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>27%</b> (95 people) felt extensions of sewer and water should be allowed — 74 of them only with restrictions in place</p><div class="bar-track"><div class="bar-fill" style="width:27%"></div></div></div>
+    </div>
+
+    <div class="feedback" data-item="2007 survey — Land Use results overall (Part 2, p. 5)">
+      <p class="fb-q">Taken together, do those 2007 land use results still speak for Edgecomb?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <div class="feedback" data-item="2007 survey — 63% did not favor multifamily housing or smaller lots">
+      <p class="fb-q">Do you still agree?</p>
+      <p class="note" style="margin:0 0 12px">In 2007, 63% of respondents did not favor multifamily housing or construction on smaller lots. Housing costs have changed a great deal since. Where do you stand now?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">&ldquo;I agree with this&rdquo; here means you still do not favor multifamily housing or smaller lots. Your answer is recorded right here on this page.</p>
+    </div>
+
+    <h3>Key points from the plan&rsquo;s analysis</h3>
+    <ul style="font-size:17.5px;padding-left:22px">
+      <li style="margin-bottom:8px">The Future Land Use Plan kept the existing district map &ldquo;as adopted in 2003 and projected to be valid for the next fifteen to twenty years&rdquo; (p. 10) — that window is the one now closing.</li>
+      <li style="margin-bottom:8px">Public water and sewer serve only the Davis Island TIF district — the plan puts sewer and water at &ldquo;only 1% of land in Edgecomb&rdquo; (Part 1, p. 2) and the TIF service area at 0.32% of the town&rsquo;s area (p. 11).</li>
+      <li style="margin-bottom:8px">Retail buildings are capped at 35,000 square feet, with design standards to keep buildings over 10,000 square feet at a residential scale (p. 8).</li>
+      <li style="margin-bottom:8px">The plan named &ldquo;the major and vital capital improvement need at this time&rdquo; as a new fire station (p. 11), and warned that administrative capacity &ldquo;is at present strained&rdquo; — a volunteer planning board and a part-time codes officer (pp. 8–9).</li>
+      <li>An accessory apartment provision allows a unit inside an existing one-family dwelling without changing the building&rsquo;s footprint, &ldquo;providing an opportunity for affordable housing&rdquo; (pp. 6–8).</li>
+    </ul>
+
+    <h3>The policies the town adopted — scorecard</h3>
+    <div class="score-note"><strong>Not yet assessed — and that is deliberate.</strong> Grading these nine policies is the Comprehensive Planning Committee&rsquo;s work as a body. Every status below starts at &ldquo;Not yet assessed&rdquo;; the committee&rsquo;s grades will appear here as they are made. Under each policy you&rsquo;ll find your own agree, disagree, and comment buttons — your responses are recorded right on this page, go to the committee, and will inform that grading.</div>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">1.</span> Preserve and protect the natural environment and unfragmented parcels of land.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">2.</span> Preserve and protect scenic and historic views.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">3.</span> Preserve and protect traditional land uses outside of the Route 1 growth areas.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">4.</span> Plan for impacts of climate change while providing incentives for &ldquo;green&rdquo; land use.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">5.</span> Coordinate the community&rsquo;s land use strategies with other local and regional land use planning efforts.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">6.</span> Support the location, types, scales and intensities of land uses the community desires as stated in its vision.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">7.</span> Support the level of financial commitment necessary to provide needed infrastructure in growth areas.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">8.</span> Establish efficient permitting procedures, especially in growth areas.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">9.</span> Protect both land and water-based critical resource areas from the impacts of development.*</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+    <details class="strategies"><summary>Strategies under these policies (Part 6, pp. 67–68)</summary>
+      <ul>
+        <li>Preserve existing road patterns and restrict the creation of through roads to existing abandoned or discontinued roads. (Selectmen — ongoing)</li>
+        <li>Create scenic-historic overlay districts and designated view sheds; develop design guidelines for compatible growth in each district. (Planning Board &amp; Historical Society — 3–5 years)</li>
+        <li>Provide tax or other incentives for green businesses and construction; encourage alternate energy sources. (Selectmen / private initiative — ongoing)</li>
+        <li>Appoint a Comprehensive Plan Implementation Task Force to report annually to town meeting. (Selectmen — 2009)</li>
+        <li>Enact or amend ordinances to clearly define the desired scale, intensity and location of future development, with streamlined permitting in growth areas.* (Planning Board — 2011)</li>
+        <li>Track new development in the community by type and location.* (Code Enforcement Officer — annually)</li>
+        <li>Periodically — at least every five years — evaluate implementation of the plan.* (Implementation Committee — annually)</li>
+      </ul>
+    </details>
+    <p class="note">Policy wording verbatim from Part 6, printed pp. 67–68. An asterisk (*) marks elements the plan identifies as required by the state.</p>
+
+    <div class="promptbox">
+      <h3>What should the new plan say?</h3>
+      <p>About where Edgecomb grows and what stays rural — what should the next comprehensive plan promise? Type your thought here, then send it — your comment is recorded right on this page and goes straight to the committee.</p>
+      <label class="sr" for="prompt-lu">Your thought on land use for the new plan</label>
+      <textarea id="prompt-lu" data-comment-for="Land Use chapter — What should the new plan say?" placeholder="Type your comment here…"></textarea>
+      <div class="fb-fields">
+        <label>Road or neighborhood <span class="opt">(optional)</span><input type="text" data-opt="road" autocomplete="off" aria-label="Road or neighborhood (optional)"></label>
+        <label>Name <span class="opt">(optional)</span><input type="text" data-opt="name" autocomplete="name" aria-label="Name (optional)"></label>
+      </div>
+      <div class="sendrow">
+        <button type="button" class="sendbtn" data-send="prompt-lu">Send to the committee</button>
+      </div>
+      <p class="note">Road or neighborhood and name are optional — both can be left blank.</p>
+    </div>
+  </article>
+  </div>
+
+  <div class="tabpanel" id="tab-part3" role="tabpanel" aria-labelledby="tabbtn-part3" hidden>
+  <article class="chapter" id="part3" aria-labelledby="p3-h">
+    <p class="part">Part 3 · Printed pp. 13–23 · Policies in Part 6, pp. 69–71</p>
+    <h2 id="p3-h">Economic Resources &amp; Housing</h2>
+    <p class="note">Summary (not plan language): Part 3 profiles the town in 2006 — its people, its place in the regional economy, its 58 businesses — and its housing stock, then sets visions for the economy and for housing.</p>
+
+    <h3>Edgecomb in 2006 — the plan&rsquo;s own panel (p. 13)</h3>
+    <div class="facts">
+      <div class="fact"><p class="n">1,228</p><p class="t">Population in 2006, on 11,893 acres (18.58 sq. miles) — 1 person per 10 acres (p. 13).</p></div>
+      <div class="fact"><p class="n">$50,865</p><p class="t">Median family income, 2006 (p. 13).</p></div>
+      <div class="fact"><p class="n">$250,000</p><p class="t">Median home price in the 2006 panel (p. 13). The Housing analysis on p. 22 uses $220,000 — the plan prints both figures, in different places, and both are shown on this page as printed.</p></div>
+      <div class="fact"><p class="n">58 businesses</p><p class="t">Employing about 205 people; annual sales $1,344,500 (pp. 13, 17).</p></div>
+      <div class="fact"><p class="n">94.1%</p><p class="t">High school or higher; 37.6% bachelor&rsquo;s degree or higher (2000 Census, p. 13).</p></div>
+      <div class="fact"><p class="n">10 births · 55 deaths</p><p class="t">Town records, 2001–2006 — &ldquo;death rates are higher than birth rates&rdquo; with &ldquo;an aging population and the in-migration of retirees&rdquo; (p. 13).</p></div>
+    </div>
+    <p class="note">Population history in the plan (p. 13): a high of 872 in the 1880s, a low of 411 in 1940, then a steady rise to 1,090 in 2000. Davis Island is &ldquo;only 1% of Edgecomb&rsquo;s land, 4% of its households and virtually 100% Gateway visibility&rdquo; (p. 20). Health care and service jobs paid an average of $11.45 per hour (p. 18).</p>
+
+    <h3>The Town Vision — Edgecomb&rsquo;s Economy</h3>
+    <div class="vision-quote">
+      <p>&ldquo;To maintain existing low impact home businesses and small commercial enterprises and encourage &lsquo;green&rsquo; economic growth.&rdquo;</p>
+      <p class="cite">Verbatim — Part 3, printed p. 17; restated in Part 6, p. 69.</p>
+    </div>
+    <div class="feedback" data-item="Economy Vision (Part 3, p. 17)">
+      <p class="fb-q">Do you still agree with this vision?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>What residents said in 2007 — the Citizens&rsquo; View on the economy (p. 17)</h3>
+    <div class="bars">
+      <div class="bar-row"><p class="bar-lbl"><b>35%</b> (128 people) felt commercial development should be encouraged on Routes 1 and 27 to increase the tax base</p><div class="bar-track"><div class="bar-fill" style="width:35%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>12%</b> (44 people) thought home businesses and low-impact industry should continue to be allowed anywhere in town</p><div class="bar-track"><div class="bar-fill" style="width:12%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>55%</b> (194 people) were opposed to extending the existing water and sewer system; <b>33%</b> (95) favored extending it when possible</p><div class="bar-track"><div class="bar-fill gold" style="width:55%"></div></div></div>
+    </div>
+    <p class="sourceline">The plan also reports that, based on the survey&rsquo;s broadband results, high-speed internet access was a priority for most Edgecomb residents (p. 17).</p>
+    <div class="feedback" data-item="2007 survey — Economy results (Part 3, p. 17)">
+      <p class="fb-q">Taken together, do those 2007 economy results still speak for Edgecomb?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+    <div class="feedback" data-item="2007 survey — 35% favored commercial development on Routes 1 and 27">
+      <p class="fb-q">Do you still agree?</p>
+      <p class="note" style="margin:0 0 12px">In 2007, 35% of respondents felt commercial development should be encouraged on Routes 1 and 27 to increase the tax base. Where do you stand now?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">&ldquo;I agree with this&rdquo; here means you favor encouraging commercial development on Routes 1 and 27. Your answer is recorded right here on this page.</p>
+    </div>
+
+    <h3>The Town Vision — Housing</h3>
+    <div class="vision-quote">
+      <p>&ldquo;To maintain traditional patterns of primarily single-family housing for all income levels.&rdquo;</p>
+      <p class="cite">Verbatim — Part 3, printed p. 21. Note: Part 6 (p. 71) prints a different housing vision — &ldquo;To provide housing for a growing population that includes homes for low, mid, and high income families in order to add to the diversity of the present citizenry.&rdquo; The plan itself carries both wordings; this page shows both rather than choosing between them.</p>
+    </div>
+    <div class="feedback" data-item="Housing Vision (Part 3, p. 21)">
+      <p class="fb-q">Do you still agree with this vision?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>What residents said in 2007 — the Citizens&rsquo; View on housing (p. 21)</h3>
+    <div class="bars">
+      <div class="bar-row"><p class="bar-lbl"><b>65%</b> (226 people) were opposed to multi-family housing and construction on small lots; <b>31%</b> (87) did not oppose multi-family housing, and <b>10%</b> (34) were in favor of allowing multi-family units</p><div class="bar-track"><div class="bar-fill" style="width:65%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>45%</b> (171 people) felt diversity in housing was not important; <b>18%</b> (65) felt it was very important and <b>8%</b> (31) fairly important</p><div class="bar-track"><div class="bar-fill gold" style="width:45%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>45%</b> (159 people) were in favor of allowing cluster or resource-based subdivisions</p><div class="bar-track"><div class="bar-fill" style="width:45%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>32%</b> (112 people) felt smaller lots should be restricted to zones with public water and sewer</p><div class="bar-track"><div class="bar-fill" style="width:32%"></div></div></div>
+    </div>
+    <div class="feedback" data-item="2007 survey — Housing results (Part 3, p. 21)">
+      <p class="fb-q">Taken together, do those 2007 housing results still speak for Edgecomb?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>Key facts on housing from the plan</h3>
+    <div class="facts">
+      <div class="fact"><p class="n">237 of 466</p><p class="t">Houses in the 2006 stock were built before 1950 (p. 21).</p></div>
+      <div class="fact"><p class="n">69%</p><p class="t">Of the population could not afford the median home: $220,000 in 2006, requiring an annual family income of $73,000, against a median income of $50,500 (p. 22).</p></div>
+      <div class="fact"><p class="n">1,250 by 2010 · 1,397 by 2020</p><p class="t">Population projections in the plan, requiring 64 new households by 2010 and 123 in total by 2020 (p. 22).</p></div>
+      <div class="fact"><p class="n">26 units</p><p class="t">The Townhouses at Davis Island — &ldquo;a 26-unit workforce housing project&rdquo; completed in 2007 (p. 22).</p></div>
+      <div class="fact"><p class="n">32 units</p><p class="t">Complete or under construction at Sheepscot Harbour Village and Resort, with 20 more retirement homes projected (p. 22).</p></div>
+      <div class="fact"><p class="n">8 units</p><p class="t">Edgecomb Green (the former Eddy School): six assisted-living rooms and two independent-living units (pp. 22–23).</p></div>
+    </div>
+
+    <h3>The policies the town adopted — scorecard</h3>
+    <div class="score-note"><strong>Not yet assessed.</strong> Every policy below starts ungraded. Deciding what was done, partly done, or overtaken by events is the Comprehensive Planning Committee&rsquo;s work as a body; this website does not grade the old plan. Under each policy you&rsquo;ll find your own agree, disagree, and comment buttons — your responses are recorded right on this page and go to the committee.</div>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:18px 0 0">Economic Resources (Part 6, p. 69)</h4>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">1.</span> Maintain a sound financial base through a balanced mix of federal, state and local revenues.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">2.</span> Provide an equitable local financial base for both residential and commercial taxpayers.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">3.</span> Encourage low-impact home-based businesses that follow traditional patterns.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">4.</span> Support the type of economic development activity the community desires, reflecting the community&rsquo;s role in the region.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">5.</span> Make a financial commitment, if necessary, to support desired economic development, including needed public improvements.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">6.</span> Coordinate with regional development corporations and surrounding towns as necessary to support desired economic development.*</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:18px 0 0">Housing Resources (Part 6, p. 71)</h4>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">1.</span> Encourage and promote safe and affordable housing for all residents.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">2.</span> Encourage and promote adequate workforce housing to support the community&rsquo;s and region&rsquo;s economic development.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">3.</span> Ensure that land use controls encourage the development of quality affordable housing, including rental housing.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">4.</span> Seek to achieve at least 10% of all housing built or placed during the next decade be affordable.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">5.</span> Encourage and support the efforts of the regional housing coalitions in addressing affordable and workforce housing needs.*</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+    <p class="note">An asterisk (*) marks elements the plan identifies as required by the state. Policy wording is from Part 6; the full strategy tables appear in the plan at printed pp. 69–71.</p>
+
+    <div class="promptbox">
+      <h3>What should the new plan say?</h3>
+      <p>About work, business, and housing in Edgecomb — what should the next comprehensive plan promise? Type your thought here, then send it — your comment is recorded right on this page and goes straight to the committee.</p>
+      <label class="sr" for="prompt-p3">Your thought on economy and housing for the new plan</label>
+      <textarea id="prompt-p3" data-comment-for="Part 3 Economy and Housing — What should the new plan say?" placeholder="Type your comment here…"></textarea>
+      <div class="fb-fields">
+        <label>Road or neighborhood <span class="opt">(optional)</span><input type="text" data-opt="road" autocomplete="off" aria-label="Road or neighborhood (optional)"></label>
+        <label>Name <span class="opt">(optional)</span><input type="text" data-opt="name" autocomplete="name" aria-label="Name (optional)"></label>
+      </div>
+      <div class="sendrow"><button type="button" class="sendbtn" data-send="prompt-p3">Send to the committee</button></div>
+      <p class="note">Road or neighborhood and name are optional — both can be left blank.</p>
+    </div>
+  </article>
+  </div>
+
+  <div class="tabpanel" id="tab-part4" role="tabpanel" aria-labelledby="tabbtn-part4" hidden>
+  <!-- ============ NATURAL RESOURCES ============ -->
+  <article class="chapter" id="natural" aria-labelledby="nat-h">
+    <p class="part">Part 4 · Printed pp. 24–41 · Policies in Part 6, pp. 72–77</p>
+    <h2 id="nat-h">Natural Resources</h2>
+    <p class="note">Summary (not plan language): Part 4 covers the town&rsquo;s critical natural areas, its water, its three tidal rivers, its recreation land, and its farms and forests. The visions and survey results below are the plan&rsquo;s own words and numbers.</p>
+
+    <h3>The Town Visions</h3>
+
+    <div class="vision-quote">
+      <p>&ldquo;To protect Edgecomb&rsquo;s critical natural resources within and surrounding Edgecomb&rsquo;s privately-owned undeveloped and unfragmented lands; Edgecomb&rsquo;s only great pond, Lily Pond; the town-owned Charles and Constance Schmid Land Preserve as well as Edgecomb&rsquo;s tidal frontage and its scenic vistas.&rdquo;</p>
+      <p class="cite">Critical Natural Resources — verbatim, Part 4, printed p. 25.</p>
+    </div>
+
+    <div class="feedback" data-item="Critical Natural Resources Vision (Part 4, p. 25)">
+      <p class="fb-q">That vision was written in 2009. Do you still agree with it?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <div class="vision-quote">
+      <p>&ldquo;To provide clean, safe drinking water throughout the town and assure that the Lily Pond and Sheepscot and Damariscotta rivers are pollution free.&rdquo;</p>
+      <p class="cite">Water Resources — verbatim, Part 4, printed p. 29.</p>
+    </div>
+
+    <div class="feedback" data-item="Water Resources Vision (Part 4, p. 29)">
+      <p class="fb-q">Do you still agree with this vision?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+    <div class="vision-quote">
+      <p>&ldquo;To protect waters and shoreline of Edgecomb&rsquo;s 26.5 mile frontage on three tidal rivers: the Damariscotta, the Sheepscot, and the Cross rivers; and to curb and in time eliminate local pollution of these waters. To provide Edgecomb&rsquo;s citizens with visual access, and possibly physical access in time, to these waters; and to manage private and public mooring and uses of the rivers.&rdquo;</p>
+      <p class="cite">Marine Resources — verbatim, Part 4, printed p. 31.</p>
+    </div>
+
+    <div class="feedback" data-item="Marine Resources Vision (Part 4, p. 31)">
+      <p class="fb-q">Do you still agree with this vision?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+    <div class="vision-quote">
+      <p>&ldquo;To maintain, protect and promote small-scale private agriculture, managed forests and woodlots and to increase sustainable conservation areas for public use.&rdquo;</p>
+      <p class="cite">Agricultural &amp; Forest Resources — verbatim, Part 4, printed p. 39.</p>
+    </div>
+
+    <div class="feedback" data-item="Agriculture and Forest Resources Vision (Part 4, p. 39)">
+      <p class="fb-q">Do you still agree with this vision?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>Key facts from the plan</h3>
+    <div class="facts">
+      <div class="fact"><p class="n">853 acres</p><p class="t">The town-owned Charles &amp; Constance Schmid Land Preserve, with 6+ miles of trails (Part 4, p. 35).</p></div>
+      <div class="fact"><p class="n">26.5 of 32.8 miles</p><p class="t">Of Edgecomb&rsquo;s boundary is shoreline — 83% of the town&rsquo;s boundaries are on its three tidal rivers (p. 31).</p></div>
+      <div class="fact"><p class="n">No public access</p><p class="t">&ldquo;Edgecomb has no public access to the Sheepscot, the Cross or the Damariscotta rivers&rdquo; — and no public wharves or marine services (pp. 32–33).</p></div>
+      <div class="fact"><p class="n">27</p><p class="t">Overboard discharge septic systems listed by the Maine DEP at the time of the plan (p. 30).</p></div>
+      <div class="fact"><p class="n">3,000+ acres</p><p class="t">Unfragmented block east of Route 27 around Lily Pond, its watershed, and Parsons Creek (p. 25).</p></div>
+      <div class="fact"><p class="n">100+ bird species</p><p class="t">Inventoried in the Schmid Preserve, with 50+ mammal species and nearly 20 amphibian and reptile types (p. 25).</p></div>
+    </div>
+
+    <h3>What residents said in 2007 — the Citizens&rsquo; View</h3>
+    <p class="note">Results below are the plan&rsquo;s own reporting of the 2007 Comprehensive Plan Survey (respondent totals vary by question, roughly 285–365). Bars show the percentage the plan printed.</p>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:20px 0 0">Why people live here, and what &ldquo;rural&rdquo; means</h4>
+    <div class="bars">
+      <div class="bar-row"><p class="bar-lbl"><b>71%</b> (253 people) defined rural as &ldquo;the bulk of our land remaining undeveloped, with large tracts of backland, fields and forests&rdquo;</p><div class="bar-track"><div class="bar-fill" style="width:71%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>62%</b> (220 people) live in Edgecomb because of its proximity to the water, clear skies and starry nights <span class="bar-note">— Marine Resources section, p. 31; the Critical Natural Resources section reports the same draw at 58% (205 people), p. 25</span></p><div class="bar-track"><div class="bar-fill" style="width:62%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>54%</b> (177 people) enjoy the respect for privacy in Edgecomb</p><div class="bar-track"><div class="bar-fill" style="width:54%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>54%</b> (191 people) felt nature preserves are an acceptable trade-off for lost tax revenue</p><div class="bar-track"><div class="bar-fill gold" style="width:54%"></div></div></div>
+    </div>
+
+    <div class="feedback" data-item="2007 survey — Rural means the bulk of land stays undeveloped (71%)">
+      <p class="fb-q">Do you still agree?</p>
+      <p class="note" style="margin:0 0 12px">In 2007, 71% of respondents defined &ldquo;rural&rdquo; as the bulk of Edgecomb&rsquo;s land remaining undeveloped. Is that still your definition?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:20px 0 0">Water, sewer, and the working shore</h4>
+    <div class="bars">
+      <div class="bar-row"><p class="bar-lbl"><b>55%</b> (194 people) opposed extending the existing public sewer and water systems</p><div class="bar-track"><div class="bar-fill" style="width:55%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>33%</b> (94 people) favored extending sewer and water</p><div class="bar-track"><div class="bar-fill" style="width:33%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>12%</b> (40 people) were willing to pay additional taxes for the service</p><div class="bar-track"><div class="bar-fill" style="width:12%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>5%</b> (19 people) objected to fishing and related marine operations &ldquo;in my back yard&rdquo; — and only <b>4%</b> (15 people) earned $1,000 or more from marine resources</p><div class="bar-track"><div class="bar-fill gold" style="width:5%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>82%</b> (301 people) felt maintaining Edgecomb&rsquo;s historic character was important; <b>26%</b> objected to forestry &ldquo;in my back yard&rdquo; and <b>7%</b> to farming there</p><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
+    </div>
+    <p class="sourceline">All Citizens&rsquo; View figures: Part 4, printed pp. 25, 29, 31, 35, 39, as printed in the plan.</p>
+
+    <div class="feedback" data-item="2007 survey — Sewer and water extension: 55% opposed, 33% in favor">
+      <p class="fb-q">Sewer and water divided the town in 2007 — 55% opposed extending the systems, 33% in favor. Where do you stand now?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">&ldquo;I agree with this&rdquo; here means you agree with the 2007 majority — opposing extension. If you&rsquo;ve changed your mind since, or see it differently, say so with &ldquo;I disagree&rdquo; or a comment. Your answer is recorded right here on this page.</p>
+    </div>
+
+    <h3>The policies the town adopted — scorecard</h3>
+    <div class="score-note"><strong>Not yet assessed — and that is deliberate.</strong> Every policy below starts ungraded. Deciding what was done, partly done, or overtaken by events is the Comprehensive Planning Committee&rsquo;s work as a body; this website does not grade the old plan. When the committee assesses a policy, its status will appear here. Under each policy you&rsquo;ll find your own agree, disagree, and comment buttons — your responses are recorded right on this page, go to the committee, and will inform that assessment.</div>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:18px 0 0">Critical Natural Resources (Part 6, p. 72)</h4>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">1.</span> Conserve critical natural resources in the community.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">2.</span> Coordinate with neighboring communities and regional and state resource agencies to protect shared critical natural resources.*</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+    <details class="strategies"><summary>Strategies under these policies (Part 6, p. 72)</summary>
+      <ul>
+        <li>Amend local shoreland zone standards to meet current state guidelines.* (Planning Board — as needed)</li>
+        <li>Designate critical natural resources as Critical Resource Areas in the Future Land Use Plan.* (Comp Plan Committee — listed as Completed in 2009)</li>
+        <li>Require subdivisions and non-residential developers to identify critical natural resources on site and protect them, using Maine Beginning with Habitat maps in review.* (Planning Board — ongoing)</li>
+        <li>Adopt natural resource protection practices for construction and maintenance of public roads and properties.* (Code Enforcement Officer — ongoing)</li>
+        <li>Make information available to those living in or near critical natural areas about applicable regulations.* (Implementation Committee — ongoing)</li>
+        <li>Protect air quality by encouraging carbon footprint reduction and green conservation practices. (Implementation Committee — ongoing)</li>
+        <li>Participate in interlocal and regional planning around shared critical natural resources and unfragmented parcels.* (Citizen initiative / Selectmen — ongoing)</li>
+        <li>Pursue public/private partnerships to protect critical natural resources, such as purchase of land or easements from willing sellers.* (Citizen initiative / Selectmen — ongoing)</li>
+      </ul>
+    </details>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:18px 0 0">Water Resources (Part 6, p. 73)</h4>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">1.</span> Protect current and potential drinking water sources.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">2.</span> Protect significant surface water resources from pollution and improve water quality where needed.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">3.</span> Protect water resources in growth areas while promoting more intensive development in those areas.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">4.</span> Minimize pollution discharges through the upgrade of existing public sewer systems and wastewater treatment facilities.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">5.</span> Cooperate with neighboring communities and regional/local advocacy groups to protect water resources.*</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:18px 0 0">Marine Resources (Part 6, p. 74)</h4>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">1.</span> Protect, maintain and, where warranted, improve marine habitat and water quality.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">2.</span> Foster water-dependent land uses and balance them with other complementary land uses.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">3.</span> Maintain, and where warranted, improve harbor management and facilities.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">4.</span> Protect, maintain and, where warranted, improve physical and visual public access to the community&rsquo;s marine resources for all appropriate uses including fishing, recreation and tourism.*</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:18px 0 0">Agriculture &amp; Forestry (Part 6, p. 75) · Recreation &amp; Culture (Part 6, p. 76)</h4>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">Ag 1.</span> Safeguard lands identified as prime farmland or capable of supporting commercial forestry.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">Ag 2.</span> Promote the use of best management practices for timber harvesting and agricultural production; support farming and forestry and encourage their economic viability.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">Rec 1.</span> Provide for passive recreational opportunities.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">Rec 2.</span> Enhance appreciation of the rich cultural offerings in the region.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">Rec 3.</span> Maintain/upgrade existing recreational facilities as necessary to meet current and future needs.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">Rec 4.</span> Preserve open space for recreational use as appropriate.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">Rec 5.</span> Seek to achieve at least one major point of public access to major water bodies for boating, fishing, and swimming, and work with nearby property owners to address concerns.*</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+    <p class="note">An asterisk (*) marks elements the plan identifies as required by the state. Policy wording is verbatim from Part 6; the full strategy tables for Water, Marine, Agriculture &amp; Forestry, and Recreation appear in the plan at printed pp. 73–77.</p>
+
+    <div class="promptbox">
+      <h3>What should the new plan say?</h3>
+      <p>About Edgecomb&rsquo;s rivers, Lily Pond, the Schmid Preserve, farms and forests — what should the next comprehensive plan promise? Type your thought here, then send it — your comment is recorded right on this page and goes straight to the committee.</p>
+      <label class="sr" for="prompt-nat">Your thought on natural resources for the new plan</label>
+      <textarea id="prompt-nat" data-comment-for="Natural Resources chapter — What should the new plan say?" placeholder="Type your comment here…"></textarea>
+      <div class="fb-fields">
+        <label>Road or neighborhood <span class="opt">(optional)</span><input type="text" data-opt="road" autocomplete="off" aria-label="Road or neighborhood (optional)"></label>
+        <label>Name <span class="opt">(optional)</span><input type="text" data-opt="name" autocomplete="name" aria-label="Name (optional)"></label>
+      </div>
+      <div class="sendrow">
+        <button type="button" class="sendbtn" data-send="prompt-nat">Send to the committee</button>
+      </div>
+      <p class="note">Road or neighborhood and name are optional — both can be left blank.</p>
+    </div>
+  </article>
+  </div>
+
+  <div class="tabpanel" id="tab-part5" role="tabpanel" aria-labelledby="tabbtn-part5" hidden>
+  <article class="chapter" id="part5" aria-labelledby="p5-h">
+    <p class="part">Part 5 · Printed pp. 42–65 · Policies in Part 6, pp. 78–81</p>
+    <h2 id="p5-h">Facilities &amp; Services</h2>
+    <p class="note">Summary (not plan language): Part 5 covers how the town runs — its government, school, fire and refuse services, its roads, its finances and capital plans, and its historic and scenic resources.</p>
+
+    <h3>The Town Vision — Public Facilities &amp; Services</h3>
+    <div class="vision-quote">
+      <p>&ldquo;To provide adequate facilities and services for the town and its small population, thereby assuring public safety and fiscally responsible governance for the citizens.&rdquo;</p>
+      <p class="cite">Verbatim — Part 5, printed p. 43; restated in Part 6, p. 78.</p>
+    </div>
+    <div class="feedback" data-item="Public Facilities and Services Vision (Part 5, p. 43)">
+      <p class="fb-q">Do you still agree with this vision?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>What residents said in 2007 — the Citizens&rsquo; View (p. 43)</h3>
+    <div class="bars">
+      <div class="bar-row"><p class="bar-lbl"><b>82%</b> (299 people) indicated that government providing emergency, fire, accident, and natural disaster services was important; <b>51%</b> (186) said those services were very important</p><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>43%</b> (157 people) were willing to pay higher taxes for better roads</p><div class="bar-track"><div class="bar-fill" style="width:43%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>14%</b> (51 people) were in favor of increasing town administrative staff</p><div class="bar-track"><div class="bar-fill gold" style="width:14%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>11%</b> (40 people) were willing to pay higher taxes for a new town hall</p><div class="bar-track"><div class="bar-fill gold" style="width:11%"></div></div></div>
+    </div>
+    <div class="feedback" data-item="2007 survey — Public Facilities results (Part 5, p. 43)">
+      <p class="fb-q">Taken together, do those 2007 results still speak for Edgecomb?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+    <div class="feedback" data-item="2007 survey — 43% willing to pay higher taxes for better roads (Part 5, p. 43)">
+      <p class="fb-q">Do you still agree?</p>
+      <p class="note" style="margin:0 0 12px">In 2007, 43% of respondents were willing to pay higher taxes for better roads. Where do you stand now?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">&ldquo;I agree with this&rdquo; here means you are willing to pay higher taxes for better roads. Your answer is recorded right here on this page.</p>
+    </div>
+
+    <h3>Key facts from the plan</h3>
+    <div class="facts">
+      <div class="fact"><p class="n">14 paid · 74 volunteer</p><p class="t">Positions run the town: Town Meeting government, three elected selectmen, five elected planning board members (p. 43).</p></div>
+      <div class="fact"><p class="n">94 of 135</p><p class="t">Edgecomb Eddy School enrollment in 2008 against capacity; the school was built in 2001. 33 Edgecomb students attended middle school and 69 high school in surrounding towns (p. 44).</p></div>
+      <div class="fact"><p class="n">$86,316</p><p class="t">The town&rsquo;s 2006 cost under its Boothbay Region Refuse Disposal District contract (p. 45).</p></div>
+      <div class="fact"><p class="n">~35 miles</p><p class="t">Of public roads, 7.30 miles of them on Routes 1 and 27; the road inventory totals 36.39 miles of public roads and 11.01 miles of private roads (pp. 50, 53–54).</p></div>
+    </div>
+
+    <h3>The Town Vision — Transportation</h3>
+    <div class="vision-quote">
+      <p>&ldquo;To establish and maintain a safe and environmentally sensitive road system that supports the community and the economy while protecting the town&rsquo;s key assets.&rdquo;</p>
+      <p class="cite">Verbatim — Part 5, printed p. 49; restated in Part 6, p. 79.</p>
+    </div>
+    <div class="feedback" data-item="Transportation Vision (Part 5, p. 49)">
+      <p class="fb-q">Do you still agree with this vision?</p>
+      <p class="note" style="margin:0 0 12px">The section&rsquo;s only survey result: 43% (154 people) were willing to pay additional taxes for better roads (p. 49).</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>The Town Vision — Fiscal Capacity</h3>
+    <div class="vision-quote">
+      <p>&ldquo;To provide necessary services and safe, functional public facilities in a responsible and efficient manner.&rdquo;</p>
+      <p class="cite">Verbatim — Part 5, printed p. 55. Part 6 (p. 80) heads its fiscal table with a different wording: &ldquo;To plan for, finance and develop an efficient system of public facilities and services to accommodate anticipated growth and economic development.&rdquo; Both are printed here as the plan prints them.</p>
+    </div>
+    <div class="feedback" data-item="Fiscal Capacity Vision (Part 5, p. 55)">
+      <p class="fb-q">Do you still agree with this vision?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>What residents said in 2007 — where the tax base could grow (p. 55)</h3>
+    <div class="bars">
+      <div class="bar-row"><p class="bar-lbl"><b>35%</b> (124 people) felt commercial development on Routes 1 and 27 has the greatest potential for increasing the tax base</p><div class="bar-track"><div class="bar-fill" style="width:35%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>16%</b> (57 people) felt residential growth will be the greatest source of revenue, with shorefront properties contributing the most</p><div class="bar-track"><div class="bar-fill" style="width:16%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>12%</b> (43 people) felt home businesses and other low-impact industries anywhere in town would best provide a tax base</p><div class="bar-track"><div class="bar-fill" style="width:12%"></div></div></div>
+      <div class="bar-row"><p class="bar-lbl"><b>6%</b> (21 people) felt &ldquo;niche&rdquo; farming, woodlots, green technology and eco tourism may in time provide stable revenue</p><div class="bar-track"><div class="bar-fill gold" style="width:6%"></div></div></div>
+    </div>
+    <p class="sourceline">One figure as printed: this section pairs &ldquo;43%&rdquo; willing to pay higher taxes for better roads with 57 respondents (p. 55), while the Public Facilities section pairs the same 43% with 157 respondents (p. 43). The &ldquo;57&rdquo; appears to be a typographical error in the plan; both are shown as printed. Fiscal facts (pp. 55–57): income and expenditures rose 300% from 1999 to 2009; real estate taxes supplied 55%–72% of total revenue over the prior ten years; the LD-1 levy limit was raised at town meeting in 2007 to a 2008 limit of $598,442.30. The Davis Island TIF district&rsquo;s 2008 valuation was $14,700,000, with $78,500 in tax revenue delivered to the town, split 55% to the developer and 45% to the town (p. 57).</p>
+    <div class="feedback" data-item="2007 survey — Fiscal Capacity results (Part 5, p. 55)">
+      <p class="fb-q">Taken together, do those 2007 fiscal results still speak for Edgecomb?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>The capital plan the town adopted (Part 5, Table 1, p. 58)</h3>
+    <div class="facts">
+      <div class="fact"><p class="n">$500,000</p><p class="t">New fire station — grants/bond, phased 2009–2014 ($25,000 in 2009, $75,000 in 2010, $100,000 a year 2011–2014).</p></div>
+      <div class="fact"><p class="n">$1,000,000</p><p class="t">Water and sewer expansion, 2019–2020 — TIF recapture, direct appropriations and bonds.</p></div>
+      <div class="fact"><p class="n">$200,000</p><p class="t">Town hall renovation &amp; ADA compliance — ongoing.</p></div>
+      <div class="fact"><p class="n">$145,000</p><p class="t">Road improvements — ongoing, State Highway Block Grant and direct appropriations.</p></div>
+      <div class="fact"><p class="n">$5,000</p><p class="t">Fire Department Reserve Fund, 2009.</p></div>
+    </div>
+
+    <h3>The Town Vision — Historic, Archaeological &amp; Scenic Resources</h3>
+    <div class="vision-quote">
+      <p>&ldquo;To protect and preserve historic structures in their scenic context and to conserve archeological resources.&rdquo;</p>
+      <p class="cite">Verbatim — Part 5, printed p. 61. In the survey, 81% (287 people) felt protecting Edgecomb&rsquo;s unique and defining natural, historical and archaeological sites is important (p. 61). Note: the vision printed at the head of Part 6&rsquo;s Historic Resources table (p. 81) repeats the Critical Natural Resources vision — apparently a copy error in the 2009 plan itself; the section&rsquo;s own vision is the one quoted here.</p>
+    </div>
+    <div class="feedback" data-item="Historic, Archaeological and Scenic Resources Vision (Part 5, p. 61)">
+      <p class="fb-q">Do you still agree with this vision?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+    <div class="feedback" data-item="2007 survey — 81% said protecting historic and archaeological sites is important (Part 5, p. 61)">
+      <p class="fb-q">Do you still agree?</p>
+      <p class="note" style="margin:0 0 12px">In 2007, 81% of respondents felt protecting Edgecomb&rsquo;s unique and defining natural, historical and archaeological sites is important. Where do you stand now?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <h3>The policies the town adopted — scorecard</h3>
+    <div class="score-note"><strong>Not yet assessed.</strong> Every policy below starts ungraded. Deciding what was done, partly done, or overtaken by events is the Comprehensive Planning Committee&rsquo;s work as a body; this website does not grade the old plan. Notable strategies in this part include increasing the number of selectmen from three to five, planning for a replacement fire station, establishing a water district and sewer commission, and securing high-speed internet access town-wide (Part 6, p. 78). Under each policy you&rsquo;ll find your own agree, disagree, and comment buttons.</div>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:18px 0 0">Public Facilities and Services (Part 6, p. 78)</h4>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">1.</span> Assure responsible and qualified governance, administration and management in all town matters.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">2.</span> Efficiently meet identified public facility and service needs.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">3.</span> Provide public facilities and services in a manner that promotes and supports growth and development in identified growth areas.*</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:18px 0 0">Transportation (Part 6, p. 79)</h4>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">1.</span> Assure that secondary roads are well maintained, safe and that speed is controlled.</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">2.</span> Prioritize community and regional needs associated with safe, efficient, and optimal use of transportation systems.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">3.</span> Safely and efficiently preserve or improve the transportation system.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">4.</span> Promote public health, protect natural and cultural resources and enhance livability by managing land use in ways that maximize the efficiency of the transportation system and minimize increases in vehicle miles traveled.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">5.</span> Promote fiscal prudence by maximizing the efficiency of the state or state-aid highway network.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">6.</span> Meet the diverse transportation needs of the residents (including children, the elderly and disabled) and through travelers by providing a safe, efficient and adequate transportation network for all types of users (motor vehicles, pedestrians, bicyclist).*</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:18px 0 0">Fiscal Capacity and Capital Investment Plan (Part 6, p. 80)</h4>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">1.</span> Finance existing and future facilities and services in a cost effective manner.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">2.</span> Explore grants available to assist in the funding of capital investments within the community.*</span><span class="chip">Not yet assessed</span></li>
+      <li><span class="ptxt"><span class="pnum">3.</span> Direct a minimum of 75% of new municipal growth-related capital investments into designated growth areas in the Future Land Use Plan.*</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+
+    <h4 style="font-family:var(--serif);font-size:20px;margin:18px 0 0">Historical, Archaeological and Scenic Resources (Part 6, p. 81)</h4>
+    <ul class="policies">
+      <li><span class="ptxt"><span class="pnum">1.</span> Preserve and protect the town&rsquo;s historical and archaeological resources.</span><span class="chip">Not yet assessed</span></li>
+    </ul>
+    <details class="strategies"><summary>Strategies under the historic resources policy (Part 6, p. 81)</summary>
+      <ul>
+        <li>Preservation easements and deed restrictions.</li>
+        <li>Maintaining the historic structures survey.</li>
+        <li>A survey of abandoned industrial and domestic sites.</li>
+        <li>Creating a scenic overlay district. (Planning Board and Historical Society — 2017)</li>
+      </ul>
+    </details>
+    <p class="note">An asterisk (*) marks elements the plan identifies as required by the state. Policy wording is from Part 6; the full strategy tables appear in the plan at printed pp. 78–81.</p>
+
+    <div class="promptbox">
+      <h3>What should the new plan say?</h3>
+      <p>About town services, roads, taxes, and Edgecomb&rsquo;s historic places — what should the next comprehensive plan promise? Type your thought here, then send it — your comment is recorded right on this page and goes straight to the committee.</p>
+      <label class="sr" for="prompt-p5">Your thought on facilities and services for the new plan</label>
+      <textarea id="prompt-p5" data-comment-for="Part 5 Facilities and Services — What should the new plan say?" placeholder="Type your comment here…"></textarea>
+      <div class="fb-fields">
+        <label>Road or neighborhood <span class="opt">(optional)</span><input type="text" data-opt="road" autocomplete="off" aria-label="Road or neighborhood (optional)"></label>
+        <label>Name <span class="opt">(optional)</span><input type="text" data-opt="name" autocomplete="name" aria-label="Name (optional)"></label>
+      </div>
+      <div class="sendrow"><button type="button" class="sendbtn" data-send="prompt-p5">Send to the committee</button></div>
+      <p class="note">Road or neighborhood and name are optional — both can be left blank.</p>
+    </div>
+  </article>
+  </div>
+
+  <div class="tabpanel" id="tab-part6" role="tabpanel" aria-labelledby="tabbtn-part6" hidden>
+  <article class="chapter" id="part6" aria-labelledby="p6-h">
+    <p class="part">Part 6 · Printed pp. 66–81</p>
+    <h2 id="p6-h">Policies &amp; Strategies — the whole plan in one place</h2>
+    <p class="note">Part 6 is the plan&rsquo;s implementation engine: for every topic, a policy-and-strategy table naming who is responsible and by when (introduction, p. 66). The adopted policies for Land Use and for Natural Resources appear in full, with their strategy tables, in the Part 2 and Part 4 tabs; the policies for Economy, Housing, Public Facilities, Transportation, Fiscal Capacity, and Historic Resources appear in the Part 3 and Part 5 tabs. This tab gathers the complete map of those tables so the whole plan can be taken in at once — and carries the whole-plan feedback.</p>
+
+    <h3>Every policy table in Part 6</h3>
+    <div class="facts">
+      <div class="fact"><p class="n">Land Use — p. 67</p><p class="t">9 policies. Full scorecard in the Part 2 tab.</p></div>
+      <div class="fact"><p class="n">Economic Resources — p. 69</p><p class="t">6 policies. Full scorecard in the Part 3 tab.</p></div>
+      <div class="fact"><p class="n">Housing Resources — p. 71</p><p class="t">5 policies. Full scorecard in the Part 3 tab.</p></div>
+      <div class="fact"><p class="n">Critical Natural Resources — p. 72</p><p class="t">2 policies. Full scorecard in the Part 4 tab.</p></div>
+      <div class="fact"><p class="n">Water Resources — p. 73</p><p class="t">5 policies. Full scorecard in the Part 4 tab.</p></div>
+      <div class="fact"><p class="n">Marine Resources — p. 74</p><p class="t">4 policies. Full scorecard in the Part 4 tab.</p></div>
+      <div class="fact"><p class="n">Agriculture &amp; Forestry — p. 75</p><p class="t">2 policies. Full scorecard in the Part 4 tab.</p></div>
+      <div class="fact"><p class="n">Recreation &amp; Culture — p. 76</p><p class="t">5 policies. Full scorecard in the Part 4 tab.</p></div>
+      <div class="fact"><p class="n">Public Facilities — p. 78</p><p class="t">3 policies. Full scorecard in the Part 5 tab.</p></div>
+      <div class="fact"><p class="n">Transportation — p. 79</p><p class="t">6 policies. Full scorecard in the Part 5 tab.</p></div>
+      <div class="fact"><p class="n">Fiscal Capacity — p. 80</p><p class="t">3 policies. Full scorecard in the Part 5 tab.</p></div>
+      <div class="fact"><p class="n">Historic Resources — p. 81</p><p class="t">1 policy. Full scorecard in the Part 5 tab.</p></div>
+    </div>
+    <p class="note">51 adopted policies in total across the twelve tables. Every one of them starts as <strong>Not yet assessed</strong> — grading what was done, partly done, or overtaken by events is the Comprehensive Planning Committee&rsquo;s work as a body, and the committee&rsquo;s grades will appear in the chapter tabs as they are made. An asterisk (*) in the chapter scorecards marks elements the plan identifies as required by the state.</p>
+    <p class="note">Two wordings to know about, both printed as the plan prints them: Part 6&rsquo;s Housing table (p. 71) carries a different housing vision from Part 3 (p. 21), and the vision at the head of Part 6&rsquo;s Historic Resources table (p. 81) repeats the Critical Natural Resources vision — apparently a copy error in the 2009 plan itself. The chapter tabs show each wording in its place.</p>
+
+    <div class="feedback" data-item="Part 6 — Policies and Strategies as a whole (pp. 66–81)">
+      <p class="fb-q">Taken as a whole, did Part 6 give the town a workable to-do list?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">&ldquo;I agree with this&rdquo; here means Part 6 worked as an implementation plan. Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <div class="promptbox">
+      <h3>What should the new plan say?</h3>
+      <p>About how the next plan should be carried out — who does what, by when, and how the town will know — what should it promise? Type your thought here, then send it — your comment is recorded right on this page and goes straight to the committee.</p>
+      <label class="sr" for="prompt-p6">Your thought on implementation for the new plan</label>
+      <textarea id="prompt-p6" data-comment-for="Part 6 Policies and Strategies — What should the new plan say?" placeholder="Type your comment here…"></textarea>
+      <div class="fb-fields">
+        <label>Road or neighborhood <span class="opt">(optional)</span><input type="text" data-opt="road" autocomplete="off" aria-label="Road or neighborhood (optional)"></label>
+        <label>Name <span class="opt">(optional)</span><input type="text" data-opt="name" autocomplete="name" aria-label="Name (optional)"></label>
+      </div>
+      <div class="sendrow"><button type="button" class="sendbtn" data-send="prompt-p6">Send to the committee</button></div>
+      <p class="note">Road or neighborhood and name are optional — both can be left blank.</p>
+    </div>
+  </article>
+  </div>
+
+  <!-- ============ FEEDBACK ============ -->
+  <section id="feedback" aria-labelledby="fb-h">
+    <h2 id="fb-h">Have your say on the whole plan</h2>
+    <p class="lede">You&rsquo;ve been able to react item by item as you read. This is the place for the bigger picture — and for anything that didn&rsquo;t fit a button above. Every response is recorded right here on the page, sent to the Comprehensive Planning Committee, and read by the committee as it writes the new plan.</p>
+
+    <div class="feedback" data-item="The 2009 plan overall">
+      <p class="fb-q">Overall, did the 2009 plan point Edgecomb in the right direction?</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-agree" data-view="I agree">I agree with this</button>
+        <button type="button" class="fb-btn fb-disagree" data-view="I disagree">I disagree with this</button>
+        <button type="button" class="fb-btn fb-mixed" data-view="I have mixed feelings">I have mixed feelings</button>
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the Comprehensive Planning Committee.</p>
+    </div>
+
+    <div class="feedback" data-item="General comment">
+      <p class="fb-q">Anything else the committee should hear?</p>
+      <p class="note" style="margin:0 0 12px">A topic the 2009 plan missed, something Edgecomb should protect or change, a question you want the new plan to answer — all of it is useful, and none of it has to fit a chapter.</p>
+      <div class="fb-btns">
+        <button type="button" class="fb-btn fb-comment" data-view="Just a comment">Add a general comment</button>
+      </div>
+      <p class="fb-note">Recorded right here on this page and sent to the committee. Your name and your road or neighborhood are optional — add them with your comment, or leave them blank if you prefer.</p>
+    </div>
+    <p class="note" style="margin-top:16px">Prefer a form instead? You can also <a href="https://docs.google.com/forms/d/e/1FAIpQLSc87Ha8PfzEwfUaHdNrUkyazd8xQgQS7btCC19LAzonoQNiUA/viewform" target="_blank" rel="noopener">respond using the committee&rsquo;s Google Form</a> — an alternative way to send feedback. Responses sent through the form are collected separately from the ones recorded on this page.</p>
+  </section>
+
+  <!-- ============ NEXT ============ -->
+  <section id="next" aria-labelledby="next-h">
+    <div class="nextbox">
+      <h2 id="next-h">What happens next</h2>
+      <p>Edgecomb is writing a new comprehensive plan. The 2009 plan&rsquo;s own land use map was adopted &ldquo;projected to be valid for the next fifteen to twenty years&rdquo; — that horizon has arrived, and the Comprehensive Planning Committee is doing the work in the open: reading the old plan honestly, counting the town as it is now, and asking residents what should come next.</p>
+      <p class="meet">Next committee meeting: <strong>Wednesday, November 25, 2026, at 3:00 PM</strong> — residents are welcome.</p>
+      <p>This site is the front door for that conversation. The agree and disagree answers, the comments, and your responses to &ldquo;What should the new plan say?&rdquo; are recorded right on this page, and they feed directly into the committee&rsquo;s work — including the policy scorecard above. Send a thought from any chapter, use the general comment below, or just come to a meeting and listen.</p>
+      <p><a class="fb-link" href="#feedback">Have your say — feedback section</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Sources.</strong> All plan quotations, visions, survey results, and policies are from <em>Edgecomb Maine Comprehensive Plan, Volume I</em> (Edgecomb Comprehensive Plan Committee, 2009), cited by the plan&rsquo;s printed page numbers throughout. The plan text was sourced from the University of Maine DigitalCommons copy (&ldquo;Maine Town Documents&rdquo; no. 320), retrieved via the Internet Archive&rsquo;s archived copy. &ldquo;Today&rdquo; figures are from the U.S. Census Bureau&rsquo;s ACS 2024 5-year estimates via Census Reporter, and current Edgecomb Eddy School enrollment as reported to the school board. Where the 2009 plan&rsquo;s own figures differ between its sections, this site prints the narrative figure and notes the difference rather than reconciling it silently.</p>
+    <p><strong>About this site.</strong> This site is published by the Edgecomb Comprehensive Planning Committee to present the 2009 Comprehensive Plan for resident review and feedback as the committee writes the next plan. The agree, disagree, and comment buttons throughout this page record your response right on the page and send it to the Comprehensive Planning Committee; the running totals shown under each item come from those recorded responses. Name and road or neighborhood are optional, and are only sent if you add them with a comment. A Google Form is also linked in the &ldquo;Have your say&rdquo; section as an alternative way to respond; responses sent there are collected separately. Volume II of the 2009 plan (appendices, maps, and full survey detail) is a printed companion volume; the plan&rsquo;s map series (printed pp. 85&ndash;92) is likewise part of the printed plan and is not reproduced here.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  /* Dashboard era toggle */
+  var dashBtns = document.querySelectorAll("[data-dashbtn]");
+  dashBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      document.body.setAttribute("data-dash", btn.getAttribute("data-dashbtn"));
+      dashBtns.forEach(function(b){ b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+    });
+  });
+
+  /* Feedback — true in-page capture. Every agree / disagree / mixed click and
+     every comment is POSTed straight from this page to the committee's Apps
+     Script endpoint, which appends one row per response to the responses
+     spreadsheet. The button confirms in place; tallies load via JSONP (GET
+     ?callback=) and update immediately after each recorded response. */
+  var ENDPOINT = "https://script.google.com/macros/s/AKfycbxP8_SCcK9iean-IyWDgOhHuNBbYs1v9evmiQfeSfuohL_lriw_7vE7mDQKd192zuqljg/exec";
+  var counts = {};
+  var tallyEntries = [];
+  function countFor(item, view){
+    var c = counts[item];
+    return (c && typeof c[view] === "number") ? c[view] : 0;
+  }
+  function tallyText(item){
+    var a = countFor(item, "I agree"), d = countFor(item, "I disagree"),
+        m = countFor(item, "I have mixed feelings"), c = countFor(item, "Just a comment");
+    if (a + d + m + c === 0) return "";
+    var t = "So far: " + a + " agree \u00B7 " + d + " disagree \u00B7 " + m + " mixed";
+    if (c > 0) t += " \u00B7 " + c + (c === 1 ? " comment" : " comments");
+    return t;
+  }
+  function renderTally(entry){
+    var t = tallyText(entry.item);
+    entry.el.textContent = t;
+    entry.el.style.display = t ? "" : "none";
+  }
+  function registerTally(item, el){
+    var e = { item: item, el: el };
+    tallyEntries.push(e);
+    renderTally(e);
+  }
+  function bump(item, view){
+    if (!counts[item]) counts[item] = {};
+    counts[item][view] = (counts[item][view] || 0) + 1;
+    tallyEntries.forEach(function(e){ if (e.item === item) renderTally(e); });
+  }
+  function postFeedback(payload){
+    /* text/plain + no-cors avoids a CORS preflight against Apps Script;
+       a completed fetch is treated as recorded. */
+    return fetch(ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify(payload)
+    });
+  }
+  function loadTallies(){
+    var cb = "edgecombTallyCallback";
+    var finished = false, script = null, timer = null;
+    function cleanup(){
+      if (finished) return; finished = true;
+      if (timer) clearTimeout(timer);
+      try { delete window[cb]; } catch (e) { window[cb] = undefined; }
+      if (script && script.parentNode) script.parentNode.removeChild(script);
+    }
+    window[cb] = function(data){
+      if (data && data.counts) {
+        counts = data.counts;
+        tallyEntries.forEach(renderTally);
+      }
+      cleanup();
+    };
+    script = document.createElement("script");
+    script.src = ENDPOINT + "?callback=" + cb;
+    script.onerror = cleanup;
+    timer = setTimeout(cleanup, 12000);
+    document.head.appendChild(script);
+  }
+  function buildCommentArea(item, getView, statusEl, onSent){
+    var area = document.createElement("div");
+    area.className = "fb-comment";
+    area.hidden = true;
+    var ta = document.createElement("textarea");
+    ta.rows = 3;
+    ta.placeholder = "Type your comment here\u2026";
+    ta.setAttribute("aria-label", "Your comment");
+    var fields = document.createElement("div");
+    fields.className = "fb-fields";
+    function mkField(labelText, ac){
+      var lab = document.createElement("label");
+      lab.appendChild(document.createTextNode(labelText + " "));
+      var sp = document.createElement("span");
+      sp.className = "opt"; sp.textContent = "(optional)";
+      lab.appendChild(sp);
+      var inp = document.createElement("input");
+      inp.type = "text"; inp.autocomplete = ac; inp.setAttribute("aria-label", labelText + " (optional)");
+      lab.appendChild(inp);
+      fields.appendChild(lab);
+      return inp;
+    }
+    var roadInp = mkField("Road or neighborhood", "off");
+    var nameInp = mkField("Name", "name");
+    var row = document.createElement("div");
+    row.className = "sendrow";
+    var send = document.createElement("button");
+    send.type = "button"; send.className = "sendbtn fb-sendbtn"; send.textContent = "Send comment";
+    var local = document.createElement("span");
+    local.className = "fb-status";
+    local.setAttribute("role", "status");
+    row.appendChild(send); row.appendChild(local);
+    area.appendChild(ta); area.appendChild(fields); area.appendChild(row);
+    send.addEventListener("click", function(){
+      var comment = ta.value.replace(/\s+/g, " ").trim();
+      if (!comment) { local.textContent = "Please type a comment first."; ta.focus(); return; }
+      send.disabled = true;
+      local.textContent = "Recording\u2026";
+      var view = getView() || "Just a comment";
+      postFeedback({ item: item, view: view, comment: comment, road: roadInp.value.trim(), name: nameInp.value.trim() })
+        .then(function(){
+          bump(item, view);
+          ta.disabled = true; roadInp.disabled = true; nameInp.disabled = true;
+          statusEl.textContent = "Comment recorded \u2014 thank you.";
+          area.hidden = true;
+          if (onSent) onSent();
+        })
+        .catch(function(){
+          send.disabled = false;
+          local.textContent = "Sorry \u2014 that didn\u2019t go through. Please try again.";
+        });
+    });
+    return { area: area, ta: ta };
+  }
+  /* Wire one feedback block: a set of view buttons plus an optional comment button. */
+  function attachBlock(container, item, viewBtns, commentBtn){
+    var state = { view: null };
+    var status = document.createElement("p");
+    status.className = "fb-status";
+    status.setAttribute("role", "status");
+    var tally = document.createElement("p");
+    tally.className = "fb-tally";
+    var ca = buildCommentArea(item, function(){ return state.view; }, status, function(){
+      if (commentBtn) commentBtn.disabled = true;
+    });
+    container.appendChild(ca.area);
+    container.appendChild(status);
+    container.appendChild(tally);
+    registerTally(item, tally);
+    viewBtns.forEach(function(btn){
+      btn.addEventListener("click", function(){
+        if (state.view) return;
+        var view = btn.getAttribute("data-view");
+        viewBtns.forEach(function(b){ b.disabled = true; });
+        status.textContent = "Recording\u2026";
+        postFeedback({ item: item, view: view })
+          .then(function(){
+            state.view = view;
+            btn.classList.add("is-chosen");
+            status.textContent = "Recorded: " + view + " \u2014 thank you.";
+            bump(item, view);
+          })
+          .catch(function(){
+            viewBtns.forEach(function(b){ b.disabled = false; });
+            status.textContent = "Sorry \u2014 that didn\u2019t go through. Please try again.";
+          });
+      });
+    });
+    if (commentBtn) {
+      commentBtn.addEventListener("click", function(){
+        ca.area.hidden = !ca.area.hidden;
+        if (!ca.area.hidden) ca.ta.focus();
+      });
+    }
+  }
+  function miniBtn(view, label, cls){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("data-view", view);
+    b.textContent = label;
+    if (cls) b.className = cls;
+    return b;
+  }
+  function miniFeedback(item, commentOnly){
+    var box = document.createElement("div");
+    box.className = "fb-mini";
+    var lbl = document.createElement("span");
+    lbl.className = "fb-mini-lbl"; lbl.textContent = "Your view:";
+    box.appendChild(lbl);
+    var viewBtns = [], commentBtn = null;
+    if (!commentOnly) {
+      var a = miniBtn("I agree", "I agree with this", "mini-agree");
+      var d = miniBtn("I disagree", "I disagree with this", "");
+      var m = miniBtn("I have mixed feelings", "Mixed feelings", "");
+      box.appendChild(a); box.appendChild(d); box.appendChild(m);
+      viewBtns = [a, d, m];
+    }
+    commentBtn = miniBtn("Just a comment", "Add a comment", "");
+    box.appendChild(commentBtn);
+    attachBlock(box, item, viewBtns, commentBtn);
+    return box;
+  }
+  /* Per-policy buttons — one set under every adopted policy in both chapters */
+  document.querySelectorAll(".policies li").forEach(function(li){
+    var chapter = li.closest(".chapter");
+    var chapName = chapter ? chapter.querySelector("h2").textContent.replace(/\s+/g, " ").trim() : "Comprehensive Plan";
+    var ptxt = li.querySelector(".ptxt");
+    var full = ptxt ? ptxt.textContent.replace(/\s+/g, " ").trim() : "";
+    var item = chapName + " \u2014 Policy " + full;
+    if (item.length > 150) item = item.slice(0, 147) + "\u2026";
+    li.appendChild(miniFeedback(item, false));
+  });
+  /* Per-card buttons in the chapter index — visions get the full set;
+     the Part 6 card (no vision quoted) gets a comment button */
+  document.querySelectorAll(".idxcard").forEach(function(card){
+    var h = card.querySelector("h3");
+    var title = h ? h.textContent.replace(/\s+/g, " ").trim() : "Chapter";
+    var hasVision = !!card.querySelector("blockquote");
+    card.appendChild(miniFeedback(title + (hasVision ? " \u2014 Town Vision" : " \u2014 general"), !hasVision));
+  });
+  /* Hand-written feedback blocks: the buttons are already in the markup */
+  document.querySelectorAll(".feedback").forEach(function(block){
+    var item = block.getAttribute("data-item");
+    var viewBtns = [], commentBtn = null;
+    block.querySelectorAll("[data-view]").forEach(function(btn){
+      if (btn.getAttribute("data-view") === "Just a comment") commentBtn = btn;
+      else viewBtns.push(btn);
+    });
+    attachBlock(block, item, viewBtns, commentBtn);
+  });
+  /* Chapter comment boxes — typed text now records in-page, with the
+     optional road / name fields beside the box */
+  document.querySelectorAll(".promptbox").forEach(function(box){
+    var ta = box.querySelector("textarea[data-comment-for]");
+    if (!ta) return;
+    var item = ta.getAttribute("data-comment-for");
+    var btn = box.querySelector("[data-send]");
+    var road = box.querySelector('[data-opt="road"]');
+    var name = box.querySelector('[data-opt="name"]');
+    var status = document.createElement("p");
+    status.className = "fb-status";
+    status.setAttribute("role", "status");
+    var tally = document.createElement("p");
+    tally.className = "fb-tally";
+    box.appendChild(status);
+    box.appendChild(tally);
+    registerTally(item, tally);
+    if (!btn) return;
+    btn.addEventListener("click", function(){
+      var text = ta.value.replace(/\s+/g, " ").trim();
+      if (!text) { status.textContent = "Please type your comment first."; ta.focus(); return; }
+      btn.disabled = true;
+      status.textContent = "Recording\u2026";
+      postFeedback({ item: item, view: "Just a comment", comment: text, road: road ? road.value.trim() : "", name: name ? name.value.trim() : "" })
+        .then(function(){
+          bump(item, "Just a comment");
+          ta.disabled = true;
+          if (road) road.disabled = true;
+          if (name) name.disabled = true;
+          status.textContent = "Comment recorded \u2014 thank you.";
+        })
+        .catch(function(){
+          btn.disabled = false;
+          status.textContent = "Sorry \u2014 that didn\u2019t go through. Please try again.";
+        });
+    });
+  });
+  /* Running totals from the responses spreadsheet (best-effort: if the load
+     fails, no counts are shown and nothing else is affected) */
+  loadTallies();
+
+  /* District explorer */
+  var districts = {
+    marine: {
+      title: "Mixed Use Marine District — 36% of Edgecomb",
+      body: "The town's eastern and western edges, along the saltwater rivers. Purpose, in the plan's words: \"to allow productive uses of the marine eco-system and maritime resources, to maintain residential scale in all non-residential structures and operations, and to create water accessible conservation land, walking trails and scenic outlooks.\" Minimum lots: 2 acres in Marine Area I, 1 acre in Marine Area II — where the plan allows one-acre lots to accommodate affordable housing along Cross Point Road, Mill Road and River Road (Part 2, pp. 5–6, 10)."
+    },
+    woodland: {
+      title: "Mixed Use Woodland District — 28% of Edgecomb",
+      body: "The most restrictive district — much of the interior, including the Schmid Preserve and River~Link. Purpose: \"to provide sustainable, productive, nature-based uses that require limited infrastructure and limited disturbance of the natural environment and to preserve the natural environment and wildlife habitat.\" Minimum lot size is 5 acres, and the district forms part of a regional \"quiet\" zone linking Newcastle to Boothbay. No capital improvements are anticipated here (Part 2, pp. 5–6, 10)."
+    },
+    rural: {
+      title: "Mixed Use Rural District — 26% of Edgecomb",
+      body: "Land generally suited to agricultural and land-based uses. Purpose: \"to provide renewable working use of the land, which may employ equipment and/or live stock for small-scale operation, and to preserve the wildlife habitat and protect watersheds and wetlands.\" Minimum lot size is 3 acres (Part 2, pp. 5–6)."
+    },
+    commercial: {
+      title: "Mixed Use Commercial Districts — 10% of Edgecomb",
+      body: "The Routes 1 and 27 corridors, including the Gateway, Thoroughfare and Commercial Growth districts on Route 1 and Areas I–III on Route 27. Purpose: \"to provide for commercial operations that are traffic-generating, need thoroughfare exposure, or are larger than residential scale; for public facilities; and for traditional village density in Area II of Route 27.\" Growth-area lots are typically 1 acre with 400 feet of frontage; Route 27 Areas I and III require 3 acres (Part 2, pp. 5–6)."
+    }
+  };
+  var detail = document.getElementById("distdetail");
+  var distBtns = document.querySelectorAll("[data-dist]");
+  function showDist(key){
+    var d = districts[key];
+    detail.innerHTML = "";
+    var h = document.createElement("h4"); h.textContent = d.title;
+    var p = document.createElement("p"); p.textContent = d.body;
+    detail.appendChild(h); detail.appendChild(p);
+    distBtns.forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-dist") === key ? "true" : "false"); });
+  }
+  distBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){ showDist(btn.getAttribute("data-dist")); });
+  });
+  showDist("marine");
+})();
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var btns = Array.prototype.slice.call(document.querySelectorAll(".tabnav [data-tab]"));
+  var panels = {};
+  btns.forEach(function(b){ panels[b.getAttribute("data-tab")] = document.getElementById("tab-" + b.getAttribute("data-tab")); });
+  function activate(name, focusPanel){
+    if (!panels[name]) name = "overview";
+    btns.forEach(function(b){ b.setAttribute("aria-selected", b.getAttribute("data-tab") === name ? "true" : "false"); });
+    Object.keys(panels).forEach(function(k){ if (panels[k]) panels[k].hidden = (k !== name); });
+    if (focusPanel && panels[name]) panels[name].scrollIntoView({ block: "start" });
+  }
+  btns.forEach(function(b){
+    b.addEventListener("click", function(){
+      activate(b.getAttribute("data-tab"), false);
+      try { history.replaceState(null, "", "#tab-" + b.getAttribute("data-tab")); } catch (e) {}
+    });
+  });
+  document.querySelectorAll("[data-tablink]").forEach(function(a){
+    a.addEventListener("click", function(ev){
+      ev.preventDefault();
+      activate(a.getAttribute("data-tablink"), true);
+    });
+  });
+  var map = { "natural": "part4", "landuse": "part2", "part1": "part1", "part3": "part3", "part5": "part5", "part6": "part6", "dashboard": "overview" };
+  var h = (location.hash || "").replace("#", "").replace("tab-", "");
+  if (map[h]) activate(map[h], false);
+  else if (panels[h]) activate(h, false);
+  window.addEventListener("hashchange", function(){
+    var k = (location.hash || "").replace("#", "").replace("tab-", "");
+    if (map[k]) activate(map[k], false);
+    else if (panels[k]) activate(k, false);
+  });
+})();
+</script>
+</body>
+</html>
